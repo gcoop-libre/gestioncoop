@@ -1,0 +1,1102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1024px"
+   height="768px"
+   id="svg2816"
+   version="1.1"
+   inkscape:version="0.47pre4 r22446"
+   sodipodi:docname="04_gestion-coop_foro_02.svg">
+  <defs
+     id="defs2818">
+    <linearGradient
+       id="linearGradient3805">
+      <stop
+         id="stop3823"
+         offset="0"
+         style="stop-color:#9e9e9e;stop-opacity:0.502994;" />
+      <stop
+         style="stop-color:#757575;stop-opacity:0.19607843;"
+         offset="0.5"
+         id="stop3825" />
+      <stop
+         style="stop-color:#4d4d4d;stop-opacity:0;"
+         offset="1"
+         id="stop3811" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3802">
+      <stop
+         style="stop-color:#ffffff;stop-opacity:1;"
+         offset="0"
+         id="stop3804" />
+      <stop
+         style="stop-color:#ffffff;stop-opacity:0;"
+         offset="1"
+         id="stop3807" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient5511">
+      <stop
+         style="stop-color:#ecece2;stop-opacity:1;"
+         offset="0"
+         id="stop5513" />
+      <stop
+         style="stop-color:#b2b2ae;stop-opacity:0;"
+         offset="1"
+         id="stop5515" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3856">
+      <stop
+         style="stop-color:#1a1a1a;stop-opacity:1;"
+         offset="0"
+         id="stop3858" />
+      <stop
+         style="stop-color:#1a1a1a;stop-opacity:0.004"
+         offset="1"
+         id="stop3860" />
+    </linearGradient>
+    <linearGradient
+       inkscape:collect="always"
+       id="linearGradient3804">
+      <stop
+         style="stop-color:#1a1a1a;stop-opacity:1;"
+         offset="0"
+         id="stop3806" />
+      <stop
+         style="stop-color:#1a1a1a;stop-opacity:0;"
+         offset="1"
+         id="stop3808" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient3703">
+      <stop
+         style="stop-color:#0090ff;stop-opacity:1;"
+         offset="0"
+         id="stop3705" />
+      <stop
+         style="stop-color:#15599b;stop-opacity:1;"
+         offset="1"
+         id="stop3707" />
+    </linearGradient>
+    <linearGradient
+       id="linearGradient2877">
+      <stop
+         style="stop-color:#e6e6e6;stop-opacity:1;"
+         offset="0"
+         id="stop2879" />
+      <stop
+         style="stop-color:#e6e6e6;stop-opacity:0;"
+         offset="1"
+         id="stop2881" />
+    </linearGradient>
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 384 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="1024 : 384 : 1"
+       inkscape:persp3d-origin="512 : 256 : 1"
+       id="perspective2824" />
+    <inkscape:perspective
+       id="perspective2838"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3804"
+       id="linearGradient3874"
+       x1="140"
+       y1="420"
+       x2="186.6497"
+       y2="420"
+       gradientUnits="userSpaceOnUse" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3703"
+       id="linearGradient5643"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.25245036,0,0,1.0725561,321.68076,31.835313)"
+       x1="71.013977"
+       y1="294"
+       x2="953.05347"
+       y2="294" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3703"
+       id="linearGradient5647"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.25103268,0,0,1.0725561,562.96279,31.835316)"
+       x1="71.013977"
+       y1="294"
+       x2="953.05347"
+       y2="294" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3703"
+       id="linearGradient5651"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(0.18159574,0,0,1.0725561,748.80514,31.835313)"
+       x1="71.013977"
+       y1="294"
+       x2="953.05347"
+       y2="294" />
+    <inkscape:perspective
+       id="perspective2940"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3851"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3059"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3073"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3087"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3101"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3328"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3091"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3650"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3483"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3501"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <filter
+       id="filter3194"
+       inkscape:label="Desaturate"
+       x="0"
+       y="0"
+       width="1"
+       height="1"
+       inkscape:menu="Color"
+       inkscape:menu-tooltip="Render in shades of gray by reducing saturation to zero"
+       color-interpolation-filters="sRGB">
+      <feColorMatrix
+         id="feColorMatrix3196"
+         type="saturate"
+         values="0" />
+    </filter>
+    <inkscape:perspective
+       id="perspective2826"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2826-1"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2826-5"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <linearGradient
+       inkscape:collect="always"
+       xlink:href="#linearGradient3805"
+       id="linearGradient3356"
+       gradientUnits="userSpaceOnUse"
+       gradientTransform="matrix(1.0101774,0,0,1,-0.42819098,0)"
+       x1="462"
+       y1="-1"
+       x2="462"
+       y2="98" />
+    <inkscape:perspective
+       id="perspective2826-6"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective2839"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3095"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3108"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3108-6"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3121"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="1"
+     inkscape:cx="477.74897"
+     inkscape:cy="601.86981"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     showgrid="false"
+     showguides="false"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1280"
+     inkscape:window-height="725"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-bbox="true">
+    <sodipodi:guide
+       orientation="1,0"
+       position="42.072854,511.41498"
+       id="guide2826" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="981.46421,817.41544"
+       id="guide2828" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="102,489"
+       id="guide3666" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="921,595"
+       id="guide3668" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="141.0678,782.41365"
+       id="guide3670" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="321,811"
+       id="guide3672" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="266,338"
+       id="guide3778" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="401.63665,694.37886"
+       id="guide5344" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="680.23672,660.43773"
+       id="guide5346" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="420.72853,367.69553"
+       id="guide5394" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="380.42345,765.79664"
+       id="guide5480" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="340.82547,691.55043"
+       id="guide5482" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="160.86679,760.13979"
+       id="guide5532" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="200.81833,741.40146"
+       id="guide5534" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="441.23463,731.14841"
+       id="guide5538" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="222,666"
+       id="guide5566" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="261,637"
+       id="guide5568" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="282,635"
+       id="guide5570" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="862,709"
+       id="guide5609" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="462,637"
+       id="guide5611" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="522,617"
+       id="guide5615" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="561,718"
+       id="guide5617" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="582,670"
+       id="guide5619" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="621,666"
+       id="guide5621" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="641,652"
+       id="guide5623" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="680.23672,643"
+       id="guide5625" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="702,675"
+       id="guide5627" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="762,637"
+       id="guide5631" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="801,665"
+       id="guide5633" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="821,624"
+       id="guide5635" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="884,684"
+       id="guide5637" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="942,642"
+       id="guide5639" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="741,587"
+       id="guide5653" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="81,713"
+       id="guide5655" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="340.82547,746"
+       id="guide2956" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="340.82547,671"
+       id="guide3865" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="340.82547,211"
+       id="guide4248" />
+    <sodipodi:guide
+       orientation="1,0"
+       position="500,766"
+       id="guide4919" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="321,610"
+       id="guide3220" />
+    <sodipodi:guide
+       orientation="0,1"
+       position="474,48"
+       id="guide3349" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata2821">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     id="layer1"
+     inkscape:label="degradado fondo"
+     inkscape:groupmode="layer">
+    <image
+       sodipodi:absref="/home/jalinski/inkscape_pasted_image_20100609_173422.png"
+       y="-11.5"
+       x="32.072853"
+       id="image2840"
+       height="1"
+       width="940"
+       xlink:href="/home/jalinski/inkscape_pasted_image_20100609_173422.png"
+       style="fill:#ff0000" />
+    <rect
+       style="font-size:11px;fill:url(#linearGradient3356);fill-opacity:1"
+       id="rect2875"
+       width="939.39136"
+       height="766"
+       x="42.072853"
+       y="0.99999964" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5322"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"><flowRegion
+         id="flowRegion5324"><rect
+           id="rect5326"
+           width="498.51028"
+           height="134.3503"
+           x="381.83768"
+           y="252.51915"
+           style="fill:#ffffff" /></flowRegion><flowPara
+         id="flowPara5328" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="429.92093"
+       y="417.27505"
+       id="text5380"><tspan
+         sodipodi:role="line"
+         id="tspan5382"
+         x="429.92093"
+         y="417.27505" /></text>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5550"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:11"><flowRegion
+         id="flowRegion5552"><rect
+           id="rect5554"
+           width="279"
+           height="122"
+           x="101"
+           y="525" /></flowRegion><flowPara
+         id="flowPara5556" /></flowRoot>    <g
+       id="g3065"
+       transform="translate(0,28)">
+      <rect
+         y="707"
+         x="42.072853"
+         height="5"
+         width="939.39136"
+         id="rect5548"
+         style="fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:0;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.00400002;stroke-dasharray:none" />
+      <flowRoot
+         transform="translate(-57.912726,188)"
+         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         id="flowRoot5558"
+         xml:space="preserve"><flowRegion
+           id="flowRegion5560"><rect
+             y="536"
+             x="100"
+             height="141"
+             width="341"
+             id="rect5562" /></flowRegion><flowPara
+           style="font-size:8px"
+           id="flowPara5564">SISTEMA DE GESTIÓN COOPERATIVA</flowPara></flowRoot>    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4181"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:11"><flowRegion
+         id="flowRegion4183"><rect
+           id="rect4185"
+           width="204"
+           height="20"
+           x="419"
+           y="-53" /></flowRegion><flowPara
+         id="flowPara4187" /></flowRoot>    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="370"
+       y="404"
+       id="text3010"><tspan
+         sodipodi:role="line"
+         id="tspan3012"
+         x="370"
+         y="404" /><tspan
+         sodipodi:role="line"
+         id="tspan3014" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="376"
+       y="300"
+       id="text3030"><tspan
+         sodipodi:role="line"
+         id="tspan3032" /></text>
+    <text
+       xml:space="preserve"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="386"
+       y="247"
+       id="text3034"><tspan
+         sodipodi:role="line"
+         id="tspan3036"
+         x="386"
+         y="247" /></text>
+    <g
+       transform="translate(60.109375,0.2089319)"
+       id="g3617">
+      <rect
+         style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="rect3455"
+         width="639"
+         height="25"
+         x="282"
+         y="97"
+         ry="7.4246211"
+         rx="7.4246211" />
+      <flowRoot
+         transform="translate(12,2)"
+         style="font-size:11px;font-style:normal;font-weight:normal;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         id="flowRoot3601"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3603"><rect
+             style="fill:#ffffff"
+             y="99"
+             x="289"
+             height="18"
+             width="619"
+             id="rect3605" /></flowRegion><flowPara
+           style="font-size:12px"
+           id="flowPara3607">Inicio    |    Actas     |     Novedades     |     Actividades     |     Foro </flowPara></flowRoot>    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3002"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="matrix(0.91543548,0,0,1,66.736374,112.84889)"><flowRegion
+         id="flowRegion3004"><rect
+           id="rect3006"
+           width="642"
+           height="30"
+           x="300"
+           y="119" /></flowRegion><flowPara
+         id="flowPara3008"
+         style="font-size:16px;font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold">Tema de este foro</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3020"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="matrix(0.91543548,0,0,1,67.006523,-151.3175)"><flowRegion
+         id="flowRegion3022"><rect
+           id="rect3024"
+           width="633.06696"
+           height="101.16638"
+           x="302"
+           y="410" /></flowRegion><flowPara
+         id="flowPara3042"
+         style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start">Hola, acá planteo una cuestión para que todos intercambiemos al respecto.</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3052"
+       style="font-size:9px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="matrix(0.91543548,0,0,1,67.914723,53.84889)"><flowRegion
+         id="flowRegion3054"><rect
+           id="rect3056"
+           width="642"
+           height="32"
+           x="299"
+           y="147"
+           style="font-size:9px" /></flowRegion><flowPara
+         id="flowPara3058">PUBLICADO EL 30/05/2010 A LAS 15:34</flowPara></flowRoot>    <g
+       id="g3277"
+       transform="translate(60,0)">
+      <rect
+         rx="5.6568542"
+         ry="5.6568542"
+         y="159"
+         x="282"
+         height="19.353554"
+         width="98.423447"
+         id="rect3667"
+         style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <image
+         y="147.53462"
+         x="289"
+         id="image12-4"
+         height="24"
+         width="24"
+         xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/001_50.png" />
+      <flowRoot
+         transform="translate(-25.0453,22.807257)"
+         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         id="flowRoot3678"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3680"><rect
+             y="141.14984"
+             x="346.12878"
+             height="13.081475"
+             width="118.44038"
+             id="rect3682" /></flowRegion><flowPara
+           style="font-size:8px;fill:#ffffff"
+           id="flowPara3684">RESPONDER</flowPara></flowRoot>      <rect
+         y="183"
+         x="282"
+         height="1"
+         width="639"
+         id="rect3422"
+         style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    </g>
+    <rect
+       style="fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3132"
+       width="103"
+       height="134"
+       x="878"
+       y="184" />
+    <image
+       xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/inkscape_pasted_image_20100614_115233.png"
+       width="67.5"
+       height="64"
+       id="image3409"
+       x="893.59009"
+       y="198.24033" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3143"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(649,-79)"><flowRegion
+         id="flowRegion3145"><rect
+           id="rect3147"
+           width="234"
+           height="47"
+           x="247"
+           y="355" /></flowRegion><flowPara
+         id="flowPara3149"
+         style="font-size:12px;font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold">Usuario </flowPara><flowPara
+         style="font-size:12px;font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
+         id="flowPara3151">Nombre</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.91543548,0,0,1,66.736374,250.84889)"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       id="flowRoot3180"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3182"><rect
+           y="119"
+           x="300"
+           height="30"
+           width="642"
+           id="rect3184" /></flowRegion><flowPara
+         style="font-size:16px;font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
+         id="flowPara3186">Re: Tema de este foro</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.91543548,0,0,1,67.006523,-11.3175)"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       id="flowRoot3188"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3190"><rect
+           y="410"
+           x="302"
+           height="134.16638"
+           width="553.32349"
+           id="rect3192" /></flowRegion><flowPara
+         style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start"
+         id="flowPara3194">Otro usuario responde al hilo.  gcoop es una empresa de desarrollo e implementación Software Libre constituida como cooperativa de trabajo. Nuestra forma de organización potencia el trabajo colaborativo y mejora los procesos de desarrollo. Este emprendimiento está sustentando en la construcción de una empresa democrática, preocupada por el desarrollo de la comunidad en la que está inserta.</flowPara><flowPara
+         style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start"
+         id="flowPara3252"></flowPara><flowPara
+         style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start"
+         id="flowPara3254">gcoop brinda soluciones informáticas ofreciendo desarrollos a medida, consultoría, soporte, migración y auditorías de sistemas.</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.91543548,0,0,1,67.914723,189.84889)"
+       style="font-size:9px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       id="flowRoot3196"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3198"><rect
+           style="font-size:9px"
+           y="147"
+           x="299"
+           height="32"
+           width="642"
+           id="rect3200" /></flowRegion><flowPara
+         id="flowPara3202">PUBLICADO EL 30/05/2010 16:56</flowPara></flowRoot>    <rect
+       y="317"
+       x="342"
+       height="1"
+       width="639"
+       id="rect3204"
+       style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <rect
+       y="318"
+       x="878"
+       height="208"
+       width="103"
+       id="rect3206"
+       style="fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <flowRoot
+       transform="translate(649,59)"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       id="flowRoot3210"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3212"><rect
+           y="355"
+           x="247"
+           height="47"
+           width="234"
+           id="rect3214" /></flowRegion><flowPara
+         style="font-size:12px;font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
+         id="flowPara3216">Usuario </flowPara><flowPara
+         id="flowPara3218"
+         style="font-size:12px;font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold">Nombre</flowPara></flowRoot>    <rect
+       style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3220"
+       width="639"
+       height="1"
+       x="342"
+       y="527" />
+    <image
+       xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/inkscape_pasted_image_20100614_115446.png"
+       width="66.75"
+       height="62"
+       id="image3413"
+       x="893.125"
+       y="333" />
+    <g
+       id="g3397"
+       transform="translate(60,0)">
+      <g
+         id="g3311">
+        <rect
+           rx="5.6568542"
+           ry="5.6568542"
+           y="549"
+           x="282"
+           height="19.353554"
+           width="98.423447"
+           id="rect3288"
+           style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+        <image
+           y="537.53461"
+           x="289"
+           id="image3290"
+           height="24"
+           width="24"
+           xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/001_50.png" />
+        <flowRoot
+           transform="translate(-25.0453,412.80726)"
+           style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           id="flowRoot3292"
+           xml:space="preserve"><flowRegion
+             id="flowRegion3294"><rect
+               y="141.14984"
+               x="346.12878"
+               height="13.081475"
+               width="118.44038"
+               id="rect3296" /></flowRegion><flowPara
+             style="font-size:8px;fill:#ffffff"
+             id="flowPara3298">RESPONDER</flowPara></flowRoot>      </g>
+      <g
+         id="g3360">
+        <rect
+           style="fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="rect3309"
+           width="636"
+           height="116"
+           x="283"
+           y="576" />
+        <rect
+           style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="rect3321"
+           width="55.289932"
+           height="19.353554"
+           x="282"
+           y="701"
+           ry="5.6568542"
+           rx="5.6568542" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot3325"
+           style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           transform="translate(-53.0453,564.80726)"><flowRegion
+             id="flowRegion3327"><rect
+               id="rect3329"
+               width="118.44038"
+               height="13.081475"
+               x="346.12878"
+               y="141.14984" /></flowRegion><flowPara
+             id="flowPara3331"
+             style="font-size:8px;fill:#ffffff">ENVIAR</flowPara></flowRoot>        <rect
+           style="fill:#f2f2f2;fill-opacity:1;fill-rule:nonzero;stroke:none"
+           id="rect3339"
+           width="8.1187181"
+           height="7.6338835"
+           x="764"
+           y="712.54291" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot3341"
+           style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           transform="translate(59.5,-36)"><flowRegion
+             id="flowRegion3343"><rect
+               id="rect3345"
+               width="273.5"
+               height="19.5"
+               x="714"
+               y="747.5" /></flowRegion><flowPara
+             id="flowPara3347"
+             style="font-size:7px">Notificar cuando se realice otra respuesta</flowPara></flowRoot>      </g>
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer6"
+     inkscape:label="logo" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer4"
+     inkscape:label="cabezalito">
+    <g
+       id="g5529"
+       transform="matrix(1.1332617,0,0,1,-69.069351,0)">
+      <rect
+         y="-1.3720825e-13"
+         x="98.072853"
+         height="35"
+         width="828.92712"
+         id="rect5732"
+         style="fill:#4d4d4d;fill-opacity:1;stroke:none" />
+    </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5734"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:40px"><flowRegion
+         id="flowRegion5736"><rect
+           id="rect5738"
+           width="672"
+           height="158"
+           x="-276"
+           y="416" /></flowRegion><flowPara
+         id="flowPara5740" /></flowRoot>  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer3"
+     inkscape:label="login">
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="654"
+       y="234"
+       id="text5782"><tspan
+         sodipodi:role="line"
+         id="tspan5784"
+         x="654"
+         y="234" /></text>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer7"
+     inkscape:label="user" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer8"
+     inkscape:label="contenidos" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer5"
+     inkscape:label="titulo loguin" />
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="titulo"
+     style="display:inline">
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2894"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"><flowRegion
+         id="flowRegion2896"><rect
+           id="rect2898"
+           width="487"
+           height="127"
+           x="69"
+           y="30" /></flowRegion><flowPara
+         id="flowPara2900" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2902"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:40px"><flowRegion
+         id="flowRegion2904"><rect
+           id="rect2906"
+           width="491"
+           height="170"
+           x="112"
+           y="27" /></flowRegion><flowPara
+         id="flowPara2908" /></flowRoot>    <rect
+       y="5.25"
+       x="102"
+       height="24.75"
+       width="37.597973"
+       id="rect5536"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:0;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.00400002;stroke-dasharray:none" />
+    <flowRoot
+       transform="translate(-98.47803,-94.75)"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       id="flowRoot5540"
+       xml:space="preserve"><flowRegion
+         id="flowRegion5542"><rect
+           y="106"
+           x="259"
+           height="53"
+           width="276"
+           id="rect5544" /></flowRegion><flowPara
+         style="fill:#ffffff"
+         id="flowPara5546">Cooperativa de Trabajo Gcoop Ejemplo</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5593"
+       style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:11"><flowRegion
+         id="flowRegion5595"><rect
+           id="rect5597"
+           width="163"
+           height="37"
+           x="471"
+           y="-74" /></flowRegion><flowPara
+         id="flowPara5599" /></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2946"
+       style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(58.806641,-112.8068)"><flowRegion
+         id="flowRegion2948"><rect
+           id="rect2950"
+           width="126.8511"
+           height="36"
+           x="42"
+           y="169"
+           style="font-size:10px" /></flowRegion><flowPara
+         style="font-size:13px;font-weight:bold;fill:#1a1a1a;-inkscape-font-specification:Bitstream Charter Bold"
+         id="flowPara3863">Hola, Soledad!</flowPara></flowRoot>    <rect
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect4062"
+       width="159"
+       height="18"
+       x="762"
+       y="54" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4189"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(42,8)"><flowRegion
+         id="flowRegion4191"><rect
+           id="rect4193"
+           width="89"
+           height="20"
+           x="725"
+           y="47" /></flowRegion><flowPara
+         id="flowPara4195">Buscar</flowPara></flowRoot>    <g
+       transform="translate(0.173358,0)"
+       style="display:inline"
+       id="g3468">
+      <image
+         y="12.506096"
+         x="801"
+         id="image3350"
+         height="11.493904"
+         width="14.826642"
+         xlink:href="file:///home/jalinski/Escritorio/pic696.png" />
+      <flowRoot
+         transform="translate(499.42752,-94.75)"
+         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         id="flowRoot5601"
+         xml:space="preserve"><flowRegion
+           id="flowRegion5603"><rect
+             y="106"
+             x="259"
+             height="17.610912"
+             width="167.76056"
+             id="rect5605" /></flowRegion><flowPara
+           style="fill:#ffffff"
+           id="flowPara5607"> Perfil |       (1) | Cerrar Sesión</flowPara></flowRoot>    </g>
+    <image
+       xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/001_38.png"
+       width="14.100505"
+       height="13.746952"
+       id="image12"
+       x="898.89954"
+       y="55.378502" />
+  </g>
+</svg>
