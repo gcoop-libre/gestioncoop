@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -13,7 +14,7 @@
    height="768px"
    id="svg2816"
    version="1.1"
-   inkscape:version="0.46"
+   inkscape:version="0.47pre4 r22446"
    sodipodi:docname="04_gestion-coop_contenidos_actas.svg"
    sodipodi:version="0.32"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
@@ -282,17 +283,80 @@
        xlink:href="#linearGradient3805"
        id="linearGradient3356"
        gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.0096397,0,0,1,9.442966e-2,0)"
+       gradientTransform="matrix(1.0096397,0,0,0.20888967,-0.4913568,0.79111004)"
        x1="462"
        y1="-1"
        x2="462"
-       y2="98" />
+       y2="453.43268" />
     <inkscape:perspective
        id="perspective2843"
        inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
        inkscape:vp_z="744.09448 : 526.18109 : 1"
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 526.18109 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3109"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3134"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3153"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3050"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3076"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3100"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3060"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3334"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3080"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
@@ -302,16 +366,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.70710678"
-     inkscape:cx="299.29599"
-     inkscape:cy="608.22151"
+     inkscape:zoom="1.4142136"
+     inkscape:cx="365.14916"
+     inkscape:cy="579.68535"
      inkscape:current-layer="layer1"
      inkscape:document-units="px"
      showgrid="false"
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1280"
-     inkscape:window-height="949"
+     inkscape:window-height="725"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -495,7 +559,29 @@
      inkscape:label="degradado fondo"
      inkscape:groupmode="layer"
      style="display:inline">
-    <image
+    <rect
+       rx="5.6568542"
+       ry="5.6568542"
+       y="168.32323"
+       x="221.78827"
+       height="19.353554"
+       width="98.423447"
+       id="rect3118"
+       style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+    <flowRoot
+       transform="translate(303.41272,-135.47532)"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       id="flowRoot3120"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3122"><rect
+           style="fill:#ffffff"
+           y="307.7655"
+           x="-73.950722"
+           height="27.840271"
+           width="129.63127"
+           id="rect3124" /></flowRegion><flowPara
+         style="font-size:8px;fill:#00d455"
+         id="flowPara3126">ACTAS DE ASAMBLEA</flowPara></flowRoot>    <image
        sodipodi:absref="/home/jalinski/inkscape_pasted_image_20100609_173422.png"
        y="-11.5"
        x="32.072853"
@@ -508,8 +594,8 @@
        style="font-size:11px;fill:url(#linearGradient3356);fill-opacity:1"
        id="rect2875"
        width="938.89136"
-       height="766"
-       x="42.572853"
+       height="160.00948"
+       x="41.987068"
        y="0.99999964" />
     <flowRoot
        xml:space="preserve"
@@ -542,29 +628,7 @@
            height="122"
            x="101"
            y="525" /></flowRegion><flowPara
-         id="flowPara5556" /></flowRoot>    <g
-       id="g3065">
-      <rect
-         y="707"
-         x="42.072853"
-         height="5"
-         width="939.39136"
-         id="rect5548"
-         style="fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:0;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:0.00400002" />
-      <flowRoot
-         transform="translate(-57.912726,188)"
-         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot5558"
-         xml:space="preserve"><flowRegion
-           id="flowRegion5560"><rect
-             y="536"
-             x="100"
-             height="141"
-             width="341"
-             id="rect5562" /></flowRegion><flowPara
-           style="font-size:8px"
-           id="flowPara5564">SISTEMA DE GESTIÓN COOPERATIVA</flowPara></flowRoot>    </g>
-    <flowRoot
+         id="flowPara5556" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4181"
        style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"><flowRegion
@@ -616,7 +680,7 @@
        height="25"
        width="639"
        id="rect3455"
-       style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+       style="fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot3601"
@@ -630,105 +694,45 @@
            y="99"
            style="fill:#ffffff" /></flowRegion><flowPara
          id="flowPara3607"
-         style="font-size:12px">Inicio    |    Actas     |     Novedades     |     Actividades     |     Foro </flowPara></flowRoot>    <rect
-       style="fill:#f9f9f9;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect4232"
-       width="639"
-       height="517.21826"
-       x="102"
-       y="158"
-       rx="5.9999995"
-       ry="5.9999995" />
-    <rect
+         style="font-size:11px">Inicio    |    Actividades     |     Novedades     |     <flowSpan
+   style="fill:#00d455"
+   id="flowSpan3049">Actas</flowSpan>     |     Foro </flowPara></flowRoot>    <rect
        y="454"
        x="119.35397"
        height="1"
        width="603.27197"
        id="rect4903"
        style="fill:#ffffff;fill-opacity:0;fill-rule:nonzero;stroke:#ffffff;stroke-width:0.2870352;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot4921"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       transform="matrix(0.9154355,0,0,1,-120.42544,44.71826)"><flowRegion
-         id="flowRegion4923"><rect
-           id="rect4925"
-           width="375"
-           height="38"
-           x="474"
-           y="589" /></flowRegion><flowPara
-         id="flowPara4927"><flowSpan
-   style="font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
-   id="flowSpan4929">1</flowSpan> 2 3 4 5 6 7 8 9 10 &gt;siguiente &gt;&gt;última</flowPara></flowRoot>    <rect
-       style="fill:#e6e6e6"
-       id="rect2628"
-       width="639"
-       height="1.75"
-       x="102"
-       y="193.75"
-       rx="0"
-       ry="0.25" />
-    <rect
-       style="fill:#cccccc"
-       id="rect2630"
-       width="98.818329"
-       height="21"
-       x="102"
-       y="167.5"
-       ry="5.5124998"
-       rx="4.446825" />
-    <rect
-       rx="4.4549999"
-       ry="5.25"
-       y="167.99567"
-       x="222"
-       height="20"
-       width="99"
-       id="rect2632"
-       style="fill:#e6e6e6" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot2634"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       transform="translate(27,-36)"><flowRegion
-         id="flowRegion2636"><rect
-           id="rect2638"
-           width="184"
-           height="91"
-           x="93.5"
-           y="207.5"
-           style="font-size:11px" /></flowRegion><flowPara
-         id="flowPara2640"
-         style="fill:#ffffff">ASAMBLEA</flowPara></flowRoot>    <flowRoot
-       transform="translate(27,-36)"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       id="flowRoot2642"
-       xml:space="preserve"><flowRegion
-         id="flowRegion2644"><rect
-           style="font-size:11px"
-           y="207.5"
-           x="93.5"
-           height="91"
-           width="184"
-           id="rect2646" /></flowRegion><flowPara
-         style="fill:#ffffff"
-         id="flowPara2648">ASAMBLEA</flowPara></flowRoot>    <flowRoot
-       xml:space="preserve"
-       id="flowRoot2650"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       transform="translate(150,-35)"><flowRegion
-         id="flowRegion2652"><rect
-           id="rect2654"
-           width="184"
-           height="91"
-           x="93.5"
-           y="207.5"
-           style="font-size:11px" /></flowRegion><flowPara
-         id="flowPara2656"
-         style="fill:#ffffff">CONSEJO</flowPara></flowRoot>    <g
-       id="g2683">
+    <g
+       id="g3146"
+       transform="translate(0,2)">
+      <rect
+         rx="5.6568542"
+         ry="5.6568542"
+         y="166.32323"
+         x="101.78828"
+         height="19.353554"
+         width="98.423447"
+         id="rect3233"
+         style="fill:#333333;fill-opacity:1;fill-rule:nonzero;stroke:none" />
       <flowRoot
-         transform="matrix(0.9154355,0,0,1,-172.26363,88)"
+         transform="translate(185.41272,-137.47532)"
+         style="font-size:11px;font-style:normal;font-weight:normal;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         id="flowRoot3256"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3258"><rect
+             style="fill:#ffffff"
+             y="307.7655"
+             x="-73.950722"
+             height="27.840271"
+             width="129.63127"
+             id="rect3260" /></flowRegion><flowPara
+           style="font-size:8px"
+           id="flowPara3262">ACTAS DE CONSEJO</flowPara></flowRoot>    </g>
+    <g
+       id="g3198">
+      <flowRoot
+         transform="matrix(0.9154355,0,0,1,-172.26363,90)"
          style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
          id="flowRoot3002"
          xml:space="preserve"><flowRegion
@@ -740,7 +744,7 @@
              id="rect3006" /></flowRegion><flowPara
            style="font-size:16px;font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
            id="flowPara3008">Asamblea xx/xx/xx</flowPara></flowRoot>      <flowRoot
-         transform="matrix(0.9154355,0,0,1,-173.99348,-145.16639)"
+         transform="matrix(0.9154355,0,0,1,-173.99348,-139.16639)"
          style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
          id="flowRoot3020"
          xml:space="preserve"><flowRegion
@@ -754,7 +758,7 @@
            id="flowPara3042">En cuanto a la formación profesional, durante este ejercicio se continuaron profundizando los conocimientos sobre los productos Drupal CMS y SugarCRM, lo que nos permite asumir cada vez proyectos de mayor envergadura. También, asumimos que la formación interna continua es un modo de potenciar... <flowSpan
    style="font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
    id="flowSpan4121">Leer +</flowSpan></flowPara></flowRoot>      <flowRoot
-         transform="matrix(0.9154355,0,0,1,-171.58528,88)"
+         transform="matrix(0.9154355,0,0,1,-171.58528,94)"
          style="font-size:9px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
          id="flowRoot3052"
          xml:space="preserve"><flowRegion
@@ -766,121 +770,163 @@
              width="642"
              id="rect3056" /></flowRegion><flowPara
            style="fill:#b3b3b3"
-           id="flowPara3058">VER ACTA DE PRESENCIA </flowPara></flowRoot>      <rect
+           id="flowPara3058"><flowSpan
+             id="flowSpan3065"
+             style="fill:#00d455">VER ACTA DE PRESENCIA </flowSpan></flowPara></flowRoot>      <rect
          style="fill:#e6e6e6"
          id="rect2681"
          width="639"
          height="1.75"
          x="102"
-         y="321.75"
+         y="331.75"
          rx="0"
          ry="0.25" />
+      <rect
+         y="193.61682"
+         x="102.1188"
+         height="1"
+         width="639"
+         id="rect3174"
+         style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none" />
     </g>
     <g
-       id="g2699"
-       transform="translate(0,128)">
+       id="g3216"
+       transform="translate(0,138)">
       <flowRoot
          xml:space="preserve"
-         id="flowRoot2701"
+         id="flowRoot3218"
          style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         transform="matrix(0.9154355,0,0,1,-172.26363,88)"><flowRegion
-           id="flowRegion2703"><rect
-             id="rect2705"
+         transform="matrix(0.9154355,0,0,1,-172.26363,90)"><flowRegion
+           id="flowRegion3220"><rect
+             id="rect3222"
              width="642"
              height="30"
              x="300"
              y="119" /></flowRegion><flowPara
-           id="flowPara2707"
+           id="flowPara3224"
            style="font-size:16px;font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold">Asamblea xx/xx/xx</flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
-         id="flowRoot2709"
+         id="flowRoot3226"
          style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         transform="matrix(0.9154355,0,0,1,-173.99348,-145.16639)"><flowRegion
-           id="flowRegion2711"><rect
-             id="rect2713"
+         transform="matrix(0.9154355,0,0,1,-173.99348,-139.16639)"><flowRegion
+           id="flowRegion3228"><rect
+             id="rect3230"
              width="661.46777"
              height="384.16638"
              x="302"
              y="410" /></flowRegion><flowPara
-           id="flowPara2715"
+           id="flowPara3232"
            style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start">En cuanto a la formación profesional, durante este ejercicio se continuaron profundizando los conocimientos sobre los productos Drupal CMS y SugarCRM, lo que nos permite asumir cada vez proyectos de mayor envergadura. También, asumimos que la formación interna continua es un modo de potenciar... <flowSpan
-   id="flowSpan2717"
+   id="flowSpan3234"
    style="font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold">Leer +</flowSpan></flowPara></flowRoot>      <flowRoot
          xml:space="preserve"
-         id="flowRoot2719"
+         id="flowRoot3236"
          style="font-size:9px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         transform="matrix(0.9154355,0,0,1,-171.58528,88)"><flowRegion
-           id="flowRegion2721"><rect
-             id="rect2723"
+         transform="matrix(0.9154355,0,0,1,-171.58528,94)"><flowRegion
+           id="flowRegion3238"><rect
+             id="rect3240"
              width="642"
              height="32"
              x="299"
              y="147"
              style="font-size:9px" /></flowRegion><flowPara
-           id="flowPara2725"
-           style="fill:#b3b3b3">VER ACTA DE PRESENCIA </flowPara></flowRoot>      <rect
+           id="flowPara3242"
+           style="fill:#b3b3b3"><flowSpan
+             style="fill:#00d455"
+             id="flowSpan3244">VER ACTA DE PRESENCIA </flowSpan></flowPara></flowRoot>      <rect
          ry="0.25"
          rx="0"
-         y="321.75"
+         y="331.75"
          x="102"
          height="1.75"
          width="639"
-         id="rect2727"
+         id="rect3246"
          style="fill:#e6e6e6" />
+      <rect
+         style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="rect3248"
+         width="639"
+         height="1"
+         x="102.1188"
+         y="193.61682" />
     </g>
     <g
-       transform="translate(0,258)"
-       id="g2729">
+       transform="translate(0,276)"
+       id="g3250">
       <flowRoot
-         transform="matrix(0.9154355,0,0,1,-172.26363,88)"
+         transform="matrix(0.9154355,0,0,1,-172.26363,90)"
          style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot2731"
+         id="flowRoot3252"
          xml:space="preserve"><flowRegion
-           id="flowRegion2733"><rect
+           id="flowRegion3254"><rect
              y="119"
              x="300"
              height="30"
              width="642"
-             id="rect2735" /></flowRegion><flowPara
+             id="rect3256" /></flowRegion><flowPara
            style="font-size:16px;font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
-           id="flowPara2737">Asamblea xx/xx/xx</flowPara></flowRoot>      <flowRoot
-         transform="matrix(0.9154355,0,0,1,-173.99348,-145.16639)"
+           id="flowPara3258">Asamblea xx/xx/xx</flowPara></flowRoot>      <flowRoot
+         transform="matrix(0.9154355,0,0,1,-173.99348,-139.16639)"
          style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot2739"
+         id="flowRoot3260"
          xml:space="preserve"><flowRegion
-           id="flowRegion2741"><rect
+           id="flowRegion3262"><rect
              y="410"
              x="302"
              height="384.16638"
              width="661.46777"
-             id="rect2743" /></flowRegion><flowPara
+             id="rect3264" /></flowRegion><flowPara
            style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start"
-           id="flowPara2745">En cuanto a la formación profesional, durante este ejercicio se continuaron profundizando los conocimientos sobre los productos Drupal CMS y SugarCRM, lo que nos permite asumir cada vez proyectos de mayor envergadura. También, asumimos que la formación interna continua es un modo de potenciar... <flowSpan
+           id="flowPara3266">En cuanto a la formación profesional, durante este ejercicio se continuaron profundizando los conocimientos sobre los productos Drupal CMS y SugarCRM, lo que nos permite asumir cada vez proyectos de mayor envergadura. También, asumimos que la formación interna continua es un modo de potenciar... <flowSpan
    style="font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
-   id="flowSpan2747">Leer +</flowSpan></flowPara></flowRoot>      <flowRoot
-         transform="matrix(0.9154355,0,0,1,-171.58528,88)"
+   id="flowSpan3268">Leer +</flowSpan></flowPara></flowRoot>      <flowRoot
+         transform="matrix(0.9154355,0,0,1,-171.58528,94)"
          style="font-size:9px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot2749"
+         id="flowRoot3270"
          xml:space="preserve"><flowRegion
-           id="flowRegion2751"><rect
+           id="flowRegion3272"><rect
              style="font-size:9px"
              y="147"
              x="299"
              height="32"
              width="642"
-             id="rect2753" /></flowRegion><flowPara
+             id="rect3274" /></flowRegion><flowPara
            style="fill:#b3b3b3"
-           id="flowPara2755">VER ACTA DE PRESENCIA </flowPara></flowRoot>      <rect
+           id="flowPara3276"><flowSpan
+             id="flowSpan3278"
+             style="fill:#00d455">VER ACTA DE PRESENCIA </flowSpan></flowPara></flowRoot>      <rect
          style="fill:#e6e6e6"
-         id="rect2757"
+         id="rect3280"
          width="639"
          height="1.75"
          x="102"
-         y="321.75"
+         y="331.75"
          rx="0"
          ry="0.25" />
+      <rect
+         y="193.61682"
+         x="102.1188"
+         height="1"
+         width="639"
+         id="rect3282"
+         style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none" />
     </g>
-  </g>
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot4921"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Bitstream Vera Sans"
+       transform="matrix(0.9154355,0,0,1,-192.33638,58.817698)"><flowRegion
+         id="flowRegion4923"><rect
+           id="rect4925"
+           width="444.91208"
+           height="41"
+           x="474"
+           y="589" /></flowRegion><flowPara
+         id="flowPara4927"><flowSpan
+   style="font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
+   id="flowSpan4929">primera&lt;&lt;  anterior &lt; 1</flowSpan> 2 3 4 5 6 7 8 9 10 <flowSpan
+   style="font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
+   id="flowSpan5860">&gt;siguiente &gt;&gt;última</flowSpan></flowPara></flowRoot>  </g>
   <g
      inkscape:groupmode="layer"
      id="layer9"
@@ -895,14 +941,15 @@
      inkscape:label="cabezalito">
     <g
        id="g5529"
-       transform="matrix(1.1338648,0,0,1,-69.628499,0)">
+       transform="matrix(1.1332616,0,0,1,-69.069346,0)"
+       style="fill:#1a1a1a">
       <rect
          y="-1.3720825e-13"
          x="98.072853"
          height="35"
          width="828.92712"
          id="rect5732"
-         style="fill:#4d4d4d;fill-opacity:1;stroke:none" />
+         style="fill:#1a1a1a;fill-opacity:1;stroke:none" />
     </g>
     <flowRoot
        xml:space="preserve"
@@ -1009,31 +1056,73 @@
            y="169"
            style="font-size:10px" /></flowRegion><flowPara
          style="font-size:13px;font-weight:bold;fill:#1a1a1a;-inkscape-font-specification:Bitstream Charter Bold"
-         id="flowPara3863">Hola, Soledad!</flowPara></flowRoot>    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect4062"
-       width="159"
-       height="18"
-       x="762"
-       y="54" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot4189"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       transform="translate(42,8)"><flowRegion
-         id="flowRegion4191"><rect
-           id="rect4193"
-           width="89"
-           height="20"
-           x="725"
-           y="47" /></flowRegion><flowPara
-         id="flowPara4195">Buscar</flowPara></flowRoot>    <image
-       y="55.778488"
-       x="899.36627"
-       id="image2845"
-       height="14.5"
-       width="15"
-       sodipodi:absref="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/lupa.png"
-       xlink:href="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/lupa.png" />
+         id="flowPara3863">Hola, Soledad!</flowPara></flowRoot>    <g
+       transform="translate(0.638889,-4.196819)"
+       style="display:inline"
+       id="g3118">
+      <rect
+         y="54"
+         x="762"
+         height="18"
+         width="159"
+         id="rect4062"
+         style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+      <flowRoot
+         transform="translate(42,10)"
+         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         id="flowRoot4189"
+         xml:space="preserve"><flowRegion
+           id="flowRegion4191"><rect
+             y="47"
+             x="725"
+             height="20"
+             width="89"
+             id="rect4193" /></flowRegion><flowPara
+           id="flowPara4195">Buscar</flowPara></flowRoot>      <image
+         y="56.521557"
+         x="896.99225"
+         id="image2893"
+         height="14.759362"
+         width="14.579177"
+         xlink:href="/var/www/gestioncooperativa/trunk/gcoop_doc/disenio/lupa.png"
+         sodipodi:absref="/var/www/gestioncooperativa/trunk/gcoop_doc/disenio/lupa.png" />
+    </g>
+    <g
+       transform="translate(0.10054,1.1575918)"
+       id="g3043">
+      <image
+         y="9.3485041"
+         x="866.07281"
+         id="image3350-8-0"
+         height="11.493904"
+         width="14.826642"
+         xlink:href="file:///home/jalinski/Escritorio/pic696.png" />
+      <image
+         y="9.7445021"
+         x="908.22345"
+         id="image12-7-0"
+         height="12.75"
+         width="13.25"
+         xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/cerrar_sesion.png" />
+      <image
+         y="8.7822685"
+         x="837.76654"
+         id="image12-6-4"
+         height="11.75"
+         width="10.75"
+         xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/perfil.png" />
+      <flowRoot
+         transform="translate(52.609194,37.197696)"
+         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         id="flowRoot3664"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3666"><rect
+             y="-27.439236"
+             x="831.4278"
+             height="16.302505"
+             width="19.686045"
+             id="rect3668" /></flowRegion><flowPara
+           style="font-size:8px;fill:#ffffff"
+           id="flowPara3670">(2)</flowPara></flowRoot>    </g>
   </g>
 </svg>

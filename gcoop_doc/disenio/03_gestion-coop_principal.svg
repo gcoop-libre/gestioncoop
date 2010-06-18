@@ -280,6 +280,13 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective4563"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -289,12 +296,12 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1"
-     inkscape:cx="587.35226"
-     inkscape:cy="741.73684"
+     inkscape:cx="178.39931"
+     inkscape:cy="626.40628"
      inkscape:current-layer="g3293"
      inkscape:document-units="px"
      showgrid="false"
-     showguides="false"
+     showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1280"
      inkscape:window-height="725"
@@ -870,91 +877,6 @@
              y="525" /></flowRegion><flowPara
            id="flowPara3487">Desconectar</flowPara></flowRoot>    </g>
     <g
-       id="g3273"
-       transform="translate(-922.475,5.978201)">
-      <flowRoot
-         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot3551"
-         xml:space="preserve"><flowRegion
-           id="flowRegion3553"><rect
-             y="205"
-             x="763"
-             height="154"
-             width="157"
-             id="rect3555" /></flowRegion><flowPara
-           style="font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
-           id="flowPara3557">Acá se publica una pregunta que nos interesa que los socios contesten</flowPara></flowRoot>      <flowRoot
-         transform="translate(16,2)"
-         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot3559"
-         xml:space="preserve"><flowRegion
-           id="flowRegion3561"><rect
-             y="278"
-             x="761"
-             height="205"
-             width="159"
-             id="rect3563" /></flowRegion><flowPara
-           id="flowPara3565">Respuesta posible uno bla</flowPara><flowPara
-           id="flowPara3587">blablablablabla.</flowPara><flowPara
-           id="flowPara3567" /><flowPara
-           id="flowPara3569">Respuesta posible dos.</flowPara><flowPara
-           id="flowPara3571" /><flowPara
-           id="flowPara3573">Respuesta posible tres blabla blablabla blablabla.</flowPara></flowRoot>      <path
-         transform="matrix(0.72628125,0,0,0.74746186,208.57369,73.645069)"
-         d="m 777.5,286.5 c 0,3.86599 -3.46979,7 -7.75,7 -4.28021,0 -7.75,-3.13401 -7.75,-7 0,-3.86599 3.46979,-7 7.75,-7 4.28021,0 7.75,3.13401 7.75,7 z"
-         sodipodi:ry="7"
-         sodipodi:rx="7.75"
-         sodipodi:cy="286.5"
-         sodipodi:cx="769.75"
-         id="path3581"
-         style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         sodipodi:type="arc" />
-      <path
-         sodipodi:type="arc"
-         style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="path3589"
-         sodipodi:cx="769.75"
-         sodipodi:cy="286.5"
-         sodipodi:rx="7.75"
-         sodipodi:ry="7"
-         d="m 777.5,286.5 c 0,3.86599 -3.46979,7 -7.75,7 -4.28021,0 -7.75,-3.13401 -7.75,-7 0,-3.86599 3.46979,-7 7.75,-7 4.28021,0 7.75,3.13401 7.75,7 z"
-         transform="matrix(0.72628125,0,0,0.74746186,208.57369,113.64507)" />
-      <path
-         transform="matrix(0.72628125,0,0,0.74746186,208.57369,141.64507)"
-         d="m 777.5,286.5 c 0,3.86599 -3.46979,7 -7.75,7 -4.28021,0 -7.75,-3.13401 -7.75,-7 0,-3.86599 3.46979,-7 7.75,-7 4.28021,0 7.75,3.13401 7.75,7 z"
-         sodipodi:ry="7"
-         sodipodi:rx="7.75"
-         sodipodi:cy="286.5"
-         sodipodi:cx="769.75"
-         id="path3591"
-         style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         sodipodi:type="arc" />
-      <flowRoot
-         transform="translate(714,-119.9452)"
-         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot3527"
-         xml:space="preserve"><flowRegion
-           id="flowRegion3529"><rect
-             y="274"
-             x="48"
-             height="33.945198"
-             width="220.17133"
-             id="rect3531" /></flowRegion><flowPara
-           style="fill:#cccccc"
-           id="flowPara3533">///////////////////////////////////////////</flowPara></flowRoot>      <flowRoot
-         transform="translate(0,-8)"
-         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot3535"
-         xml:space="preserve"><flowRegion
-           id="flowRegion3537"><rect
-             y="183"
-             x="763"
-             height="72"
-             width="160"
-             id="rect3539" /></flowRegion><flowPara
-           style="font-size:13px;font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
-           id="flowPara3541">ENCUESTA</flowPara></flowRoot>    </g>
-    <g
        id="g3617"
        transform="translate(-180,1)">
       <rect
@@ -1411,11 +1333,11 @@
        y="5.25"
        x="102"
        height="24.75"
-       width="37.597973"
+       width="39.067799"
        id="rect5536"
        style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:0;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.00400002;stroke-dasharray:none" />
     <flowRoot
-       transform="translate(-98.47803,-94.75)"
+       transform="translate(-98.47803,-96.75)"
        style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
        id="flowRoot5540"
        xml:space="preserve"><flowRegion
@@ -1467,43 +1389,45 @@
            height="20"
            x="725"
            y="47" /></flowRegion><flowPara
-         id="flowPara4195">Buscar</flowPara></flowRoot>    <g
-       id="g3377">
-      <image
-         y="12.506096"
-         x="839"
-         id="image3350"
-         height="11.493904"
-         width="14.826642"
-         xlink:href="file:///home/jalinski/Escritorio/pic696.png" />
-      <image
-         y="11"
-         x="885"
-         id="image12"
-         height="13"
-         width="12.500025"
-         xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/001_44.png" />
-      <image
-         y="11.833147"
-         x="907"
-         id="image12-7"
-         height="12.75"
-         width="13.25"
-         xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/cerrar_sesion.png" />
-      <image
-         y="11.250018"
-         x="862"
-         id="image12-0"
-         height="14.5"
-         width="14.5"
-         xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/001_50.png" />
-      <image
-         y="12.25"
-         x="821"
-         id="image12-6"
-         height="11.75"
-         width="10.75"
-         xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/perfil.png" />
-    </g>
-  </g>
+         id="flowPara4195">Buscar</flowPara></flowRoot>    <image
+       xlink:href="file:///home/jalinski/Escritorio/pic696.png"
+       width="14.826642"
+       height="11.493904"
+       id="image3350-8"
+       x="837.34937"
+       y="11.437149" />
+    <image
+       xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/001_44.png"
+       width="12.500025"
+       height="13"
+       id="image12-5"
+       x="871.40625"
+       y="9.96875" />
+    <image
+       xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/cerrar_sesion.png"
+       width="13.25"
+       height="12.75"
+       id="image12-7"
+       x="903.5"
+       y="9.833147" />
+    <image
+       xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/perfil.png"
+       width="10.75"
+       height="11.75"
+       id="image12-6"
+       x="813.04309"
+       y="10.870914" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3664"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(21.885692,39.286342)"><flowRegion
+         id="flowRegion3666"><rect
+           id="rect3668"
+           width="19.686045"
+           height="16.302505"
+           x="831.4278"
+           y="-27.439236" /></flowRegion><flowPara
+         id="flowPara3670"
+         style="font-size:8px;fill:#ffffff">(2)</flowPara></flowRoot>  </g>
 </svg>
