@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
+
 <svg
    xmlns:dc="http://purl.org/dc/elements/1.1/"
    xmlns:cc="http://creativecommons.org/ns#"
@@ -13,7 +14,7 @@
    height="768px"
    id="svg2816"
    version="1.1"
-   inkscape:version="0.46"
+   inkscape:version="0.47pre4 r22446"
    sodipodi:docname="04_gestion-coop_mensajes_abierto.svg"
    sodipodi:version="0.32"
    inkscape:output_extension="org.inkscape.output.svg.inkscape">
@@ -267,16 +268,6 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 0.5 : 1"
        sodipodi:type="inkscape:persp3d" />
-    <linearGradient
-       inkscape:collect="always"
-       xlink:href="#linearGradient3805"
-       id="linearGradient3356"
-       gradientUnits="userSpaceOnUse"
-       gradientTransform="matrix(1.0101774,0,0,1,-0.4281919,-2)"
-       x1="462"
-       y1="-1"
-       x2="462"
-       y2="98" />
     <inkscape:perspective
        id="perspective2826-6"
        inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
@@ -460,6 +451,48 @@
        inkscape:vp_y="0 : 1000 : 0"
        inkscape:vp_x="0 : 526.18109 : 1"
        sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective5030"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3096"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3178"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3263"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3337"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
+    <inkscape:perspective
+       id="perspective3193"
+       inkscape:persp3d-origin="0.5 : 0.33333333 : 1"
+       inkscape:vp_z="1 : 0.5 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_x="0 : 0.5 : 1"
+       sodipodi:type="inkscape:persp3d" />
   </defs>
   <sodipodi:namedview
      id="base"
@@ -468,16 +501,16 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="0.8127585"
-     inkscape:cx="625.75498"
-     inkscape:cy="364.30513"
-     inkscape:current-layer="layer1"
+     inkscape:zoom="1.1494141"
+     inkscape:cx="465.3736"
+     inkscape:cy="630.25147"
+     inkscape:current-layer="layer2"
      inkscape:document-units="px"
      showgrid="false"
-     showguides="true"
+     showguides="false"
      inkscape:guide-bbox="true"
      inkscape:window-width="1280"
-     inkscape:window-height="949"
+     inkscape:window-height="725"
      inkscape:window-x="0"
      inkscape:window-y="25"
      inkscape:window-maximized="1"
@@ -504,10 +537,6 @@
        orientation="1,0"
        position="141.0678,782.41365"
        id="guide3670" />
-    <sodipodi:guide
-       orientation="1,0"
-       position="321,811"
-       id="guide3672" />
     <sodipodi:guide
        orientation="0,1"
        position="266,338"
@@ -650,8 +679,8 @@
        id="guide4238" />
     <sodipodi:guide
        orientation="0,1"
-       position="137.67884,599.00083"
-       id="guide4446" />
+       position="450.31827,698.85458"
+       id="guide3224" />
   </sodipodi:namedview>
   <metadata
      id="metadata2821">
@@ -682,13 +711,6 @@
        width="940"
        xlink:href="/home/jalinski/inkscape_pasted_image_20100609_173422.png"
        style="fill:#ff0000" />
-    <rect
-       style="font-size:11px;fill:url(#linearGradient3356);fill-opacity:1"
-       id="rect2875"
-       width="939.39136"
-       height="766"
-       x="42.072853"
-       y="-1.0000004" />
     <flowRoot
        xml:space="preserve"
        id="flowRoot5322"
@@ -720,30 +742,7 @@
            height="122"
            x="101"
            y="525" /></flowRegion><flowPara
-         id="flowPara5556" /></flowRoot>    <g
-       id="g3065"
-       transform="translate(0,30)">
-      <rect
-         y="707"
-         x="42.072853"
-         height="5"
-         width="939.39136"
-         id="rect5548"
-         style="fill:#4d4d4d;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:0;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.00400002;stroke-dasharray:none" />
-      <flowRoot
-         transform="translate(-57.912726,188)"
-         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot5558"
-         xml:space="preserve"><flowRegion
-           id="flowRegion5560"><rect
-             y="536"
-             x="100"
-             height="141"
-             width="341"
-             id="rect5562" /></flowRegion><flowPara
-           style="font-size:8px"
-           id="flowPara5564">SISTEMA DE GESTIÓN COOPERATIVA</flowPara></flowRoot>    </g>
-    <flowRoot
+         id="flowPara5556" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot4181"
        style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:11"><flowRegion
@@ -783,32 +782,6 @@
          id="tspan3036"
          x="386"
          y="247" /></text>
-    <g
-       transform="translate(-179.89063,0.2089319)"
-       id="g3617">
-      <rect
-         style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none"
-         id="rect3455"
-         width="639"
-         height="25"
-         x="282"
-         y="97"
-         ry="7.4246211"
-         rx="7.4246211" />
-      <flowRoot
-         transform="translate(12,2)"
-         style="font-size:11px;font-style:normal;font-weight:normal;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot3601"
-         xml:space="preserve"><flowRegion
-           id="flowRegion3603"><rect
-             style="fill:#ffffff"
-             y="99"
-             x="289"
-             height="18"
-             width="619"
-             id="rect3605" /></flowRegion><flowPara
-           style="font-size:12px"
-           id="flowPara3607">Inicio    |    Actas     |     Novedades     |     Actividades     |     Foro </flowPara></flowRoot>    </g>
     <image
        xlink:href="file:///home/jalinski/Escritorio/gcoop/gestion%20coop/perfil.png"
        width="24"
@@ -816,332 +789,196 @@
        id="image12-8"
        x="432"
        y="9" />
-    <rect
-       y="187.20204"
-       x="761.83435"
-       height="159.03798"
-       width="219.84991"
-       id="rect3405"
-       style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none" />
-    <rect
-       y="157.70204"
-       x="762.06909"
-       height="22.037971"
-       width="220.53798"
-       id="rect3407"
-       style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none" />
-    <flowRoot
-       transform="translate(721.60705,-315.25998)"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       id="flowRoot3417"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3419"><rect
-           y="529.70502"
-           x="92.630989"
-           height="23.334524"
-           width="158.39192"
-           id="rect3421" /></flowRegion><flowPara
-         style="font-size:9px"
-         id="flowPara3423">Usuario conectado 1</flowPara></flowRoot>    <flowRoot
-       xml:space="preserve"
-       id="flowRoot3425"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       transform="translate(721.60705,-279.25998)"><flowRegion
-         id="flowRegion3427"><rect
-           id="rect3429"
-           width="158.39192"
-           height="23.334524"
-           x="92.630989"
-           y="529.70502" /></flowRegion><flowPara
-         id="flowPara3431"
-         style="font-size:9px">Usuario conectado 2</flowPara></flowRoot>    <flowRoot
-       transform="translate(721.60705,-245.25998)"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       id="flowRoot3433"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3435"><rect
-           y="529.70502"
-           x="92.630989"
-           height="23.334524"
-           width="158.39192"
-           id="rect3437" /></flowRegion><flowPara
-         style="font-size:9px"
-         id="flowPara3439">Usuario conectado 3</flowPara></flowRoot>    <flowRoot
-       xml:space="preserve"
-       id="flowRoot3441"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       transform="translate(721.60705,-207.25998)"><flowRegion
-         id="flowRegion3443"><rect
-           id="rect3445"
-           width="158.39192"
-           height="23.334524"
-           x="92.630989"
-           y="529.70502" /></flowRegion><flowPara
-         id="flowPara3447"
-         style="font-size:9px">Usuario desconectado 1</flowPara></flowRoot>    <flowRoot
-       transform="translate(854.10705,-363.25998)"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       id="flowRoot3481"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3483"><rect
-           y="525"
-           x="47"
-           height="15"
-           width="81"
-           id="rect3485" /></flowRegion><flowPara
-         id="flowPara3487">Desconectar</flowPara></flowRoot>    <g
-       id="g3407"
-       transform="translate(-2,0)">
-      <flowRoot
-         transform="matrix(0.9154355,0,0,1,-171.26363,116.84889)"
-         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot3002"
-         xml:space="preserve"><flowRegion
-           id="flowRegion3004"><rect
-             y="119"
-             x="300"
-             height="30"
-             width="642"
-             id="rect3006" /></flowRegion><flowPara
-           style="font-size:16px;font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
-           id="flowPara3008">Asunto del mensaje</flowPara></flowRoot>      <flowRoot
-         transform="matrix(0.9154355,0,0,1,-172.99348,-151.3175)"
-         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot3020"
-         xml:space="preserve"><flowRegion
-           id="flowRegion3022"><rect
-             y="410"
-             x="302"
-             height="256.89792"
-             width="696.26697"
-             id="rect3024" /></flowRegion><flowPara
-           style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start"
-           id="flowPara3042">gcoop es una empresa de desarrollo e implementación Software Libre constituida como cooperativa de trabajo. Nuestra gcoop es una empresa de desarrollo e implementación Software Libre constituida como cooperativa de trabajo. Nuestra forma de organización potencia el trabajo colaborativo y mejora los procesos de desarrollo. Este emprendimiento está sustentando en la construcción de una empresa democrática, preocupada por el desarrollo de la comunidad en la que está inserta.gcoop brinda soluciones informáticas ofreciendo desarrollos a medida, consultoría, soporte, migración y auditorías de sistemas.  gcoop es una empresa de desarrollo e implementación Software Libre constituida como cooperativa de trabajo. Nuestra forma de organización potencia el trabajo colaborativo y mejora los procesos de desarrollo. Este emprendimiento está sustentando en la construcción de una empresa democrática, preocupada por el desarrollo de la comunidad en la que está inserta.</flowPara><flowPara
-           id="flowPara2628"
-           style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start">gcoop brinda soluciones informáticas ofreciendo desarrollos a medida, consultoría, soporte, migración y auditorías de sistemas.</flowPara><flowPara
-           id="flowPara2622"
-           style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start" /><flowPara
-           id="flowPara2624"
-           style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start" /></flowRoot>      <flowRoot
-         transform="matrix(0.9154355,0,0,1,-170.2603,68.348465)"
-         style="font-size:9px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot3052"
-         xml:space="preserve"><flowRegion
-           id="flowRegion3054"><rect
-             style="font-size:9px"
-             y="147"
-             x="299"
-             height="32"
-             width="642"
-             id="rect3056" /></flowRegion><flowPara
-           id="flowPara3058">MENSAJE RECIBIDO EL 30/05/2010 A LAS 10:34</flowPara></flowRoot>    </g>
-    <rect
-       style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect3422"
-       width="639"
-       height="1"
-       x="102"
-       y="193" />
-    <rect
-       y="429"
-       x="102"
-       height="1"
-       width="639"
-       id="rect3350"
-       style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none" />
-    <rect
-       style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect3237"
-       width="98.423447"
-       height="19.353554"
-       x="222"
-       y="169"
-       ry="5.6568542"
-       rx="5.6568542" />
     <flowRoot
        xml:space="preserve"
-       id="flowRoot3248"
+       id="flowRoot3020"
        style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       transform="translate(330.92438,-97.440951)"><flowRegion
-         id="flowRegion3250"><rect
-           id="rect3252"
-           width="138.33134"
-           height="28.710279"
-           x="-67.860664"
-           y="268.61511" /></flowRegion><flowPara
-         id="flowPara3254">ELIMINAR</flowPara></flowRoot>    <g
-       id="g3611">
-      <rect
-         rx="5.6568542"
-         ry="5.6568542"
-         y="169"
-         x="102"
-         height="19.353554"
-         width="98.423447"
-         id="rect3233"
-         style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none" />
-      <flowRoot
-         transform="translate(225.93203,-135.72133)"
-         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-         id="flowRoot3256"
-         xml:space="preserve"><flowRegion
-           id="flowRegion3258"><rect
-             y="307.7655"
-             x="-73.950722"
-             height="27.840271"
-             width="129.63127"
-             id="rect3260" /></flowRegion><flowPara
-           id="flowPara3262">VOLVER</flowPara></flowRoot>    </g>
-    <flowRoot
-       transform="matrix(0.9154355,0,0,1,-173.26363,350.84889)"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       id="flowRoot3426"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3428"><rect
-           y="119"
-           x="300"
-           height="30"
-           width="642"
-           id="rect3430" /></flowRegion><flowPara
-         style="font-size:16px;font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
-         id="flowPara3432">Re: Asunto del mensaje</flowPara></flowRoot>    <flowRoot
-       transform="matrix(0.9154355,0,0,1,-174.99348,82.6825)"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       id="flowRoot3434"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3436"><rect
-           y="410"
+       transform="matrix(0.9154355,0,0,1,-234.99348,-61.3175)"><flowRegion
+         id="flowRegion3022"><rect
+           id="rect3024"
+           width="763.46875"
+           height="251.97641"
            x="302"
-           height="256.89792"
-           width="696.26697"
-           id="rect3438" /></flowRegion><flowPara
-         id="flowPara3442"
-         style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start">gcoop es una empresa de desarrollo e implementación Software Libre constituida como cooperativa de trabajo. Nuestra gcoop es una empresa de desarrollo e implementación Software Libre constituida como cooperativa de trabajo. Nuestra forma de organización potencia el trabajo colaborativo y mejora los procesos de desarrollo. Este emprendimiento está. </flowPara><flowPara
-         id="flowPara3444"
-         style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start" /><flowPara
-         id="flowPara3446"
-         style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start" /></flowRoot>    <flowRoot
-       transform="matrix(0.9154355,0,0,1,-172.2603,302.34847)"
-       style="font-size:9px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       id="flowRoot3448"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3450"><rect
-           style="font-size:9px"
-           y="147"
-           x="299"
-           height="32"
-           width="642"
-           id="rect3452" /></flowRegion><flowPara
-         id="flowPara3454">MENSAJE ENVIADO EL 30/05/2010 A LAS 12:56</flowPara></flowRoot>    <rect
-       style="fill:#cccccc;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect3473"
-       width="639"
-       height="1"
-       x="102"
-       y="553" />
-    <rect
-       style="fill:#ececec;stroke:none"
-       id="rect3475"
-       width="638.56616"
-       height="103.35175"
-       x="102.73654"
-       y="596.68134" />
-    <image
-       y="157.11235"
-       x="226.84517"
-       id="image3549"
-       height="24"
-       width="24"
-       sodipodi:absref="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/eliminar.png"
-       xlink:href="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/eliminar.png" />
-    <image
-       y="157.42122"
-       x="108.11629"
-       id="image3599"
-       height="24"
-       width="24"
-       sodipodi:absref="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/volver.png"
-       xlink:href="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/volver.png" />
-    <flowRoot
-       xml:space="preserve"
-       id="flowRoot3603"
-       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1;font-family:Bitstream Vera Sans"
-       transform="translate(28.913878,-114.42513)"><flowRegion
-         id="flowRegion3605"><rect
-           id="rect3607"
-           width="69.516342"
-           height="15.379716"
-           x="73.207481"
-           y="686.17987" /></flowRegion><flowPara
-         id="flowPara3609"
-         style="font-size:11px;font-weight:bold">Responder</flowPara></flowRoot>    <rect
-       rx="5.6568542"
-       ry="5.6568542"
-       y="713.44214"
-       x="102.61519"
-       height="19.353554"
-       width="98.423447"
-       id="rect3620"
-       style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none" />
-    <flowRoot
-       transform="translate(206.54722,408.72083)"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       id="flowRoot3622"
-       xml:space="preserve"><flowRegion
-         id="flowRegion3624"><rect
-           y="307.7655"
-           x="-73.950722"
-           height="27.840271"
-           width="129.63127"
-           id="rect3626" /></flowRegion><flowPara
-         id="flowPara3628">ENVIAR</flowPara></flowRoot>    <image
-       y="197.97934"
-       x="767.13037"
-       id="image3721"
-       height="30.855745"
-       width="33.546879"
-       sodipodi:absref="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/inkscape_pasted_image_20100614_115233.png"
-       xlink:href="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/inkscape_pasted_image_20100614_115233.png" />
-    <image
-       y="231.67555"
-       x="767.36328"
-       id="image3771"
-       height="31.463301"
-       width="33.3899"
-       sodipodi:absref="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/inkscape_pasted_image_20100614_115329.png"
-       xlink:href="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/inkscape_pasted_image_20100614_115329.png" />
-    <image
-       y="266.28564"
-       x="767.36322"
-       id="image3940"
-       height="30.85829"
-       width="33.3899"
-       sodipodi:absref="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/inkscape_pasted_image_20100614_115446.png"
-       xlink:href="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/inkscape_pasted_image_20100614_115446.png" />
-    <image
-       xlink:href="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/inkscape_pasted_image_20100614_115446.png"
-       sodipodi:absref="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/inkscape_pasted_image_20100614_115446.png"
-       width="33.3899"
-       height="30.85829"
-       id="image3944"
-       x="767.36322"
-       y="302.28564" />
+           y="410" /></flowRegion><flowPara
+         style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#333333"
+         id="flowPara2628" /><flowPara
+         style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#333333"
+         id="flowPara2622" /><flowPara
+         style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start"
+         id="flowPara2624" /></flowRoot>    <g
+       transform="translate(-1.2010078,-0.84131212)"
+       style="display:inline"
+       id="g4224">
+      <g
+         style="fill:#000000"
+         transform="matrix(1.1332617,0,0,2.0142857,-68.569342,1.4999998)"
+         id="g5529-1">
+        <rect
+           style="fill:#000000;fill-opacity:1;stroke:none"
+           id="rect5732-5"
+           width="828.92712"
+           height="35"
+           x="98.072853"
+           y="-1.3720825e-13" />
+      </g>
+      <g
+         id="g4191">
+        <rect
+           rx="7.4246211"
+           ry="7.4246211"
+           y="98.708931"
+           x="43.609367"
+           height="25"
+           width="698"
+           id="rect3455-9"
+           style="fill:#000000;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot3601-6"
+           style="font-size:11px;font-style:normal;font-weight:normal;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           transform="translate(-207.39063,3.7089317)"><flowRegion
+             id="flowRegion3603-3"><rect
+               id="rect3605-8"
+               width="619"
+               height="18"
+               x="289"
+               y="99"
+               style="fill:#ffffff" /></flowRegion><flowPara
+             id="flowPara3607-5"
+             style="font-size:12px">Inicio    |    Actividades  |     Novedades     |     Actas     |     <flowSpan
+   style="fill:#000000;fill-opacity:0"
+   id="flowSpan3955"><flowSpan
+     style="fill:#0f0000;fill-opacity:0"
+     id="flowSpan3957"><flowSpan
+       style="fill:#0fb000;fill-opacity:0"
+       id="flowSpan3959"><flowSpan
+         style="fill:#0fbd00;fill-opacity:0"
+         id="flowSpan3961"><flowSpan
+           style="fill:#0fbdb0;fill-opacity:0"
+           id="flowSpan3963"><flowSpan
+             style="fill:#0fbdb3;fill-opacity:0"
+             id="flowSpan3965"><flowSpan
+               style="fill:#0fbdb3;fill-opacity:0.94117647"
+               id="flowSpan3967"><flowSpan
+                 style="fill:#0fbdb3;fill-opacity:1"
+                 id="flowSpan3969"><flowSpan
+                   style="font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
+                   id="flowSpan3971"><flowSpan
+                     style="font-weight:normal;-inkscape-font-specification:Bitstream Charter"
+                     id="flowSpan3224"><flowSpan
+                       style="fill:#ffffff"
+                       id="flowSpan3226">Foro     </flowSpan></flowSpan></flowSpan></flowSpan></flowSpan></flowSpan></flowSpan></flowSpan></flowSpan></flowSpan></flowSpan></flowPara></flowRoot>        <flowRoot
+           xml:space="preserve"
+           id="flowRoot2946-9"
+           style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;display:inline;font-family:Bitstream Vera Sans"
+           transform="translate(73.30664,-149.3068)"><flowRegion
+             id="flowRegion2948-8"><rect
+               id="rect2950-4"
+               width="384.8511"
+               height="45"
+               x="42"
+               y="169"
+               style="font-size:10px" /></flowRegion><flowPara
+             style="font-size:14px;font-weight:normal;fill:#ffffff;-inkscape-font-specification:Bitstream Charter"
+             id="flowPara3863-8">Cooperativa de Trabajo gcoop</flowPara><flowPara
+             style="font-size:14px;font-weight:normal;fill:#ffffff;-inkscape-font-specification:Bitstream Charter"
+             id="flowPara3836-1">¡Hola, Soledad!</flowPara></flowRoot>        <image
+           style="display:inline"
+           y="16"
+           x="56"
+           id="image3699-0"
+           height="44"
+           width="48"
+           xlink:href="file:///var/www/gestioncooperativa/trunk/gcoop_doc/disenio/gcoop.png" />
+        <g
+           style="display:inline"
+           id="g4153"
+           transform="translate(-39.5,1.4999998)">
+          <flowRoot
+             xml:space="preserve"
+             id="flowRoot5540-3"
+             style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+             transform="translate(551.52197,-95.75)"><flowRegion
+               id="flowRegion5542-0"><rect
+                 id="rect5544-4"
+                 width="276"
+                 height="53"
+                 x="259"
+                 y="106" /></flowRegion><flowPara
+               id="flowPara5546-4"
+               style="font-size:8px;fill:#ffffff">SISTEMA DE GESTIÓN COOPERATIVA</flowPara></flowRoot>          <image
+             xlink:href="file:///var/www/gestioncooperativa/trunk/gcoop_doc/disenio/flagica.png"
+             width="15"
+             height="12"
+             id="image3775-4"
+             x="784"
+             y="9" />
+        </g>
+        <rect
+           style="fill:#999999;fill-opacity:1;fill-rule:nonzero;stroke:none;display:inline"
+           id="rect3838-4"
+           width="214"
+           height="1"
+           x="743.5"
+           y="35.499996" />
+        <g
+           id="g3784-7"
+           transform="translate(60.5,46.5)">
+          <rect
+             y="53.670059"
+             x="762.26257"
+             height="22.306322"
+             width="159"
+             id="rect3214-6"
+             style="fill:#ffffff;stroke:#483737;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+          <flowRoot
+             transform="translate(44.37001,11.67181)"
+             style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+             id="flowRoot3216-3"
+             xml:space="preserve"><flowRegion
+               id="flowRegion3218-1"><rect
+                 y="47"
+                 x="725"
+                 height="14.770894"
+                 width="126.21893"
+                 id="rect3220-7" /></flowRegion><flowPara
+               id="flowPara3222-5"
+               style="font-size:10px;fill:#1a1a1a">Buscar</flowPara></flowRoot>          <rect
+             style="fill:#1a1a1a;stroke:none"
+             id="rect3212-9"
+             width="0.10875103"
+             height="22.293968"
+             x="898.67834"
+             y="53.635323" />
+          <image
+             y="58.668739"
+             x="903.40253"
+             id="image3210-6"
+             height="13.994903"
+             width="13.994903"
+             xlink:href="file:///var/www/gestioncooperativa/trunk/gcoop_doc/disenio/lupa.png" />
+        </g>
+        <flowRoot
+           xml:space="preserve"
+           id="flowRoot3816-2"
+           style="font-size:11px;font-style:normal;font-weight:normal;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+           transform="translate(284.5,-5.5000002)"><flowRegion
+             id="flowRegion3818-1"><rect
+               id="rect3820-7"
+               width="475"
+               height="15"
+               x="459"
+               y="52"
+               style="fill:#ffffff" /></flowRegion><flowPara
+             id="flowPara3822-8">Perfil  |  <flowSpan
+   style="font-weight:bold;-inkscape-font-specification:Bitstream Charter Bold"
+   id="flowSpan3228">Correo (01)</flowSpan>  |  Cerrar Sesión </flowPara></flowRoot>      </g>
+    </g>
   </g>
   <g
      inkscape:groupmode="layer"
      id="layer4"
      inkscape:label="cabezalito">
-    <g
-       id="g5529"
-       transform="matrix(1.1332617,0,0,1,-69.069342,0)">
-      <rect
-         y="-1.3720825e-13"
-         x="98.072853"
-         height="35"
-         width="828.92712"
-         id="rect5732"
-         style="fill:#4d4d4d;fill-opacity:1;stroke:none" />
-    </g>
     <flowRoot
        xml:space="preserve"
        id="flowRoot5734"
@@ -1152,23 +989,7 @@
            height="158"
            x="-276"
            y="416" /></flowRegion><flowPara
-         id="flowPara5740" /></flowRoot>    <image
-       y="7.6227093"
-       x="905.24664"
-       id="image4234"
-       height="15.694949"
-       width="16.002544"
-       sodipodi:absref="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/cerrar_sesion.png"
-       xlink:href="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/cerrar_sesion.png" />
-    <image
-       y="7.1560006"
-       x="879.25671"
-       id="image4286"
-       height="15.079762"
-       width="14.772166"
-       sodipodi:absref="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/perfil.png"
-       xlink:href="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/perfil.png" />
-  </g>
+         id="flowPara5740" /></flowRoot>  </g>
   <g
      inkscape:groupmode="layer"
      id="layer3"
@@ -1221,26 +1042,7 @@
            height="170"
            x="112"
            y="27" /></flowRegion><flowPara
-         id="flowPara2908" /></flowRoot>    <rect
-       y="5.25"
-       x="102"
-       height="24.75"
-       width="37.597973"
-       id="rect5536"
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#1a1a1a;stroke-width:0;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:0.00400002;stroke-dasharray:none" />
-    <flowRoot
-       transform="translate(-98.47803,-94.75)"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       id="flowRoot5540"
-       xml:space="preserve"><flowRegion
-         id="flowRegion5542"><rect
-           y="106"
-           x="259"
-           height="53"
-           width="276"
-           id="rect5544" /></flowRegion><flowPara
-         style="fill:#ffffff"
-         id="flowPara5546">Cooperativa de Trabajo Gcoop Ejemplo</flowPara></flowRoot>    <flowRoot
+         id="flowPara2908" /></flowRoot>    <flowRoot
        xml:space="preserve"
        id="flowRoot5593"
        style="fill:black;stroke:none;stroke-opacity:1;stroke-width:1px;stroke-linejoin:miter;stroke-linecap:butt;fill-opacity:1;font-family:Bitstream Vera Sans;font-style:normal;font-weight:normal;font-size:11"><flowRegion
@@ -1252,68 +1054,254 @@
            y="-74" /></flowRegion><flowPara
          id="flowPara5599" /></flowRoot>    <flowRoot
        xml:space="preserve"
-       id="flowRoot2946"
-       style="font-size:10px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       transform="translate(58.806641,-112.8068)"><flowRegion
-         id="flowRegion2948"><rect
-           id="rect2950"
-           width="126.8511"
-           height="36"
-           x="42"
-           y="169"
-           style="font-size:10px" /></flowRegion><flowPara
-         style="font-size:13px;font-weight:bold;fill:#1a1a1a;-inkscape-font-specification:Bitstream Charter Bold"
-         id="flowPara3863">Hola, Soledad!</flowPara></flowRoot>    <rect
-       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:none"
-       id="rect4062"
-       width="159"
-       height="18"
-       x="762"
-       y="54" />
+       id="flowRoot3248-6"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(539.61835,-105.26884)"><flowRegion
+         id="flowRegion3250-2"><rect
+           id="rect3252-8"
+           width="138.33134"
+           height="28.710279"
+           x="-67.860664"
+           y="268.61511"
+           style="fill:#000000" /></flowRegion><flowPara
+         id="flowPara3254-4"
+         style="font-size:10px;fill:#000000">Eliminar mensaje</flowPara></flowRoot>    <rect
+       style="fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3233-7"
+       width="97.553436"
+       height="19.353554"
+       x="42.281021"
+       y="161.21971"
+       ry="5.6568542"
+       rx="5.6568542" />
     <flowRoot
        xml:space="preserve"
-       id="flowRoot4189"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       transform="translate(42,8)"><flowRegion
-         id="flowRegion4191"><rect
-           id="rect4193"
-           width="89"
-           height="20"
-           x="725"
-           y="47" /></flowRegion><flowPara
-         id="flowPara4195">Buscar</flowPara></flowRoot>    <rect
-       y="157.79099"
-       x="581.961"
-       height="29.670479"
-       width="159.30759"
-       id="rect3161"
-       style="fill:#e6e6e6;fill-opacity:1;fill-rule:nonzero;stroke:none" />
+       id="flowRoot3256-2"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#ffffff;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       transform="translate(122.52065,-141.96363)"><flowRegion
+         id="flowRegion3258-4"><rect
+           id="rect3260-0"
+           width="129.63127"
+           height="27.840271"
+           x="-73.950722"
+           y="307.7655"
+           style="fill:#ffffff" /></flowRegion><flowPara
+         id="flowPara3262-6"
+         style="font-size:8px;fill:#ffffff">VOLVER A MENSAJES</flowPara></flowRoot>    <g
+       id="g4946"
+       transform="translate(-0.02656642,-6.8574921)">
+      <image
+         xlink:href="file:///var/www/gestioncooperativa/trunk/gcoop_doc/disenio/lupa.png"
+         width="13.994903"
+         height="13.994903"
+         id="image4938"
+         x="723.30786"
+         y="169.41293" />
+      <rect
+         y="165.3679"
+         x="719.23193"
+         height="22.293968"
+         width="0.10875103"
+         id="rect4942"
+         style="fill:#1a1a1a;stroke:none" />
+      <rect
+         style="fill:none;stroke:#483737;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+         id="rect3674"
+         width="159"
+         height="22.306322"
+         x="582.05725"
+         y="165.3492" />
+      <flowRoot
+         xml:space="preserve"
+         id="flowRoot3676"
+         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         transform="translate(-137.07274,123.17417)"><flowRegion
+           id="flowRegion3678"><rect
+             id="rect3680"
+             width="126.21893"
+             height="14.770894"
+             x="725"
+             y="47" /></flowRegion><flowPara
+           style="font-size:10px;fill:#1a1a1a"
+           id="flowPara3682">Buscar en mensajes</flowPara></flowRoot>    </g>
+    <rect
+       style="opacity:0.485;fill:#ded6b2;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3309"
+       width="698.92712"
+       height="116"
+       x="43.063381"
+       y="607.31958" />
+    <rect
+       style="fill:#1a1a1a;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3321"
+       width="55.289932"
+       height="19.353554"
+       x="42.990528"
+       y="732.31958"
+       ry="5.6568542"
+       rx="5.6568542" />
+    <g
+       id="g3069"
+       transform="translate(0.99052788,-12.137489)">
+      <flowRoot
+         transform="translate(-301.0453,608.26435)"
+         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         id="flowRoot3325"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3327"><rect
+             y="141.14984"
+             x="346.12878"
+             height="13.081475"
+             width="118.44038"
+             id="rect3329" /></flowRegion><flowPara
+           style="font-size:8px;fill:#ffffff"
+           id="flowPara3331">RESPONDER</flowPara></flowRoot>    </g>
     <flowRoot
-       transform="translate(-138.96177,120.2311)"
-       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
-       id="flowRoot3163"
+       transform="translate(-301.91963,446.73441)"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#1a1a1a;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       id="flowRoot4309"
        xml:space="preserve"><flowRegion
-         id="flowRegion3165"><rect
-           y="47"
-           x="725"
-           height="20"
-           width="133.37044"
-           id="rect3167" /></flowRegion><flowPara
-         id="flowPara3169">Buscar en mensajes</flowPara></flowRoot>    <image
-       y="55.299854"
-       x="897.24915"
-       id="image4392"
-       height="16.002544"
-       width="15.387356"
-       sodipodi:absref="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/lupa.png"
-       xlink:href="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/lupa.png" />
+         id="flowRegion4311"><rect
+           y="141.14984"
+           x="346.12878"
+           height="13.081475"
+           width="118.44038"
+           id="rect4313"
+           style="fill:#1a1a1a" /></flowRegion><flowPara
+         style="font-size:8px;fill:#1a1a1a"
+         id="flowPara4315">RESPONDER</flowPara></flowRoot>    <rect
+       style="fill:#483737;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect4083-9"
+       width="699.47919"
+       height="0.39414048"
+       x="42.052288"
+       y="188.14293" />
+    <g
+       id="g3343">
+      <rect
+         style="fill:#483737;fill-opacity:1;fill-rule:nonzero;stroke:none"
+         id="rect3468"
+         width="699.47919"
+         height="0.39414048"
+         x="42.51368"
+         y="404.72031" />
+      <flowRoot
+         transform="matrix(0.9154355,0,0,1,-172.66499,111.96336)"
+         style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         id="flowRoot3002-0"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3004-6"><rect
+             style="fill:#000000"
+             y="119"
+             x="300"
+             height="30"
+             width="642"
+             id="rect3006-8" /></flowRegion><flowPara
+           style="font-size:16px;font-weight:bold;fill:#000000;-inkscape-font-specification:Bitstream Charter Bold"
+           id="flowPara3008-7">Asunto del mensaje</flowPara></flowRoot>      <flowRoot
+         transform="matrix(0.9154355,0,0,1,-174.39484,-156.20302)"
+         style="font-size:11px;font-style:normal;font-weight:normal;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         id="flowRoot3020-9"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3022-0"><rect
+             style="fill:#4d4d4d"
+             y="410"
+             x="302"
+             height="143.46825"
+             width="698.72443"
+             id="rect3024-3" /></flowRegion><flowPara
+           style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
+           id="flowPara3042-3">gcoop es una empresa de desarrollo e implementación Software Libre constituida como cooperativa de trabajo. Nuestra gcoop es una empresa de desarrollo e implementación Software Libre constituida como cooperativa de trabajo. Nuestra forma de organización potencia el trabajo colaborativo y mejora los procesos de desarrollo. Este emprendimiento está sustentando en la construcción de una empresa democrática, preocupada por el desarrollo de la comunidad en la que está inserta.gcoop brinda soluciones informáticas ofreciendo desarrollos a medida, consultoría, soporte, migración y auditorías de sistemas.  gcoop es una empresa de desarrollo e implementación Software Libre constituida como cooperativa de trabajo. Nuestra forma de organización potencia el trabajo colaborativo y mejora los procesos de desarrollo. Este emprendimiento está sustentando en la construcción de una empresa democrática, preocupada por el desarrollo de la comunidad en la que está inserta.gcoop brinda soluciones informáticas ofreciendo desarrollos a medida, consultoría, soporte, migración y auditorías de sistemas.</flowPara><flowPara
+           id="flowPara3193"
+           style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1" /></flowRoot>      <flowRoot
+         transform="matrix(0.9154355,0,0,1,-171.66166,63.46294)"
+         style="font-size:9px;font-style:normal;font-weight:normal;fill:#1a1a1a;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+         id="flowRoot3052-3"
+         xml:space="preserve"><flowRegion
+           id="flowRegion3054-7"><rect
+             style="font-size:9px;fill:#1a1a1a"
+             y="147"
+             x="299"
+             height="32"
+             width="642"
+             id="rect3056-3" /></flowRegion><flowPara
+           style="fill:#1a1a1a"
+           id="flowPara3058-2">MENSAJE ENVIADO EL 30/05/2010</flowPara></flowRoot>      <rect
+         y="211.09918"
+         x="55.127113"
+         height="13.485131"
+         width="14.790144"
+         id="rect3259"
+         style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#483737;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
+    </g>
     <image
-       y="161.11235"
-       x="709.61658"
-       id="image4442"
-       height="24"
-       width="24"
-       sodipodi:absref="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/lupa.png"
-       xlink:href="/home/www/gestioncooperativa/trunk/gcoop_doc/disenio/lupa.png" />
+       y="233.11372"
+       x="54.139797"
+       id="image3265"
+       height="17.232922"
+       width="17.232922"
+       xlink:href="file:///var/www/gestioncooperativa/trunk/gcoop_doc/disenio/mensaje_leido.png" />
+    <image
+       y="256.94263"
+       x="54.440392"
+       id="image3339"
+       height="14.772166"
+       width="16.002544"
+       xlink:href="file:///var/www/gestioncooperativa/trunk/gcoop_doc/disenio/mensaje_respondido.png" />
+    <rect
+       style="fill:#483737;fill-opacity:1;fill-rule:nonzero;stroke:none"
+       id="rect3362"
+       width="699.47919"
+       height="0.39414048"
+       x="42.51368"
+       y="546.72034" />
+    <flowRoot
+       transform="matrix(0.9154355,0,0,1,-172.66499,325.96336)"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       id="flowRoot3364"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3366"><rect
+           style="fill:#000000"
+           y="119"
+           x="300"
+           height="30"
+           width="642"
+           id="rect3368" /></flowRegion><flowPara
+         style="font-size:16px;font-weight:bold;fill:#000000;-inkscape-font-specification:Bitstream Charter Bold"
+         id="flowPara3370">RE: Asunto del mensaje</flowPara></flowRoot>    <flowRoot
+       transform="matrix(0.9154355,0,0,1,-174.39484,57.79698)"
+       style="font-size:11px;font-style:normal;font-weight:normal;fill:#4d4d4d;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       id="flowRoot3372"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3374"><rect
+           style="fill:#4d4d4d"
+           y="410"
+           x="302"
+           height="143.46825"
+           width="698.72443"
+           id="rect3376" /></flowRegion><flowPara
+         style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1"
+         id="flowPara3378">gcoop es una empresa de desarrollo e implementación Software Libre constituida como cooperativa de trabajo. Nuestra gcoop es una empresa de desarrollo e implementación Software Libre constituida como cooperativa de trabajo. Nuestra forma de organización potencia el trabajo colaborativo y mejora los procesos de desarrollo. Este emprendimiento está sustentando en la construcción de una empresa democrática, preocupada por el desarrollo de la comunidad en la que está inserta.gcoop.</flowPara><flowPara
+         id="flowPara3380"
+         style="text-align:justify;line-height:125%;writing-mode:lr-tb;text-anchor:start;fill:#4d4d4d;fill-opacity:1" /></flowRoot>    <flowRoot
+       transform="matrix(0.9154355,0,0,1,-171.66166,277.46294)"
+       style="font-size:9px;font-style:normal;font-weight:normal;fill:#1a1a1a;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       id="flowRoot3382"
+       xml:space="preserve"><flowRegion
+         id="flowRegion3384"><rect
+           style="font-size:9px;fill:#1a1a1a"
+           y="147"
+           x="299"
+           height="32"
+           width="642"
+           id="rect3386" /></flowRegion><flowPara
+         style="fill:#1a1a1a"
+         id="flowPara3388">MENSAJE ENVIADO EL 30/05/2010</flowPara></flowRoot>    <rect
+       y="425.09918"
+       x="55.127113"
+       height="13.485131"
+       width="14.790144"
+       id="rect3390"
+       style="fill:#ffffff;fill-opacity:1;fill-rule:nonzero;stroke:#483737;stroke-width:0.1;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none" />
   </g>
 </svg>
