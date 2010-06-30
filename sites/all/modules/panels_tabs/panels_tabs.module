@@ -1,0 +1,73 @@
+<?php
+// $Id: panels_tabs.module,v 1.1.2.13.2.7 2010/06/02 18:59:05 dereine Exp $
+
+/**
+ * @file
+ * Definition of the 'tabs' panel style.
+ */
+
+
+//----------------------------------------------------------------------------
+// Panels hooks.
+
+/**
+* Implements hook_ctools_plugin_directory().
+*/
+function panels_tabs_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'page_manager' || $module == 'panels') {
+    return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Implementation of hook_theme()
+ */
+function panels_tabs_theme() {
+  return array(
+    'panels_tabs_title' => array(
+      'arguments' => array('title' => NULL),
+    ),
+  );
+}
+
+/**
+ * Return rendered title.
+ *
+ * @themable
+ */
+function theme_panels_tabs_title($title) {
+  return "<h3 class=\"pane-title\">". $title ."</h3>\n";
+}
+
+
+//----------------------------------------------------------------------------
+// Private functions.
+
+/**
+ * Adds the .js file only once per page load.
+ */
+function _panels_tabs_add_js($id, $filling_tabs) {
+  static $added = FALSE;
+  static $settings_added;
+
+  // Include the JavaScript once per page.
+  if (!$added) {
+    drupal_add_js(drupal_get_path('module', 'panels_tabs') .'/panels_tabs.js');
+    $added = TRUE;
+  }
+
+  // Store the JavaScript settings for every panel that uses this style.
+  if (!isset($settings_added[$id])) {
+    drupal_add_js(
+      array(
+        'panelsTabs' => array(
+          $id => array(
+            'fillingTabs' => (isset($filling_tabs)) ? $filling_tabs : 'disabled',
+          ),
+        )
+      ),
+      'setting'
+    );
+    $settings_added[$id] = TRUE;
+  }
+}

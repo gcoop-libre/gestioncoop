@@ -1,0 +1,11 @@
+; $Id: comment_subject.info,v 1.2.2.2 2009/11/19 07:41:13 sinasalek Exp $
+name = Comment subjects
+description = Provides a default comment subject: 'Re: [parent comment/node title]'.
+core = 6.x
+
+; Information added by drupal.org packaging script on 2009-11-19
+version = "6.x-1.5"
+core = "6.x"
+project = "comment_subject"
+datestamp = "1258616711"
+

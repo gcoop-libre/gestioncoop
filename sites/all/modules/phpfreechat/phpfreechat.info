@@ -1,0 +1,13 @@
+; $Id: phpfreechat.info,v 1.1.2.7.2.1 2009/01/23 03:12:14 permutations Exp $
+name = phpFreeChat
+description = Enables the creation of phpFreeChat chatboxes on any page on the site.
+package = "Chat rooms"
+core = 6.x
+
+
+; Information added by drupal.org packaging script on 2009-01-23
+version = "6.x-1.1"
+core = "6.x"
+project = "phpfreechat"
+datestamp = "1232717124"
+

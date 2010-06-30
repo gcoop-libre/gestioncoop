@@ -1,0 +1,575 @@
+<?php
+// $Id: phpfreechat.module,v 1.5.2.25.2.1 2009/01/23 03:12:14 permutations Exp $
+
+/**
+ * @file
+ * Enables the creation of phpFreeChat channels on any page on the site.
+ */
+
+if ($messages = drupal_set_message()) {
+  unset($_SESSION['messages']);
+}
+
+require_once('phpfreechat.inc');
+
+/**
+ * Implementation of hook_help().
+ */
+function phpfreechat_help($path, $arg) {
+  return _phpfreechat_help($path, $arg);
+}
+
+/**
+ * Implementation of hook_menu().
+ * Re the 'page arguments' field:
+ *   When viewing a page at the path "admin/content/types", 
+ *   for example, arg(0) would return "admin", arg(1) would 
+ *   return "content", and arg(2) would return "types". 
+ *   http://api.drupal.org/api/function/arg 
+ */
+function phpfreechat_menu() {
+  $items = array();
+  $items['phpfreechat/nuke'] = array(
+    'title' => 'Clear chats!',
+    'page callback' => 'phpfreechat_nuke',
+    'page arguments' => array(arg(2)),
+    'access arguments' => array('admin phpfreechat'),
+    'type' => MENU_CALLBACK);
+  $items['admin/settings/phpfreechat'] = array(
+    'title' => 'phpFreeChat',
+    'description' => 'Settings to configure phpFreeChat.',
+    'page callback' => 'drupal_get_form',
+    'page arguments' => array('phpfreechat_settings'),
+    'access arguments' => array('admin phpfreechat'),
+    'type' => MENU_NORMAL_ITEM);
+  return $items;
+}
+
+/**
+ * Delete logs of a chat room.
+ * @params $rid 
+ *    Room Id
+ */
+function phpfreechat_nuke($rid) {
+  _phpfreechat_nuke($rid);
+}
+
+/**
+ * Implementation of hook_perm().
+ */
+function phpfreechat_perm() {
+  return array('talk on chat channels', 'create nodes with chatrooms', 'moderate chat channels');
+}
+
+function phpfreechat_nodedata($type) {
+  if (variable_get('phpfreechat_nodeapi_'. $type, 'never') == 'pernode' ||
+      variable_get('phpfreechat_nodeapi_custom_'. $type, '') == TRUE) {
+    return TRUE;
+  }
+  else
+    return FALSE;
+}
+
+/**
+ * Implementation of hook_form_alter() - alterations before a form is rendered.
+ */
+function phpfreechat_form_alter(&$form, &$form_state, $form_id) {
+  global $user;
+  $type = (isset($form['type']) && isset($form['type']['#value'])) ? $form['type']['#value'] : NULL;
+  $node = isset($form['#node']) ? $form['#node'] : NULL;
+
+  if ($form_id == 'node_type_form' && isset($form['identity']['type'])) {
+  // Content-type edit form
+    $form['workflow']['phpfreechat_nodeapi'] = array(
+      '#type' => 'radios',
+      '#title' => t('Show chat room'),
+      '#default_value' => variable_get('phpfreechat_nodeapi_'. $form['#node_type']->type, 'never'),
+      '#options' => array('never' => t('Never'), 'always' => t('Always'), 'pernode' => t('Per Node')),
+      '#description' => t('None: Nodes of this content type can never have a chat room.<br />'.
+          'Always: Nodes of this content type will always have a chat room.<br />'.
+          'Per Node: Nodes of this content type can choose to have a chat room if desired.'),
+    );
+    $form['workflow']['phpfreechat_nodeapi_custom'] = array(
+      '#type' => 'checkbox',
+      '#title' => t('Allow node to set title & channels'),
+      '#return_value' => 1,
+      '#default_value' => variable_get('phpfreechat_nodeapi_custom_'. $form['#node_type']->type, ''),
+      '#description' => t('If this is checked then node editors will be able to set the chat '.
+          'title and select what channels to join.'),
+    );
+    $form['workflow']['phpfreechat_nodeapi_title'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Default Chat Channel Title'),
+      '#default_value' => variable_get('phpfreechat_nodeapi_title_'. $form['#node_type']->type, ''),
+      '#size' => 70,
+      '#maxlength' => 128,
+      '#description' => t('This is the default channel title for this content type. '.
+          'Leaving this blank will use the global or node chat '.
+          'title, or the node title if these are also blank.'),
+    );
+    $form['workflow']['phpfreechat_nodeapi_channels'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Default Chat Channels'),
+      '#default_value' => variable_get('phpfreechat_nodeapi_channels_'. $form['#node_type']->type, ''),
+      '#size' => 70,
+      '#maxlength' => 128,
+      '#description' => t('Enter the default channel or channels to be joined for this content type. '.
+          'Separate multiple channels by commas (e.g. <em>Channel1, Channel2</em>) . Leaving this '.
+          'blank will use the global or node channel(s), or the node title if these are also blank.'),
+    );
+  }
+  elseif (isset($form['type'])) {
+  // Node edit form
+    if (phpfreechat_nodedata($type) && user_access('create nodes with chatrooms')) {
+      $form['phpfreechat'] = array(
+        '#type' => 'fieldset',
+        '#title' => t('phpFreeChat Settings'),
+      );
+      if (variable_get('phpfreechat_nodeapi_'. $form['type']['#value'], 'never') == 'pernode') {
+        $form['phpfreechat']['phpfreechat_enabled'] = array(
+          '#type' => 'checkbox',
+          '#title' => t('Show Chat Room'),
+          '#return_value' => 1,
+          '#default_value' => ($node->phpfreechat_enabled == 1 ? TRUE : FALSE),
+          '#description' => 'If this is selected a chat room will be displayed below the content',
+        );
+      }
+      if (variable_get('phpfreechat_nodeapi_custom_'. $form['type']['#value'], '') == TRUE) {
+        $form['phpfreechat']['phpfreechat_title'] = array(
+          '#type' => 'textfield',
+          '#title' => t('Chat Channel Title'),
+          '#default_value' => $node->phpfreechat_title,
+          '#size' => 70,
+          '#maxlength' => 128,
+          '#description' => t('This is the chat title. You can leave this blank to use the default.'),
+        );
+        $form['phpfreechat']['phpfreechat_channels'] = array(
+          '#type' => 'textfield',
+          '#title' => t('Chat Channel'),
+          '#default_value' => $node->phpfreechat_channels,
+          '#size' => 70,
+          '#maxlength' => 128,
+          '#description' => t('Enter the channel or channels to be joined for this chat. '.
+              'Separate multiple channels by commas (e.g. <em>Channel1, Channel2</em>) . '.
+              'You can leave this blank to use the default.'),
+        );
+      }
+    }
+  }
+}
+
+ /**
+ * Implementation of hook_nodeapi() - act on nodes defined by other modules (extending modules versus creating new ones).
+ */
+function phpfreechat_nodeapi(&$node, $op, $teaser = NULL, $page = NULL) {
+  switch ($op) {
+    case 'view':
+      $content_chat = variable_get('phpfreechat_nodeapi_'. $node->type, 'never');
+      if (($content_chat == 'always' || ($content_chat == 'pernode' && $node->phpfreechat_enabled)) && $teaser === FALSE) {
+        $node->content['phpfreechat'] = array(
+          '#value' => phpfreechat_room($node),
+          '#weight' => 40,
+        );
+      }
+      break;
+    case 'update': 
+      if (phpfreechat_nodedata($node->type)) {  
+        // Clear the cache
+        _phpfreechat_clear_cache();
+      }
+    case 'insert':
+      // Need to delete/insert because we can't assume an existing entry for 'pernode' content type
+      if (phpfreechat_nodedata($node->type)) {  
+        db_query('DELETE FROM {phpfreechat} WHERE nid = %d', $node->nid);
+        $rs = db_query('INSERT INTO {phpfreechat} (nid, phpfreechat_enabled, phpfreechat_title, phpfreechat_channels) VALUES (%d, %d, "%s", "%s")', $node->nid, $node->phpfreechat_enabled, $node->phpfreechat_title, $node->phpfreechat_channels);
+      }
+      break;
+    case 'delete':
+      // Always try and delete - the node could have data from before the content type was set to 'never' 
+      db_query('DELETE FROM {phpfreechat} WHERE nid = %d', $node->nid);
+      break;
+    case 'load':
+      if (phpfreechat_nodedata($node->type)) {
+        return db_fetch_array(db_query('SELECT * FROM {phpfreechat} WHERE nid = %d', $node->nid));
+      }
+      break;
+  }
+}
+
+/**
+* Implementation of hook_user()
+*/
+function phpfreechat_user($op, &$edit, &$user, $category = NULL) {
+  switch ($op) {
+    case 'logout':
+    case 'login':
+      // Remove the users cookie so their nick is not auto-set for anonymous user
+      setcookie('phpfreechat', '', time() - 3600);
+      break;
+  }
+} 
+
+/**
+ * Implementation of hook_block().
+ */
+function phpfreechat_block($op = 'list', $delta = 0, $edit = array()) {
+  global $user, $base_url;
+
+  if ($op == 'list') {
+    $block[0]['info'] = t('Who is chatting');
+    $block[1]['info'] = t('Who is chatting on...');
+    $block[2]['info'] = t('Latest from...');
+    return $block;
+  }
+  else if ($op == 'configure' && $delta > 0) {
+    $form['phpfreechat_block'] = array(
+      '#type' => 'textfield',
+      '#title' => t('Channel Name'),
+      '#default_value' => variable_get('phpfreechat_block_channel_'. $delta, ''),
+      '#description' => t('Enter the channel name to use')
+    );
+    return $form;
+  }
+  else if ($op == 'save' && $delta > 0) {
+    variable_set('phpfreechat_block_channel_'. $delta, $edit['phpfreechat_block']);
+  }
+  else if ($op == 'view') {
+    if (user_access('access content')) {
+      if (!_phpfreechat_check_install()) {
+        $block['content'] = _phpfreechat_not_found();
+        return $block;
+      }
+      $params = phpfreechat_load_params();
+
+      // Get get all chat nodes (node id).
+      $query = db_query('SELECT * FROM {phpfreechat}');
+      $chat_nodes = array();
+
+      // Drop the nodes that don't have chats on them.
+      while ($room = db_fetch_object($query)) {
+        $node = node_load($room->nid);
+//        drupal_set_message("executing phpfreechat_block - node: <pre>". print_r($node, TRUE) ."</pre>");                
+        $params = phpfreechat_prepare_params($params, $node, $user);
+        $chat_content = variable_get('phpfreechat_nodeapi_'. $node->type, '');
+        if (($chat_content == 'always') || ($chat_content == 'pernode' && $room->phpfreechat_enabled)) {
+          $chat_nodes[] = $node->nid;
+        }
+      }
+      // Use only the first chat server in the blocks (quick and dirty solution).
+      $serverid_node = md5('node'. $chat_nodes[0]);
+
+      require_once('phpfreechat/src/pfcinfo.class.php');
+      $info  = new pfcInfo($serverid_node, $params['data_private_path']);
+
+      if ($delta == 0) {
+        $users = $info->getOnlineNick(NULL);
+        if ($users) {
+          $block['content'] .= theme_item_list($users);
+        }
+        else {
+          $block['content'] .= "* empty *";
+        }
+        $block['subject'] = t('Who is Chatting');
+      }
+      if ($delta == 1) {
+        $channel = variable_get('phpfreechat_block_channel_1', '');
+        $users = $info->getOnlineNick($channel);
+        if ($users) {
+          $block['content'] .= theme_item_list($users);
+        }
+        else {
+          $block['content'] .= "* empty *";
+        }
+        $block['subject'] = t('Who is chatting on ') . $channel;
+      }
+      if ($delta == 2) {
+        $channel = variable_get('phpfreechat_block_channel_2', '');
+        $lastmsg_raw = $info->getLastMsg($channel, 10);
+        $output = '';
+                if ($lastmsg_raw) {
+                  foreach ($lastmsg_raw["data"] as $m) {
+            $output .= $m["sender"] .': ';
+            $output .= '<em>'. $m["param"] .'</em><br />';
+            $date = $m["date"];
+            $time = $m["time"];
+          }
+        }
+        $output .= t('Last chat: ');
+        // Convert to US style date
+        $date = preg_replace("/^\s*([0-9]{1,2})[\/\. -]+([0-9]{1,2})[\/\. -]+([0-9]{1,4})/", "\\2/\\1/\\3", $date);
+        $output .= format_interval(time() - strtotime($date .' '. $time));
+        $output .= t(' ago');
+        $block['content'] .= $output;
+        $block['subject'] = t('latest from ') . $channel;
+      }
+      return $block;
+    }
+  }
+}
+
+/**
+ * Implementation of hook_settings().
+ */
+function phpfreechat_settings() {
+  return system_settings_form(_phpfreechat_settings());
+}
+
+/**
+ * Returns an array of all (non-node & non-user specific) parameters
+ */
+function phpfreechat_load_params() {
+  global $base_url;
+  $params = array();
+
+  // Configure file paths
+  $params['data_private_path'] = file_check_location(PHPFREECHAT_PRIVATE_DIR);
+  $params['data_public_url'] = $base_url .'/'. PHPFREECHAT_PUBLIC_DIR;
+  $params['data_public_path'] = file_check_location(PHPFREECHAT_PUBLIC_DIR);
+  $params['theme_url'] = $base_url .'/'. drupal_get_path('module', 'phpfreechat') .'/extras/themes';
+  $params['theme_path'] = file_check_location(drupal_get_path('module', 'phpfreechat') .'/extras/themes');
+  $params['theme'] = 'drupal';
+  $params['server_script_url'] = $base_url .'/'. drupal_get_path('module', 'phpfreechat') .'/handler.php';
+  $params['server_script_path'] = file_check_location(drupal_get_path('module', 'phpfreechat') .'/handler.php');
+  $params['cmd_path'] = file_check_location(drupal_get_path('module', 'phpfreechat') .'/extras/commands');
+
+  // Public settings from phpFreeChat v1.1, pfcglobalconfig.class.php.
+  $settings = array(
+        'serverid',
+        'language',
+        'output_encoding',
+        'nick',
+        'max_nick_len',
+        'frozen_nick',
+        'nickmeta',
+        'nickmeta_private',
+        'nickmeta_key_to_hide',
+        'isadmin',
+        'admins',
+        'firstisadmin',
+        'title',
+        'channels',
+        'frozen_channels',
+        'max_channels',
+        'privmsg',
+        'max_privmsg',
+        'refresh_delay',
+        'refresh_delay_steps',
+        'timeout',
+        'islocked',
+        'lockurl',
+        'skip_proxies',
+        'post_proxies',
+        'pre_proxies',
+        'proxies_cfg',
+        'proxies_path',
+        'proxies_path_default',
+        'cmd_path',
+        'cmd_path_default',
+        'max_text_len',
+        'max_msg',
+        'max_displayed_lines',
+        'quit_on_closedwindow',
+        'focus_on_connect',
+        'connect_at_startup',
+        'start_minimized',
+        'height',
+        'shownotice',
+        'nickmarker',
+        'clock',
+        'startwithsound',
+        'openlinknewwindow',
+        'notify_window',
+        'short_url',
+        'short_url_width',
+        'display_ping',
+        'display_pfc_logo',
+        'displaytabimage',
+        'displaytabclosebutton',
+        'showwhosonline',
+        'showsmileys',
+        'btn_sh_whosonline',
+        'btn_sh_smileys',
+        'bbcode_colorlist',
+        'nickname_colorlist',
+        'theme',
+        'theme_path',
+        'theme_url',
+        'theme_default_path',
+        'theme_default_url',
+        'container_type',
+        'server_script_path',
+        'server_script_url',
+        'client_script_path',
+        'data_private_path',
+        'data_public_path',
+        'data_public_url',
+        'prototypejs_url',
+        'debug',
+        'time_offset',
+        'date_format',
+        'time_format',
+        'get_ip_from_xforwardedfor',
+        'dyn_params',
+        );
+
+  foreach ($settings as $setting) {
+    $value = variable_get('phpfreechat_'. $setting, '');
+    if (!empty($value)) {
+      if ($value == 'true') {
+              $params[$setting] = TRUE;
+      }
+      else if ($value == 'false') {
+              $params[$setting] = FALSE;
+      }
+      // To deal with integer check in pfcglobalconfig.class.php
+            else if (is_numeric($value)) {
+              $params[$setting] = (int) $value;
+            }
+            // Break out arrays (except for channel, handled below)
+            else if ($setting == 'nickmeta' ||
+                     $setting == 'nickmeta_private' ||
+                     $setting == 'nickmeta_key_to_hide' ||
+                     $setting == 'admins' ||
+                     $setting == 'frozen_channels' ||
+                     $setting == 'privmsg' ||
+                     $setting == 'refresh_delay_steps' ||
+                     $setting == 'skip_proxies' ||
+                     $setting == 'post_proxies' ||
+                     $setting == 'pre_proxies' ||
+                     $setting == 'bbcode_colorlist' ||
+                     $setting == 'nickname_colorlist' ||
+                     $setting == 'dyn_params') {    
+        $params["$setting"] = explode(',', $value);
+      }
+      else {
+              $params[$setting] = $value;
+      }
+    }
+  }
+
+  return $params;
+}
+
+/**
+ * Tunes parameters according to specific node's details.
+ *
+ * @param $params
+ *   Default parameters which might be overridden by the function
+ * @param $node
+ *   The node which will carry the chat instance
+ * @param $target
+ *   The user loading the chat
+ *
+ */
+function phpfreechat_prepare_params(&$params, &$node, &$target) {
+  global $user, $base_url;
+  
+  // Setup nick
+  if (variable_get('phpfreechat_auto_nick', '') != 'false') {
+    if ($target->uid == 0) { // Assign autonumber for guests (not logged in)
+      $params['nick'] = t('Anonymous') . rand(1, 1000); 
+    }
+    else { // Use Drupal name as nickname
+      $params['nick'] = $target->name; 
+    }
+  }
+  else { // Ask for nickname
+    $params['nick'] = ''; 
+  }
+
+  // Set the serverid to the node ID
+  $params['serverid'] = md5('node'. $node->nid);
+  
+  // This global setting will be overridden by any content-type or node settings below
+  $global_title = variable_get('phpfreechat_title', '');
+  $params['title'] = empty($global_title) ? $node->title : $global_title;
+  
+  // This global setting will be overridden by any content-type or node settings below
+  $global_channels = variable_get('phpfreechat_channels', '');
+  if (!empty($global_channels)) {
+    $params['channels'] = explode(',', $global_channels);
+  }
+  else {
+    $params['channels'] = array($node->title);
+  }
+
+  // Overrides from content type
+  $content_title = variable_get('phpfreechat_nodeapi_title_'. $node->type, '');
+  if (!empty($content_title)) {
+    $params['title'] = $content_title;
+  }
+  $content_channels = variable_get('phpfreechat_nodeapi_channels_'. $node->type, '');
+  if (!empty($content_channels)) {
+    $params['channels'] = explode(',', $content_channels);
+  }
+
+  // Overrides from node (global and node parameters have the same name!!)
+  if (!empty($node->phpfreechat_title)) {
+    $params['title'] = $node->phpfreechat_title;
+  }
+  if (!empty($node->phpfreechat_channels)) {
+    $params['channels'] = explode(',', $node->phpfreechat_channels);
+  }
+  
+  // Setup admins
+  if (user_access('moderate chat channels')  || $node->uid == $target->uid) {
+    $params['isadmin'] = TRUE;
+  }
+
+  // Add useful info to appear in user's menu only if the selected theme is the shipped one
+  if ($params['theme_path'] == file_check_location(drupal_get_path('module', 'phpfreechat')) .'/extras/themes' && $params['theme'] == 'drupal') {
+    $params['nickmeta'] = array(
+      'drupal_base_url' => $base_url,
+      'drupal_user_uid' => $target->uid,
+            'away' => 'no',
+    );
+  }
+  return $params;
+}
+
+/**
+ * Format a chat room for a nodeapi insert
+ *
+ * @param node
+ *   The node which needs a chat room inserted
+ */
+function phpfreechat_room($node) {
+  global $user, $base_url;
+  static $chat;
+  
+  if (user_access('talk on chat channels')) {
+    if (_phpfreechat_check_install() && _phpfreechat_check_files()) {
+      // now build the room HTML content
+      $output = '<div class="phpfreechat phpfreechat-'. $node->type .'">';
+      $params = phpfreechat_load_params();				// Load global params
+      $params = phpfreechat_prepare_params($params, $node, $user);	// Prepare params for current node
+          
+      // Start/resume chat session (loads handler.php, which contains [ new phpFreeChat($params); ])
+      require_once($params['server_script_path']);
+
+      if (variable_get('phpfreechat_params', '') == 'true') {
+        // Handy for debugging
+        $output .= '<pre>Parameters: '. print_r($params, TRUE) .'</pre>';
+        $output .= '<pre>Session: '. print_r($_SESSION, TRUE) .'</pre>';
+        $output .= '<pre>Cookies: '. print_r($_COOKIE, TRUE) .'</pre>';
+      }
+      
+      // This line outputs the actual chat
+      $output .= $chat->printChat(TRUE);
+      
+      if (user_access('admin phpfreechat')) {
+        $output .= l('Clear chat log for '. $node->title, 'phpfreechat/nuke/'. strtolower(str_replace(' ', '', $node->title)));
+      }
+      $output .= '</div>';
+    }
+    else {
+      $output .= _phpfreechat_not_found();
+    }
+  }
+  else if ($user->uid == 0) {
+    $output .= t('Please !login to chat', array('!login' => l('login', 'user/login')));
+  }
+  return $output;
+}
+
+?>
