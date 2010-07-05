@@ -38,8 +38,6 @@
     <div id="topic-list">
        <?php foreach ($topics as $topic): ?>
       <div id="<?php print $topic->zebra; ?>">
-            <div id="icon"><?php print $topic->icon; ?></div>
-            <div id="title"><?php print $topic->title; ?></div>
             <?php if ($topic->moved): ?>
                 <div id="nosequees"><?php print $topic->message; ?></div>
                 <?php else: ?>
@@ -53,6 +51,12 @@
             <div id="created"><?php print $topic->created; ?></div>                   
             <div id="last-reply"><?php print $topic->last_reply; ?></div>
             <?php endif; ?>
+     
+     
+            <div id="icon"><?php print $topic->icon; ?></div>
+            <div id="title"><?php print $topic->title; ?></div>
+            <?php $teaser=node_load($topic->nid); ?>
+            <div id="teaser"><?php print $teaser->teaser; ?></div>
                      
        </div><!-- Cierra Zebra -->
        <?php endforeach; ?>
