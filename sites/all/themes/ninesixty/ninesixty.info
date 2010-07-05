@@ -15,6 +15,15 @@ stylesheets[all][] = styles/framework/debug.css
 ; Theme specific styles. Any sub-themes should override this.
 stylesheets[all][] = styles/styles.css
 
+regions[left] = Left sidebar
+regions[right] = Right sidebar
+regions[content] = Content
+regions[header] = Header
+regions[headertop] = Header top
+regions[footer] = Footer
+regions[main-top] = Main top
+
+
 ; Information added by drupal.org packaging script on 2009-08-02
 version = "6.x-1.0"
 core = "6.x"

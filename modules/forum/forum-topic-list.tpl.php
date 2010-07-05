@@ -33,7 +33,36 @@
  * @see theme_forum_topic_list()
  */
 ?>
-<table id="forum-topic-<?php print $topic_id; ?>">
+
+<div id="forum-topic-<?php print $topic_id; ?>" class="grid-12 alpha omega">
+    <div id="topic-list">
+       <?php foreach ($topics as $topic): ?>
+      <div id="<?php print $topic->zebra; ?>">
+            <div id="icon"><?php print $topic->icon; ?></div>
+            <div id="title"><?php print $topic->title; ?></div>
+            <?php if ($topic->moved): ?>
+                <div id="nosequees"><?php print $topic->message; ?></div>
+                <?php else: ?>
+                <div id="replies">
+                <?php print $topic->num_comments; ?>
+                <?php if ($topic->new_replies): ?>
+                <br />
+                <a href="<?php print $topic->new_url; ?>"><?php print $topic->new_text; ?></a>
+                <?php endif; ?>
+                </div><!--Cierra Replies -->
+            <div id="created"><?php print $topic->created; ?></div>                   
+            <div id="last-reply"><?php print $topic->last_reply; ?></div>
+            <?php endif; ?>
+                     
+       </div><!-- Cierra Zebra -->
+       <?php endforeach; ?>
+       </div> <!-- Cierra lista de Topics" -->
+    </div><!-- Cierra Forum-Topic -->
+
+
+
+
+<!-- <table id="forum-topic-<?php print $topic_id; ?>" class="grid-12">
   <thead>
     <tr><?php print $header; ?></tr>
   </thead>
@@ -59,4 +88,4 @@
   <?php endforeach; ?>
   </tbody>
 </table>
-<?php print $pager; ?>
+<?php print $pager; ?> -->

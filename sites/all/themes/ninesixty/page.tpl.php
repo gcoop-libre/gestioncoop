@@ -17,22 +17,28 @@
 
   <div id="page" class="container-16 clear-block">
     
+    <div id="headertop" class="grid-16">
+    <?php if ($main_menu_links || $secondary_menu_links): ?>
+      <div id="secondary-links" class="grid-5 prefix-11">
+                <?php print $secondary_menu_links; ?>
+         </div>  
+         <?php endif; ?> <!-- Cierra Menu Secundario -->
+      
+    </div>
     <div id="site-header" class="clear-block">
-         <div id="site-menu-secondary" class="grid-16">
-            <?php  if($user->uid<>'0') print $secondary_menu_links; ?>
-            <?php print $myregion; ?>
-          </div> <!-- Cierra menú secundario -->
-         <div id="branding" class="grid-4 clear-block">
+        <div id="branding" class="grid-16">
                 <?php if ($linked_logo_img): ?>
                 <span id="logo" class="grid-1 alpha"><?php print $linked_logo_img; ?></span>
                 <?php endif; ?>
                 <?php if ($linked_site_name): ?>
-                <h1 id="site-name" class="grid-3 omega"><?php print $linked_site_name; ?></h1>
+                <h1 id="site-name" class="grid-4 alpha omega"><?php print $linked_site_name; ?></h1>
                 <?php endif; ?>
                 <?php if ($site_slogan): ?>
-                <div id="site-slogan" class="grid-3 omega"><?php print $site_slogan; ?></div>
+                <div id="site-slogan" class="grid-12 alpha omega"><h1 class="site-slogan"><?php print $site_slogan; ?></h1></div>
                 <?php endif; ?>
          </div> <!-- Cierra branding -->
+       
+        
             </div> <!-- Cierra Header -->
 
 
@@ -51,20 +57,27 @@
 
    <div id="main-top" class="grid-16">
     <?php if ($main_menu_links || $secondary_menu_links): ?>
-    <div id="site-menu" class="grid-10">
-     <?php if($user->uid<>'0') print $main_menu_links; ?>
-    </div> <!-- Cierra menú principal -->
+      <div id="site-menu" class="grid-12 alpha omega">
+      <!-- <div id="menu-image-left" class="grid-1 alpha omega"></div> -->
+        <?php print $main_menu_links; ?>
+       <!-- <div id="menu-image-right" class="grid-1 alpha omega"></div> -->
+                </div> <!-- Cierra menú principal -->
+                
     <?php endif; ?>
     <?php if ($search_box): ?>
-         <div id="search-box" class="grid-6 alpha omega"><?php print $search_box; ?></div> <!-- Cierra Serch Box -->
+         <div id="search-box" class="grid-3 omega prefix-1">
+         <?php print $search_box; ?>
+                 </div> <!-- Cierra Serch Box -->
          <?php endif; ?>
    </div> <!-- Cierra Main-top -->
 
 
-   <div id="main" class="column <?php print ns('grid-16', $left, 4, $right, 3) . ' ' . ns('push-4', !$left, 4); ?>">
+<div id="wrapper" class="grid-16">
+
+   <div id="main" class="grid-12 alpha omega">
   
 
-      <?php print $breadcrumb; ?>
+      <!-- <?php print $breadcrumb; ?> -->
       <?php if ($title): ?>
         <h1 class="title" id="page-title"><?php print $title; ?></h1>
       <?php endif; ?>
@@ -88,26 +101,28 @@
   <?php endif; ?>
 
   <?php if ($right): ?>
-    <div id="sidebar-right" class="column sidebar region grid-3">
+    <div id="sidebar-right" class="column sidebar region grid-3 prefix-1 omega">
       <?php print $right; ?>
     </div>
   <?php endif; ?>
 
 
-  <div id="footer" class="prefix-1 suffix-1">
+
+</div><!-- Cierra Wrapper -->
+
+  <div id="footer" class="grid-16 alpha omega">
     <?php if ($footer): ?>
-      <div id="footer-region" class="region grid-14 clear-block">
+      <div id="footer-region">
         <?php print $footer; ?>
       </div>
     <?php endif; ?>
 
     <?php if ($footer_message): ?>
-      <div id="footer-message" class="grid-14">
+      <div id="footer-message">
         <?php print $footer_message; ?>
       </div>
     <?php endif; ?>
   </div>
-
 
   </div>
   <?php print $closure; ?>
