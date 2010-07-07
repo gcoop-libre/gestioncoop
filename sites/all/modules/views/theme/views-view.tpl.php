@@ -55,10 +55,7 @@
 
   <?php if ($rows): ?>
     <div class="view-content">
-    <div class="row-content">
       <?php print $rows; ?>
-      
-    </div>
     </div>
   <?php elseif ($empty): ?>
     <div class="view-empty">

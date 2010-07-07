@@ -47,22 +47,20 @@ div.admin .right .admin-panel {
 background:none;
 }
 
-/**************************************************************************/
-
-/* General */
+/*********************   GENERAL   ***********************************/
 
 body {
-background: #fff;
+background: #EFECEA;
 color:#333;
 }
 
 #page{
-background:#fff;
+background:#EFECEA;
 }
 
-#site-header {
-height:50px;
-padding-top:10px;
+#header-wrapper {
+float:left;
+padding:65px 0 65px 25px;
 }
 
 #site-subheader {
@@ -71,7 +69,7 @@ display:none;
 
 #branding {
 color:#fff;
-height:50px;
+/*height:50px;*/
 margin-top:3px;
 }
 
@@ -83,56 +81,132 @@ font-size:16px;
 font-weight:normal;
 }
 
+#branding #logo{
+float:left;
+}
+
 #site-name{
-background:#c82128;
-height:50px;
+background:transparent;
+color:#252525;
+/*height:50px;*/
+font-size:44px;
+line-height:1;
 }
 
 #site-name a{
 padding-left:15px;
 padding-right:15px;
+color:#252525;
+font-size:44px;
+line-height:1;
 }
 
 #site-name a:hover{
 text-decoration:none;
-color:#FC4F13;
+color:#252525;
 }
 
 #site-slogan{
-height:50px;
-background:#FC4F13;
-width:717px;
+/*height:50px;*/
+background:transparent;
+/*width:717px;*/
 margin-left:3px;
 }
 
 #site-slogan h1 {
 font-weight:normal;
 font-size:16px;
-padding-left:15px;
+padding-left:90px;
 padding-right: 15px;
 padding-top:8px;
 margin-bottom:0px;
-
-}
-
-#headertop{
-padding-top:10px;
-height:25px;
-border-bottom:1px solid #333;
-}
-
-#secondary-links a{
-font-size:11px;
-text-decoration:none;
-}
-
-#secondary-links a:hover{
-text-decoration:underline;
+color:#252525;
+text-transform:uppercase;
 }
 
 #footer {
 background:#101010;
 }
+
+
+/* Menú Principal */
+
+#navigation{
+padding-top:0px;
+/*height:25px;*/
+background:#252525;
+}
+
+ul.main-menu{
+background:#252525;
+/*height:25px;*/
+padding-top:7px;
+float:left;
+width:638px;
+}
+
+ul.main-menu li{
+padding-left:15px;
+padding-right:15px;
+}
+
+ul.main-menu li a{
+font-size:13px;
+color:#fff;
+text-decoration:none;
+font-weight:300;
+-moz-border-radius-topleft:6px;
+-moz-border-radius-topright:6px;-moz-border-radius-topleft:6px;
+-moz-border-radius-topright:6px;
+}
+
+ul.main-menu li a:hover{
+background:#FC4F13;
+color:#252525;
+padding-left:11px;
+padding-right:11px;
+padding-bottom:9px;
+padding-top:4px;
+}
+
+ul.main-menu li.active a{
+color: #2E2E2E;
+background-color:#EFECEA;
+padding-left:11px;
+padding-right:11px;
+padding-bottom:9px;
+padding-top:4px;
+}
+
+/* Menú Secundario */
+
+#secondary-links{
+background:#252525;
+padding-top:7px;
+padding-bottom:7px;
+text-align:left;
+}
+
+ul.secondary-menu{
+text-align:left;
+}
+
+ul.secondary-menu a{
+color:#fff;
+background:#252525;
+font-size:10px;
+text-decoration:none;
+padding-top:7px;
+}
+
+ul.secondary-menu li.active a{
+font-weight:bold;
+}
+
+ul.secondary-menu a:hover{
+text-decoration:underline;
+}
+
 
 /**************************************************************************/
 
@@ -160,54 +234,21 @@ display:none;
 
 /*************************************************************************/
 
-/* Menú */
-
-/* #menu-image-left{
-height:31px;
-width:31px;
-background: url(../images/style_menu-left.png) no-repeat scroll 0 0;
-float:left;
-}
-
-#menu-image-right{
-height:31px;
-width:31px;
-background: url(../images/style_menu-right.png) no-repeat scroll 0 0;
-margin-top:1px;
-}*/
-
-
-ul.main-menu{
-background:#101010;
-height:25px;
-margin-top:3px;
-float:left;
-width:638px;
-}
-
-ul.main-menu li{
-padding-left:15px;
-padding-right:15px;
-}
-
-ul.main-menu li a{
-font-size:12px;
-color:#EFECEA;
-text-decoration:none;
-}
-
-ul.main-menu li:hover{
-background:#292929;
-}
 
 /*************************************************************************/
 
-#main{
-margin-top:30px;
+#main-content{
+-moz-border-radius-bottomleft:8px;
+-moz-border-radius-bottomright:8px;
+-moz-border-radius-topleft:8px;
+-moz-border-radius-topright:8px;
+border:1px solid #E1E1E1;
+background:#fff;
+padding:20px;
 }
 
 #main-top{
-background:#101010;
+/*background:#101010;*/
 margin-top:3px;
 }
 
@@ -223,6 +264,11 @@ background:#fff;
 border-bottom:1px solid #beb5ae;
 background:#fff;
 /*margin-bottom:20px;*/
+min-height: 154px;
+-moz-border-radius-bottomleft:8px;
+-moz-border-radius-bottomright:8px;
+-moz-border-radius-topleft:97px;
+-moz-border-radius-topright:8px;
 }
 
 .view-Noticias .views-row{
@@ -235,9 +281,9 @@ background:#fff;
 border-top:1px solid #beb5ae;
 }
 
-.view-Actividades .row-content{
+/*.view-Actividades .row-content{
 border-top:1px solid #beb5ae;
-}
+}*/
 
 .view-Noticias .row-content{
 border-top:1px solid #beb5ae;
@@ -286,6 +332,49 @@ padding-right:10px;
 margin-left:120px;
 padding-right:10px;
 padding-top:15px;
+}
+
+.view-Actividades .views-row .views-field-field-actividad-dia-value{
+margin-left:10px;
+padding-right:10px;
+float:left;
+border-right: 1px solid #333;
+}
+
+.page-frontpage .views-row .views-field-field-actividad-dia-value{
+margin-left:10px;
+padding-right:10px;
+float:left;
+border-right: 1px solid #333;
+}
+
+.view-Actividades .views-row .views-field-field-actividad-horario-value{
+margin-left:10px;
+padding-right:10px;
+float:left;
+border-right: 1px solid #333;
+}
+
+.page-frontpage .views-row .views-field-field-actividad-horario-value{
+margin-left:10px;
+padding-right:10px;
+float:left;
+border-right: 1px solid #333;
+}
+
+
+.view-Actividades .views-row .views-field-field-lugar-direccion-value{
+margin-left:10px;
+padding-right:10px;
+float:left;
+border-right: none;
+}
+
+.page-frontpage .views-row .views-field-field-lugar-direccion-value{
+margin-left:10px;
+padding-right:10px;
+float:left;
+border-right: none;
 }
 
 .view-Noticias .views-row .views-field-created{
@@ -362,6 +451,7 @@ padding-right:10px;
 
 .view-Actividades .views-row .views-field-teaser{
 margin-left:120px;
+margin-top:20px;
 padding-right:10px;
 }
 
@@ -396,9 +486,169 @@ color:#FC4F13;
 }
 
 
-/******************************************************************************/
+/************************   PANEL INICIO  ***********************************/
 
-/* Pager */
+
+#inicio .view-Inicio .views-row{
+border-bottom:1px solid #beb5ae;
+background:#fff;
+}
+
+#inicio .views-row .views-field-field-image-fid{
+width:100px;
+float:left;
+padding-top:15px;
+padding-left:10px;
+}
+
+#inicio .views-row .views-field-field-image-fid img{
+border:1px solid #333;
+}
+
+#inicio .views-row .views-field-created{
+margin-left:120px;
+padding-right:10px;
+color:#cdcdcd;
+font-size:9px;
+text-transform:uppercase;
+}
+
+#inicio .views-field-field-datos-actividad-value{
+margin-left:10px;
+padding-right:10px;
+float:left;
+font-size:9px;
+color:#212178;
+}
+
+#inicio .views-row .views-field-title{
+margin-left:120px;
+padding-right:10px;
+}
+
+#inicio .views-row .views-field-title a{
+color:#333;
+text-decoration:none;
+font-size:14px;
+font-weight:bold;
+}
+
+#inicio .views-row .views-field-title a:hover{
+text-decoration:underline;
+}
+
+#inicio .views-row:hover{
+background:#fff;
+}
+
+#inicio .views-row .views-field-teaser{
+margin-left:120px;
+padding-right:10px;
+margin-top:20px;
+text-align:justify;
+}
+
+#inicio .views-field-type{
+font-size:9px;
+text-transform:uppercase;
+color:#212178;
+margin-left:120px;
+padding-top:15px;
+padding-right:10px;
+}
+
+
+/************************* NUEVOS SOCIOS *******************************/
+
+/*.pane-nuevos-socios {
+border-top: 1px solid #cdcdcd;
+border-bottom:1px solid #cdcdcd;
+text-align:justify;
+font-size:11px;
+background:#cdcdcd;
+}
+
+.pane-nuevos-socios h2{
+margin-top:0px;
+margin-bottom:2px;
+border-bottom:1px solid #fff;
+font-size:14px;
+color: #212178;
+font-weight:bold;
+background:#ccd9d8;
+}
+
+.pane-nuevos-socios .pane-content p{
+background:#ccd9d8;
+margin-bottom:0px;
+}*/
+
+/**************************** ACTIVIDADES Y NOTICIAS *********************/
+
+h1#page-title {
+font-weight:normal;
+}
+
+.meta {
+margin-top:-15px;
+margin-bottom:15px;
+displaY:none;
+}
+
+.meta span.submitted {
+color:#cdcdcd;
+text-transform:uppercase;
+font-size:9px;
+}
+
+.field-field-datos-actividad{
+margin-bottom:15px;
+text-transform:uppercase;
+font-weight:bold;
+}
+
+.field-field-image {
+margin-right:20px;
+float:left;
+}
+
+.node {
+margin-bottom:30px;
+}
+
+.node .content p a{
+color:#212178;
+text-decoration:none;
+}
+
+.node .content p a:hover{
+text-decoration:underline;
+}
+
+/******************************** COMENTARIOS *****************************/
+
+#comments {
+border-top:1px solid #BEB5AE;
+/*background:#e3e3e3;*/
+}
+
+.comment-published {
+/*border-bottom:1px solid #BEB5AE;*/
+}
+
+#comments h3 a.active {
+color:#fc4f13;
+font-size:13px;
+text-decoration:none;
+font-weight:normal;
+}
+
+#comments .picture {
+float:left;
+margin-right:10px;
+}
+
+/******************************* PAGER ***********************************/
 
 ul.pager{
 margin-top:30px;
