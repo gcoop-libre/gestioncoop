@@ -235,8 +235,6 @@ display:none;
 /*************************************************************************/
 
 
-/*************************************************************************/
-
 #main-content{
 -moz-border-radius-bottomleft:8px;
 -moz-border-radius-bottomright:8px;
@@ -252,338 +250,12 @@ padding:20px;
 margin-top:3px;
 }
 
-/* Teaser de Contenido General*/
 
-.page-frontpage .views-row{
-border-bottom:1px solid #beb5ae;
-background:#fff;
-/*margin-bottom:20px;*/
-}
+/****************************************************************************/
 
-.view-Actividades .views-row{
-border-bottom:1px solid #beb5ae;
-background:#fff;
-/*margin-bottom:20px;*/
-min-height: 154px;
--moz-border-radius-bottomleft:8px;
--moz-border-radius-bottomright:8px;
--moz-border-radius-topleft:97px;
--moz-border-radius-topright:8px;
-}
-
-.view-Noticias .views-row{
-border-bottom:1px solid #beb5ae;
-background:#fff;
-/*margin-bottom:20px;*/
-}
-
-.page-frontpage .row-content{
-border-top:1px solid #beb5ae;
-}
-
-/*.view-Actividades .row-content{
-border-top:1px solid #beb5ae;
-}*/
-
-.view-Noticias .row-content{
-border-top:1px solid #beb5ae;
-}
-
-
-.page-frontpage .views-row .views-field-field-image-fid{
-width:100px;
-float:left;
-padding-top:15px;
-padding-left:10px;
-}
-
-.view-Actividades .views-row .views-field-field-image-fid{
-width:100px;
-float:left;
-padding-top:15px;
-padding-left:10px;
-}
-
-.view-Noticias .views-row .views-field-field-image-fid{
-width:100px;
-float:left;
-padding-top:15px;
-padding-left:10px;
-}
-
-.page-frontpage .views-row .views-field-field-image-fid img{
-border:1px solid #333;
-}
-
-.view-Actividades .views-row .views-field-field-image-fid img{
-border:1px solid #333;
-}
-
-.view-Noticias .views-row .views-field-field-image-fid img{
-border:1px solid #333;
-}
-
-.page-frontpage .views-row .views-field-created{
-margin-left:120px;
-padding-right:10px;
-}
-
-.view-Actividades .views-row .views-field-created{
-margin-left:120px;
-padding-right:10px;
-padding-top:15px;
-}
-
-.view-Actividades .views-row .views-field-field-actividad-dia-value{
-margin-left:10px;
-padding-right:10px;
-float:left;
-border-right: 1px solid #333;
-}
-
-.page-frontpage .views-row .views-field-field-actividad-dia-value{
-margin-left:10px;
-padding-right:10px;
-float:left;
-border-right: 1px solid #333;
-}
-
-.view-Actividades .views-row .views-field-field-actividad-horario-value{
-margin-left:10px;
-padding-right:10px;
-float:left;
-border-right: 1px solid #333;
-}
-
-.page-frontpage .views-row .views-field-field-actividad-horario-value{
-margin-left:10px;
-padding-right:10px;
-float:left;
-border-right: 1px solid #333;
-}
-
-
-.view-Actividades .views-row .views-field-field-lugar-direccion-value{
-margin-left:10px;
-padding-right:10px;
-float:left;
-border-right: none;
-}
-
-.page-frontpage .views-row .views-field-field-lugar-direccion-value{
-margin-left:10px;
-padding-right:10px;
-float:left;
-border-right: none;
-}
-
-.view-Noticias .views-row .views-field-created{
-margin-left:120px;
-padding-right:10px;
-padding-top:15px;
-}
-
-
-.page-frontpage .views-row .views-field-title{
-margin-left:120px;
-padding-right:10px;
-}
-
-.view-Actividades .views-row .views-field-title{
-margin-left:120px;
-padding-right:10px;
-}
-
-.view-Noticias .views-row .views-field-title{
-margin-left:120px;
-padding-right:10px;
-}
-
-.page-frontpage .views-row .views-field-title a{
-color:#333;
-text-decoration:none;
-font-size:14px;
-font-weight:bold;
-}
-
-.view-Actividades .views-row .views-field-title a{
-color:#333;
-text-decoration:none;
-font-size:14px;
-font-weight:bold;
-}
-
-.view-Noticias .views-row .views-field-title a{
-color:#333;
-text-decoration:none;
-font-size:14px;
-font-weight:bold;
-}
-
-.page-frontpage .views-row .views-field-title a:hover{
-text-decoration:underline;
-}
-
-.view-Actividades .views-row .views-field-title a:hover{
-text-decoration:underline;
-}
-
-.view-Noticias .views-row .views-field-title a:hover{
-text-decoration:underline;
-}
-
-.page-frontpage .views-row:hover{
-background:#fff;
-}
-
-.view-Actividades .views-row:hover{
-background:#fff;
-}
-
-.view-Noticias .views-row:hover{
-background:#fff;
-}
-
-.page-frontpage .views-row .views-field-teaser{
-margin-left:120px;
-padding-right:10px;
-}
-
-.view-Actividades .views-row .views-field-teaser{
-margin-left:120px;
-margin-top:20px;
-padding-right:10px;
-}
-
-.view-Noticias .views-row .views-field-teaser{
-margin-left:120px;
-padding-right:10px;
-}
-
-.page-frontpage .views-field-type{
-color:#C82128;
-font-size:8px;
-text-transform:uppercase;
-color:#991F34;
-margin-left:120px;
-padding-top:15px;
-padding-right:10px;
-}
-
-.page-frontpage .views-field-type span.field-content{
-/*background:#fff;*/
-color:#FC4F13;
-}
-
-.view-Actividades .views-field-type span.field-content{
-/*background:#fff;*/
-color:#FC4F13;
-}
-
-.view-Noticiass .views-field-type span.field-content{
-/*background:#fff;*/
-color:#FC4F13;
-}
-
-
-/************************   PANEL INICIO  ***********************************/
-
-
-#inicio .view-Inicio .views-row{
-border-bottom:1px solid #beb5ae;
-background:#fff;
-}
-
-#inicio .views-row .views-field-field-image-fid{
-width:100px;
-float:left;
-padding-top:15px;
-padding-left:10px;
-}
-
-#inicio .views-row .views-field-field-image-fid img{
-border:1px solid #333;
-}
-
-#inicio .views-row .views-field-created{
-margin-left:120px;
-padding-right:10px;
-color:#cdcdcd;
-font-size:9px;
-text-transform:uppercase;
-}
-
-#inicio .views-field-field-datos-actividad-value{
-margin-left:10px;
-padding-right:10px;
-float:left;
-font-size:9px;
-color:#212178;
-}
-
-#inicio .views-row .views-field-title{
-margin-left:120px;
-padding-right:10px;
-}
-
-#inicio .views-row .views-field-title a{
-color:#333;
-text-decoration:none;
-font-size:14px;
-font-weight:bold;
-}
-
-#inicio .views-row .views-field-title a:hover{
-text-decoration:underline;
-}
-
-#inicio .views-row:hover{
-background:#fff;
-}
-
-#inicio .views-row .views-field-teaser{
-margin-left:120px;
-padding-right:10px;
-margin-top:20px;
-text-align:justify;
-}
-
-#inicio .views-field-type{
-font-size:9px;
-text-transform:uppercase;
-color:#212178;
-margin-left:120px;
-padding-top:15px;
-padding-right:10px;
-}
-
-
-/************************* NUEVOS SOCIOS *******************************/
-
-/*.pane-nuevos-socios {
-border-top: 1px solid #cdcdcd;
-border-bottom:1px solid #cdcdcd;
-text-align:justify;
-font-size:11px;
-background:#cdcdcd;
-}
-
-.pane-nuevos-socios h2{
-margin-top:0px;
-margin-bottom:2px;
-border-bottom:1px solid #fff;
-font-size:14px;
-color: #212178;
-font-weight:bold;
-background:#ccd9d8;
-}
-
-.pane-nuevos-socios .pane-content p{
-background:#ccd9d8;
-margin-bottom:0px;
-}*/
-
-/**************************** ACTIVIDADES Y NOTICIAS *********************/
+/************************
+*************************   NODOS GRAL.
+*************************/
 
 h1#page-title {
 font-weight:normal;
@@ -624,6 +296,341 @@ text-decoration:none;
 .node .content p a:hover{
 text-decoration:underline;
 }
+
+
+/************************
+************************* ACTIVIDADES 
+************************/
+
+/* Teaser Actividades */
+
+.view-Actividades .views-row{
+border-bottom:1px solid #beb5ae;
+background:#fff;
+min-height: 154px;
+}
+
+.view-Actividades .views-row .views-field-field-image-fid{
+width:100px;
+float:left;
+padding-top:15px;
+padding-left:10px;
+}
+
+.view-Actividades .views-row .views-field-field-image-fid img{
+border:1px solid #333;
+}
+
+.view-Actividades .views-row .views-field-created{
+margin-left:120px;
+padding-right:10px;
+padding-top:15px;
+color:#CDCDCD;
+font-size:9px;
+text-transform:uppercase;
+}
+
+.view-Actividades .views-row .views-field-title{
+margin-left:120px;
+padding-right:10px;
+}
+
+.view-Actividades .views-row .views-field-title a{
+color:#333;
+text-decoration:none;
+font-size:14px;
+font-weight:bold;
+}
+
+.view-Actividades .views-row .views-field-title a:hover{
+text-decoration:underline;
+}
+
+.view-Actividades .views-row .views-field-teaser{
+margin-left:120px;
+margin-top:10px;
+padding-right:10px;
+}
+
+.view-Actividades .views-field-field-datos-actividad-value{
+margin-left:120px;
+padding-right:10px;
+font-size:9px;
+color:#212178;
+margin-top:5px;
+}
+
+/************************
+************************* NOTICIAS 
+************************/
+
+.view-Noticias .views-row{
+border-bottom:1px solid #beb5ae;
+background:#fff;
+min-height: 154px;
+}
+
+.view-Noticias .views-row .views-field-field-image-fid{
+width:100px;
+float:left;
+padding-top:15px;
+padding-left:10px;
+}
+
+.view-Noticias .views-row .views-field-field-image-fid img{
+border:1px solid #333;
+}
+
+.view-Noticias .views-row .views-field-created{
+margin-left:120px;
+padding-right:10px;
+padding-top:15px;
+color:#CDCDCD;
+font-size:9px;
+text-transform:uppercase;
+}
+
+.view-Noticias .views-row .views-field-title{
+margin-left:120px;
+padding-right:10px;
+}
+
+.view-Noticias .views-row .views-field-title a{
+color:#333;
+text-decoration:none;
+font-size:14px;
+font-weight:bold;
+}
+
+.view-Noticias .views-row .views-field-title a:hover{
+text-decoration:underline;
+}
+
+.view-Noticias .views-row .views-field-teaser{
+margin-left:120px;
+margin-top:10px;
+padding-right:10px;
+}
+
+
+/****************************************************************************/
+
+/************************
+*************************   FORO
+*************************/
+
+.page-forum #main-content{
+padding:40px;
+}
+
+#forum ul.links{
+padding-bottom:20px;
+}
+
+#forum ul.links li{
+padding:0px;
+}
+
+#forum ul.links li a{
+color:#212178;
+font-weight:bold;
+text-decoration:none;
+font-size:14px;
+}
+
+#forum ul.links li a:hover{
+text-decoration:underline;
+}
+
+table#forum tr {
+background:transparent;
+width:100%;
+border:none;
+}
+
+table#forum td.container{
+width:658px;
+min-height:70px;
+padding:20px;
+border-top:1px solid #BEB5AE;
+}
+
+table#forum td.container .name a{
+color:#333;
+text-decoration:none;
+font-size:14px;
+font-weight:bold;
+}
+
+table#forum td.container .description{
+margin-left:0px;
+margin-right:0px;
+margin-bottom:0px;
+}
+
+table#forum td.forum{
+background:none;
+padding-left:40px;
+padding-right:40px;
+padding-bottom:15px;
+padding-top:15px;
+}
+
+table#forum td.forum .indent {
+margin:0px;
+background: url(../images/foro-tema.png) no-repeat scroll 0 6%;
+padding-left:25px;
+}
+
+table#forum td.forum .indent .name a{
+color: #212178;
+text-decoration:none;
+font-size:14px;
+}
+
+table#forum td.forum .indent .name a:hover{
+text-decoration:underline;
+}
+
+table#forum td.forum:hover{
+background: #ECEFF5;
+}
+
+table#forum td.forum .indent .description{
+margin:0px;
+color:#333;
+}
+
+#forum .info-forum{
+padding-top:10px;
+padding-left:25px;
+text-transform:uppercase;
+font-size:9px;
+}
+
+#forum .info-forum .topics {
+float:left;
+padding-right:5px;
+}
+
+#forum .info-forum .topics span.new-topic a{
+color: #fc4f13;
+text-decoration:none;
+}
+
+
+#forum .info-forum .posts {
+float:left;
+padding-right:5px;
+}
+
+#forum td.forum .last-reply a{
+color:#212178;
+text-decoration:none;
+}
+
+#forum td.forum .last-reply a:hover{
+color:#212178;
+text-decoration:underline;
+}
+
+/************************   PANEL INICIO  ***********************************/
+
+
+#inicio .view-Inicio .views-row{
+border-bottom:1px solid #beb5ae;
+background:#fff;
+}
+
+#inicio .views-row .views-field-field-image-fid{
+width:100px;
+float:left;
+padding-top:15px;
+padding-left:10px;
+}
+
+#inicio .views-row .views-field-field-image-fid img{
+border:1px solid #333;
+}
+
+#inicio .views-row .views-field-created{
+margin-left:120px;
+padding-right:10px;
+color:#cdcdcd;
+font-size:9px;
+text-transform:uppercase;
+}
+
+#inicio .views-field-field-datos-actividad-value{
+margin-left:120px;
+padding-right:10px;
+font-size:9px;
+color:#212178;
+}
+
+#inicio .views-row .views-field-title{
+margin-left:120px;
+padding-right:10px;
+}
+
+#inicio .views-row .views-field-title a{
+color:#333;
+text-decoration:none;
+font-size:14px;
+font-weight:bold;
+}
+
+#inicio .views-row .views-field-title a:hover{
+text-decoration:underline;
+}
+
+#inicio .views-row:hover{
+background:#fff;
+}
+
+#inicio .views-row .views-field-teaser{
+margin-left:120px;
+padding-right:10px;
+margin-top:5px;
+text-align:justify;
+}
+
+#inicio .views-field-type{
+font-size:9px;
+text-transform:uppercase;
+color:#212178;
+margin-left:120px;
+padding-top:15px;
+padding-right:10px;
+}
+
+
+/************************* NUEVOS SOCIOS *******************************/
+
+/*.pane-nuevos-socios {
+border-top: 1px solid #cdcdcd;
+border-bottom:1px solid #cdcdcd;
+text-align:justify;
+font-size:11px;
+background:#cdcdcd;
+}
+
+.pane-nuevos-socios h2{
+margin-top:0px;
+margin-bottom:2px;
+border-bottom:1px solid #fff;
+font-size:14px;
+color: #212178;
+font-weight:bold;
+background:#ccd9d8;
+}
+
+.pane-nuevos-socios .pane-content p{
+background:#ccd9d8;
+margin-bottom:0px;
+}*/
+
+
 
 /******************************** COMENTARIOS *****************************/
 

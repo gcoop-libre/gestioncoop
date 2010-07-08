@@ -34,34 +34,36 @@
  */
 ?>
 
-<div id="forum-topic-<?php print $topic_id; ?>" class="grid-12 alpha omega">
-    <div id="topic-list">
-       <?php foreach ($topics as $topic): ?>
-      <div id="<?php print $topic->zebra; ?>">
+<table id="forum-topic-<?php print $topic_id; ?>">
+    <tbody>
+    <?php foreach ($topics as $topic): ?>
+        <tr class="<?php print $topic->zebra; ?>">
+            <td class="topic-list">
+                        <div id="icon"><?php print $topic->icon; ?></div>
+            <div id="title"><?php print $topic->title; ?></div>
+            <?php $teaser=node_load($topic->nid); ?>
+            <div id="teaser"><?php print $teaser->teaser; ?></div>
             <?php if ($topic->moved): ?>
-                <div id="nosequees"><?php print $topic->message; ?></div>
-                <?php else: ?>
-                <div id="replies">
-                <?php print $topic->num_comments; ?>
-                <?php if ($topic->new_replies): ?>
-                <br />
-                <a href="<?php print $topic->new_url; ?>"><?php print $topic->new_text; ?></a>
-                <?php endif; ?>
+            <div class="mesagges"><?php print $topic->message; ?></div>
+            <?php else: ?>
+            <div class="replies">
+            <?php print $topic->num_comments; ?>
+            <?php if ($topic->new_replies): ?>
+            <br />
+            <a href="<?php print $topic->new_url; ?>"><?php print $topic->new_text; ?></a>
+            <?php endif; ?>
                 </div><!--Cierra Replies -->
             <div id="created"><?php print $topic->created; ?></div>                   
             <div id="last-reply"><?php print $topic->last_reply; ?></div>
             <?php endif; ?>
      
      
-            <div id="icon"><?php print $topic->icon; ?></div>
-            <div id="title"><?php print $topic->title; ?></div>
-            <?php $teaser=node_load($topic->nid); ?>
-            <div id="teaser"><?php print $teaser->teaser; ?></div>
-                     
-       </div><!-- Cierra Zebra -->
-       <?php endforeach; ?>
-       </div> <!-- Cierra lista de Topics" -->
-    </div><!-- Cierra Forum-Topic -->
+
+            </td>                
+        </tr>
+    <?php endforeach; ?>
+    </tbody>
+</table><!-- Cierra Forum-Topic -->
 
 
 
