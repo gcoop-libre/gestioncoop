@@ -46,17 +46,17 @@
             <?php if ($topic->moved): ?>
             <div class="mesagges"><?php print $topic->message; ?></div>
             <?php else: ?>
+            <div class="info-topic">
             <div class="replies">
-            <?php print $topic->num_comments; ?>
-            <?php if ($topic->new_replies): ?>
-            <br />
+            <span><?php print $topic->num_comments; ?> Respuestas</span>
+            <span> - <?php if ($topic->new_replies): ?> 
             <a href="<?php print $topic->new_url; ?>"><?php print $topic->new_text; ?></a>
-            <?php endif; ?>
+            <?php endif; ?></span>
                 </div><!--Cierra Replies -->
-            <div id="created"><?php print $topic->created; ?></div>                   
-            <div id="last-reply"><?php print $topic->last_reply; ?></div>
+            <div id="created"> | Publicado hace <?php print $topic->created; ?> | </div>                   
+            <div id="last-reply">Última respuesta publicada hace <?php print $topic->last_reply; ?></div>
             <?php endif; ?>
-     
+            </div>
      
 
             </td>                
