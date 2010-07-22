@@ -97,13 +97,15 @@
          <?php endif; ?>
          </div>
     </div><!-- Cierra sidebar-right -->
+    
   <?php endif; ?>
+  
 
 
 </div><!-- Cierra Main -->
 
 
-  <div id="footer" class="grid-12 clear-block">
+  <div id="footer" class="grid-16 clear-block">
     <?php if ($footer): ?>
       <div id="footer-region">
         <?php print $footer; ?>
