@@ -39,6 +39,8 @@ div.admin .right .admin-panel {
   margin-left: 10px;
 }
 
+
+
 #wrapper {
 -moz-border-radius-bottomleft:8px;
 -moz-border-radius-bottomright:8px;
@@ -72,7 +74,6 @@ border:none;
 -moz-border-radius-topright:8px;
 -moz-border-radius-bottomright:8px;
 -moz-border-radius-bottomleft:8px;
-
 }
 
 body.not-logged-in #navigation {
@@ -84,11 +85,6 @@ display:none;
 }
 
 /* Iniciar Sesión */
-
-/*form#user-login{
-border-bottom:3px dotted #E42236;
-}*/
-
 
 body.not-logged-in #edit-name-wrapper.form-item label{
 float:left;
@@ -298,8 +294,6 @@ text-align:right;
 width:209px;
 }
 
-
-
 /* Nueva Contraseña */
 
 form#user-pass {
@@ -332,10 +326,6 @@ font-weight:normal;
 float:left;
 padding-right:10px;
 }
-
-/*#user-profile-form fieldset {
-border-bottom: 1px solid #fff;
-}*/
 
 #user-profile-form input#edit-submit {
 margin-left:0px;
@@ -479,8 +469,6 @@ background:#fff;
 width:300px;
 }
 
-
-
 body.logged-in.page-user #edit-pass-wrapper.form-item label{
 float:left;
 text-align:right;
@@ -499,13 +487,6 @@ body.logged-in.page-user .description {
 padding-left:230px;
 padding-top:5px;
 }
-
-/*body.logged-in.page-user label {
-width:215px;
-text-align:right;
-float:left;
-padding-right:15px;
-}*/
 
 body.logged-in.page-user .form-item label {
 width:215px;
@@ -565,15 +546,9 @@ body.logged-in.page-user #edit-picture-upload-wrapper .description{
 padding-left:112px;
 }
 
-/**************************************************************************/
-
-/*SACAR EL GRID*/
-
-#page {
-background:none;
-}
-
-/*********************   GENERAL   ***********************************/
+/***************************
+***************************  GENERAL
+**************************/
 
 body {
 background: /*#EFECEA*/#F1EEEE;
@@ -2266,3 +2241,42 @@ form#comment-form .captcha #edit-captcha-response-wrapper .description {
 padding-left:0px;
 }
 
+/* Balances y Memorias */
+
+.view-balances-memorias .views-field-created {
+color:#BEB5AE;
+font-size:9px;
+padding-left:10px;
+padding-right:10px;
+text-transform:uppercase;
+padding-top:15px;
+}
+
+.view-balances-memorias .views-field-title{
+padding-left:10px;
+padding-right:10px;
+}
+
+.view-balances-memorias .views-field-title a{
+color:#1A1A1A;
+font-size:14px;
+font-weight:bold;
+text-decoration:none;
+}
+
+.view-balances-memorias .views-field-title a:hover{
+text-decoration:underline;
+}
+
+.view-balances-memorias .views-field-teaser{
+margin-bottom:8px;
+margin-top:5px;
+padding-left:10px;
+padding-right:10px;
+text-align:justify;
+}
+
+.view-balances-memorias .filefield-file {
+padding-left:10px;
+padding-right:10px;
+}
