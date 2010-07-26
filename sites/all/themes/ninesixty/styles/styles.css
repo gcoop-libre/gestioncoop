@@ -435,6 +435,10 @@ body.logged-in.page-user #main .tabs ul.secondary li a.active{
 border-bottom:3px solid #1a1a1a;
 }
 
+#main .messages.status {
+margin-bottom:-19px;
+}
+
 /* Editar perfil */
 
 body.logged-in.page-user #user-profile-form legend{
@@ -1109,6 +1113,10 @@ form.fivestar-widget {
 margin-bottom:30px;
 }
 
+.fivestar-form-item{
+margin-top:60px;
+}
+
 /************************
 ************************* ACTIVIDADES 
 ************************/
@@ -1648,6 +1656,8 @@ margin:0px;
 #main {
 /*position:absolute;*/
 border-right:241px solid red;
+-moz-border-radius-topright:8px;
+-moz-border-radius-bottomright:8px;
 }
 
 #sidebar-right {
@@ -1662,8 +1672,9 @@ margin-bottom:0px;
 /*position:absolute;*/
 /*margin-left:-230px;*/
 margin-left:-241px;
-width:241px;
+/*width:241px;*/
 margin-top:1px;
+border-right:20px solid red;
 }
 
 #sidebar-right-container {
@@ -1717,6 +1728,12 @@ margin-bottom:10px;
 color:#1A1A1A;
 }
 
+#sidebar-right .poll .vote-form input#edit-vote-1 {
+color:#1A1A1A;
+font-size:11px;
+margin-bottom:10px;
+}
+
 #sidebar-right .poll .vote-form input#edit-vote-2 {
 font-size:11px;
 margin-bottom:10px;
@@ -1728,6 +1745,15 @@ color:#1A1A1A;
 color:#E42236;
 }
 
+
+#sidebar-right .poll .vote-form input#edit-vote-1:hover {
+color:#E42236;
+}
+
+
+#sidebar-right .poll .vote-form input#edit-vote-2:hover {
+color:#E42236;
+}
 
 #sidebar-right .block-poll .text{
 margin:0px;
@@ -1756,6 +1782,24 @@ text-transform:uppercase;
 font-size:9px;
 margin-bottom:15px;
 }
+
+/* Página Encuesta */
+
+#main-content .poll .vote-form{
+text-align:left;
+}
+
+#main-content .poll .choices {
+display:block;
+}
+
+#main-content .poll input#edit-vote {
+text-align:left;
+font-size:12px;
+margin-bottom:30px;
+margin-top:15px;
+}
+
 
 /*****************************************************************************/
 
