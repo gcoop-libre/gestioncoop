@@ -168,9 +168,9 @@ background:red;
 
 /* Crear nueva cuenta */
 
-form#user-register {
+/*form#user-register {
 border-bottom:3px dotted #E42236;
-}
+}*/
 
 
 body.not-logged-in form#user-register legend{
@@ -296,9 +296,9 @@ width:209px;
 
 /* Nueva Contraseña */
 
-form#user-pass {
+/*form#user-pass {
 border-bottom:3px dotted #E42236;
-}
+}*/
 
 body.not-logged-in form#user-pass #edit-name-wrapper.form-item label {
 width:195px;
