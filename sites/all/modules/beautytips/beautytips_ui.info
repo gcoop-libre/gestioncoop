@@ -1,0 +1,14 @@
+; $Id: beautytips_ui.info,v 1.1.2.4 2010/06/16 20:35:47 kleinmp Exp $
+
+name = BeautyTips UI
+description = Adds settings menu and contributed beautytip popups
+core = 6.x
+dependencies[] = beautytips
+package = User interface
+
+; Information added by drupal.org packaging script on 2010-07-07
+version = "6.x-2.0"
+core = "6.x"
+project = "beautytips"
+datestamp = "1278539104"
+

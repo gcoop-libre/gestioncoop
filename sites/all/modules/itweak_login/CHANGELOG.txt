@@ -1,0 +1,54 @@
+# $Id: CHANGELOG.txt,v 1.11 2009/08/07 04:30:21 iva2k Exp $
+
+itweak_login 6.x-1.x-dev
+------------------------
+
+itweak_login 6.x-1.10, 2009-08-06
+---------------------------------
+[NOISSUE] by iva2k: Fixed tabulation.
+[#540230] by brandon.dyck: Added renaming of User/Password labels.
+[NOISSUE] by iva2k: Disabled renaming of User/Password labels when LoginToboggan is overriding them.
+[NOISSUE] by iva2k: Added applicable tweaks from user_login_block to user_login page.
+[NOISSUE] by iva2k: Added applicable tweaks to tabs on user page.
+[NOISSUE] by iva2k: Regenerated .pot and .po files.
+
+itweak_login 6.x-1.9, 2009-07-29
+--------------------------------
+[NOISSUE] by iva2k: Bump the release to last -dev date. Just to annoy site admins with needless update;) -dev did not accumulate any real fixes, and queue is empty for quite a while.
+
+itweak_login 6.x-1.8, 2009-05-30
+--------------------------------
+#477742 by iva2k: Added update_6001() so the Internationalization will register on update.
+
+itweak_login 6.x-1.7, 2009-05-30
+--------------------------------
+#477742 by iva2k: Added internationalization support.
+
+itweak_login 6.x-1.6, 2009-05-29
+--------------------------------
+#474158 by asak: Hebrew translation.
+#474158 by iva2k: Updated Russian translation and .pot.
+
+itweak_login 6.x-1.5, 2009-05-28
+--------------------------------
+by iva2k: Translations cleanup.
+
+itweak_login 6.x-1.4, 2009-05-28
+--------------------------------
+by iva2k: Updated Russian translation.
+
+itweak_login 6.x-1.3, 2009-05-28
+--------------------------------
+#474158 by iva2k: Added translations .pot & Russian translation.
+
+itweak_login 6.x-1.2, 2009-05-28
+--------------------------------
+#475148 by iva2k: Fixed user/register to be passed through check_url(url(...)).
+
+itweak_login 6.x-1.1, 2009-05-26
+--------------------------------
+Config location fixed.
+
+itweak_login 6.x-1.0, 2009-05-26
+--------------------------------
+Initial commit, First Release.

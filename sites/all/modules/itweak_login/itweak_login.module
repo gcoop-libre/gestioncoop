@@ -1,0 +1,192 @@
+<?php
+// $Id: itweak_login.module,v 1.11 2009/08/07 04:27:01 iva2k Exp $
+
+/**
+ * @file
+ * iTweakLogin - Tweak user login form.
+ */
+
+/**
+ * Implementation of hook_init().
+ */
+function itweak_login_init() {
+  drupal_add_css(drupal_get_path('module', 'itweak_login') . '/itweak_login.css');
+}
+
+/**
+ * Implementation of hook_menu().
+ */
+/* This form is moved into a section on standard admin/user/settings
+function itweak_login_menu() {
+  $items = array();
+  $items['admin/settings/itweak_login'] = array(
+    'title' => 'iTweak Login', 
+    'description' => 'Control Login settings.', 
+    'page callback' => 'drupal_get_form', 
+    'page arguments' => array('itweak_login_admin_settings'), 
+    'access arguments' => array('administer iTweak Login'), 
+    'type' => MENU_NORMAL_ITEM, 
+    'file' => 'itweak_login.pages.inc', 
+  );
+  return $items;
+}
+*/
+
+/**
+ * Implementation of hook_form_alter().
+ */
+function itweak_login_form_alter(&$form, $form_state, $form_id) {
+
+  switch ($form_id) {
+    case 'user_admin_settings':
+      module_load_include('inc', 'itweak_login', 'itweak_login.pages');
+      $myform = _itweak_login_admin_settings();
+      $form['login'] = array(
+        '#type' => 'fieldset', 
+        '#title' => t('User Login settings'), 
+        '#description' => t('These options adjust User Login form (provided by <em>iTweak Login</em> module)'), 
+        '#collapsible' => TRUE, 
+        '#collapsed' => TRUE, 
+      );
+      $form['login'] += $myform;
+      $form['login']['#weight'] = $form['registration']['#weight'] + 0.001;
+	  foreach ($myform['#submit'] as $func) {
+	    $form['#submit'][] = $func;
+	  }
+      break;
+      
+    case 'user_login':
+	  $inpage = TRUE;
+	  // No break here!
+	  
+    case 'user_login_block':
+
+      // Avoid conflict with LoginToboggan if it is installed and enables email login.
+      $lt_enabled = (module_exists('logintoboggan') && variable_get('logintoboggan_login_with_email', 0));
+
+      // Configurable variables
+      $username_label = $lt_enabled ? '' : variable_get('itweak_login_username_label', '');
+      $password_label = $lt_enabled ? '' : variable_get('itweak_login_password_label', '');
+      $register_button = variable_get('itweak_login_register_button', FALSE);
+      $register_button_name = variable_get('itweak_login_register_button_name', '');
+      $register_name = variable_get('itweak_login_register_name', '');
+      $passwd_recover_name = variable_get('itweak_login_recover_name', '');
+      $passwd_recover_url = variable_get('itweak_login_recover_url', '');
+      $login_button_name = variable_get('itweak_login_login_button_name', '');
+
+      // Defaults
+      if ($register_button_name == '') {
+        $register_button_name = t('Register');
+      }
+      if ($register_name == '') {
+        $register_name = t('Create new account');
+      }
+      if ($passwd_recover_name == '') {
+        $passwd_recover_name = t('Request new password');
+      }
+      if ($passwd_recover_url == '') {
+        $passwd_recover_url = 'user/password'; 
+      }
+	  
+      if (!$inpage) {
+        // Button wrap with <a> makes the button functional without javascript
+        $buttonwrap = 1;
+
+        $items = array();
+        if (variable_get('user_register', 1)) {
+          if ($register_button) {
+            $url = check_url(url('user/register'));
+            // Add a new register button ...
+            $form['register'] = array(
+              // Place at the same weight as "Login" button for now
+              '#weight' => $form['submit']['#weight'], 
+              '#value' => 
+                ($buttonwrap ? '<a class="itweak_buttonwrap" href="' . $url . '">' . "\n" : '') .
+                '<input type="button" name="register" value="' . $register_button_name . '"'
+                  . ' onclick = "location.href = ' . "'" . $url . "'" . ';"'
+                  . ' class = "form-submit"'
+                   . ' />' . "\n"
+                . ($buttonwrap ? '</a>' . "\n" : '')
+            );
+          }
+          else {
+            // ... instead of a regular link
+            $items[] = l($register_name, 'user/register', array('attributes' => array('title' => t('Create a new user account.'))));
+          }
+        }
+        $items[] = l($passwd_recover_name, $passwd_recover_url, array('attributes' => array('title' => t('Request new password via e-mail.'))));
+        $form['links']['#value'] = theme('item_list', $items);
+        // Fix unassigned weight (it breaks order of controls later on)
+        $form['links']['#weight'] = $form['submit']['#weight'] + 1;
+      }
+
+      if ($username_label != '') {
+        $form['name']['#title'] = $username_label;
+      }
+      if ($password_label != '') {
+        $form['pass']['#title'] = $password_label;
+      }
+      
+      if ($login_button_name != '') {
+       $form['submit']['#value'] = $login_button_name;
+      }
+
+      // Add an after_build callback that we'll use to adjust the weight
+      // and tabindex attributes of the "Sign Up" button.
+      if (!isset($form['#after_build'])) {
+        $form['#after_build'] = array();
+      }
+      $form['#after_build'][] = 'itweak_login_form_after_build_proxy';
+      break;
+
+    case 'user_register':
+      $register_button_name = variable_get('itweak_login_register_button_name', '');
+      if ($register_button_name == '') {
+        $register_button_name = t('Create new account');
+      }
+      if ($register_button_name != '') {
+       $form['submit']['#value'] = $register_button_name;
+      }
+      break;
+  }
+}
+
+/**
+ * Proxy function to call itweak_login_form_after_build(), because it might
+ * not be included yet when the form is processed and invokes the callback.
+ */
+function itweak_login_form_after_build_proxy($form, &$form_state) {
+  module_load_include('inc', 'itweak_login', 'itweak_login.pages');
+  return itweak_login_form_after_build($form, $form_state);
+}
+
+
+/**
+ * Implementation of hook_simpletest().
+ */
+function itweak_login_simpletest() {
+  // Scan through itweak_login/tests directory for any .test files to tell SimpleTest module.
+  $tests = file_scan_directory(drupal_get_path('module', 'itweak_login') .'/tests', '\.test');
+  return array_keys($tests);
+}
+
+/**
+ * Implementation of hook_menu_alter().
+ */
+function itweak_login_menu_alter(&$items) {
+//  $register_button_name = variable_get('itweak_login_register_button_name', '');
+  $register_name = variable_get('itweak_login_register_name', '');
+  $passwd_recover_name = variable_get('itweak_login_recover_name', '');
+  $passwd_recover_url = variable_get('itweak_login_recover_url', '');
+  $login_button_name = variable_get('itweak_login_login_button_name', '');
+
+  if ($login_button_name != '') {
+    $items['user/login']['title'] = $login_button_name;
+  }
+  if ($register_name != '') {
+    $items['user/register']['title'] = $register_name;
+  }
+  if ($passwd_recover_name != '' && $passwd_recover_url == '') {
+    $items['user/password']['title'] = $passwd_recover_name;
+  }
+}

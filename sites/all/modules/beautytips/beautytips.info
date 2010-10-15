@@ -1,0 +1,13 @@
+; $Id: beautytips.info,v 1.5.2.4 2010/05/10 21:48:24 kleinmp Exp $
+
+name = BeautyTips API
+description = API for implementing jQuery beautyTips tooltip plugin
+core = 6.x
+package = User interface
+
+; Information added by drupal.org packaging script on 2010-07-07
+version = "6.x-2.0"
+core = "6.x"
+project = "beautytips"
+datestamp = "1278539104"
+

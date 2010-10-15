@@ -1,0 +1,11 @@
+/* $Id: itweak_login.css,v 1.1 2009/05/26 03:21:16 iva2k Exp $ */
+
+/**
+ * @file
+ * itweak_login CSS file.
+ */
+
+
+a.itweak_buttonwrap, a.itweak_buttonwrap:hover, a.itweak_buttonwrap:visited {
+  text-decoration: none !important;
+}

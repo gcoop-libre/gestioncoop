@@ -1,0 +1,12 @@
+; $Id: itweak_login.info,v 1.3 2009/05/28 14:19:45 iva2k Exp $
+name = iTweak Login
+description = Tweak login forms.
+package = Site Tweaks
+core = 6.x
+
+; Information added by drupal.org packaging script on 2009-08-07
+version = "6.x-1.10"
+core = "6.x"
+project = "itweak_login"
+datestamp = "1249619741"
+

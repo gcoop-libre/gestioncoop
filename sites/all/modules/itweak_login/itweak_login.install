@@ -1,0 +1,69 @@
+<?php
+// $Id: itweak_login.install,v 1.5 2009/08/07 03:05:53 iva2k Exp $
+
+/**
+ * @file
+ * Installs the itweak_login module
+ */
+
+function _itweak_variables($i18n = FALSE) {
+  $ret = array(
+    'itweak_login_register_button_name',
+    'itweak_login_register_name',
+    'itweak_login_recover_name',
+    'itweak_login_login_button_name',
+    'itweak_login_username_label',
+    'itweak_login_password_label',
+  );
+  if (!$i18n) {
+    $ret += array (
+      'itweak_login_register_button',
+      'itweak_login_recover_url',
+    );
+  }
+  return $ret;
+}
+
+/**
+ *  Implementation of hook_update_N().
+ */
+function itweak_login_update_6001() {
+  $ret = array();
+  $i18n_variables = variable_get('i18n_variables', '');
+  if (!is_array($i18n_variables)) {
+    $i18n_variables = array();
+  }
+  $i18n_variables = array_diff($i18n_variables, _itweak_variables(FALSE));
+  $i18n_variables = array_merge($i18n_variables, _itweak_variables(TRUE));
+  variable_set('i18n_variables', $i18n_variables);
+  $ret[] = array('success' => TRUE, 'query' => 'iTweak Login Internationalization variables registered.');
+  return $ret;
+}
+
+/**
+ *  Implementation of hook_install().
+ */
+function itweak_login_install() {
+  $i18n_variables = variable_get('i18n_variables', '');
+  if (!is_array($i18n_variables)) {
+    $i18n_variables = array();
+  }
+  $i18n_variables = array_merge($i18n_variables, _itweak_variables(TRUE));
+  variable_set('i18n_variables', $i18n_variables);
+}
+
+/**
+ *  Implementation of hook_uninstall().
+ */
+function itweak_login_uninstall() {
+  foreach (_itweak_variables() as $var) {
+    variable_del($var);
+  }
+
+  $i18n_variables = variable_get('i18n_variables', '');
+  if (is_array($i18n_variables)) {
+    $i18n_variables = array_diff($i18n_variables, _itweak_variables());
+    variable_set('i18n_variables', $i18n_variables);
+  }
+}
+

@@ -1,0 +1,8 @@
+# $Id: INSTALL.txt,v 1.1 2009/05/31 06:15:40 iva2k Exp $
+
+To enable this module, follow these instruction:
+
+Note: Before updating your website to release 6.x-1.7 first UNINSTALL (disable and then uninstall) any previous release of itweak_login. Otherwise Internationalization will not register properly.
+
+1. Upload it to your sies/all/modules folder and enable it on the admin/build/modules page.
+
