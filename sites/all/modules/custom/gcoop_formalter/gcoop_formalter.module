@@ -41,38 +41,38 @@ function gcoop_formalter_form_alter(&$form, $form_state, $form_id)
             // Our kickin' mods go here.
             $form['field_label1'] = array (
                                             '#type' => 'markup',
-                                            '#value' => ' En la ',
+                                            '#value' => '<div class="label1"> En la </div>',
                                             '#weight' => $form['field_ciudad']['#weight'] - 1,
                                             );
             $form['field_label2'] = array (
                                             '#type' => 'markup',
-                                            '#value' => ' a los días y siendo las ',
+                                            '#value' => '<div class="label2" a los días y siendo las </div>',
                                             '#weight' => $form['field_fecha']['#weight'] - 1,
                                             );
             $form['field_label3'] = array (
                                             '#type' => 'markup',
-                                            '#value' => ' se reúnen los miembros del Consejeros de Administración de la '. variable_get('site_name', TRUE) .', en el domicilio de la calle ',
+                                            '#value' => '<div class="label3"> se reúnen los miembros del Consejeros de Administración de la '. variable_get('site_name', TRUE) .', en el domicilio de la calle </div>',
                                             '#weight' => $form['field_domiciliosocial']['#weight'] - 1,
                                             );
             $form['field_label4'] = array (
                                             '#type' => 'markup',
-                                            '#value' => ' quien da comienzo al acto con la presencia de ',
+                                            '#value' => '<div class="label4"> quien da comienzo al acto con la presencia de </div>',
                                             '#weight' => $form['field_presidereunion']['#weight'] + 1,
                                             );
-            $form['field_label4'] = array (
+            $form['field_label5'] = array (
                                             '#type' => 'markup',
-                                            '#value' => 'Abierto el acto el Señor Presidente pone a consideración el acta anterior, la misma es leída y se aprueba por unanimidad, sin observaciones. 
-                                           <br /> A continuación el Sr. Presidente expone que la reunión fue convocada a los efectos de tratar los siguientes temas: ',
+                                            '#value' => '<div class="label5"> Abierto el acto el Señor Presidente pone a consideración el acta anterior, la misma es leída y se aprueba por unanimidad, sin observaciones. 
+                                           <br /> A continuación el Sr. Presidente expone que la reunión fue convocada a los efectos de tratar los siguientes temas: </div>',
                                             '#weight' => $form['field_presentes']['#weight'] + 1,
                                             );
-            $form['field_label5'] = array (
+            $form['field_label6'] = array (
                                             '#type' => 'markup',
-                                            '#value' => 'Siendo las ',
+                                            '#value' => '<div class="label6">Siendo las </div>',
                                             '#weight' => $form['field_firmantes']['#weight'] + 1,
                                             );
-            $form['field_label5'] = array (
+            $form['field_label7'] = array (
                                             '#type' => 'markup',
-                                            '#value' => 'Y al no haber otro asunto que tratar, se levanta la sesión.',
+                                            '#value' => '<div class="label7">Y al no haber otro asunto que tratar, se levanta la sesión.</div>',
                                             '#weight' => $form['field_firmantes']['#weight'] - 1,
                                             );
             #print "<pre>";
