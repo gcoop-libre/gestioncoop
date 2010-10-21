@@ -93,6 +93,12 @@ function gcoop_formalter_form_alter(&$form, $form_state, $form_id)
                   '#default_value' => variable_get('gcoop_formalter_ciudad_setting', TRUE),
                   '#weight' => '-11',
                 );
+              $form['gcoop_formalter_matricula_setting'] = array(
+                  '#type' => 'textfield',
+                  '#title' => t('matricula INAES NRO'),
+                  '#default_value' => variable_get('gcoop_formalter_matricula_setting', TRUE),
+                  '#weight' => '-12',
+                );
               break;
     }
 }
