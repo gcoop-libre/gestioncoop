@@ -1,0 +1,12 @@
+; $Id: gcoop_formalter.info,v 1.5.2.1 2010/10/18 12:50:36 sun Exp $
+name = gcoop_formalter
+description = modificacion de node_form para la creacion de Actas y Asambleas
+package = gcoop
+core = 6.x
+
+; Information added by drupal.org packaging script on 2010-10-18
+version = "6.x-dev"
+core = "6.x"
+project = "gcoop_formalter"
+datestamp = "1287435076"
+

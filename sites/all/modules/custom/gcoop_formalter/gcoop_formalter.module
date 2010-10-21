@@ -1,0 +1,110 @@
+<?php
+// $Id: gcoop_formalter.module,v 1.43.2.18 2009/06/21 18:58:04 sun Exp $
+
+/**
+ * @file
+ * Renders a menu tree for administrative purposes as a dropdown menu at the top
+ * of the window.
+ */
+
+/**
+ * Implementation of hook_help().
+ */
+function gcoop_formalter_help($path, $arg) {
+  switch ($path) {
+    case 'admin/help#gcoop_formalter':
+      $output = 'Template para node_form de tipo contenido Acta y Asamblea';
+      return $output;
+  }
+}
+
+/**
+* Implementation of hook_form_alter().
+*
+* The function is named modulename_form_alter.
+*/
+function gcoop_formalter_form_alter(&$form, $form_state, $form_id) 
+{
+    // Normally a switch is used because you may want to alter more than
+    // one form and it is easy to add a new case for each form.
+    switch ($form_id) {
+        // This is our form ID.
+        case 'acta_consejo_node_form':
+            $form['field_ciudad']['#weight'] = $form['field_ciudad']['#weight']+10;
+            $form['field_fecha']['#weight'] = $form['field_fecha']['#weight']+20;
+            $form['field_domiciliosocial']['#weight'] = $form['field_domiciliosocial']['#weight']+30;
+            $form['field_presidereunion']['#weight'] = $form['field_presidereunion']['#weight']+40;
+            $form['field_presentes']['#weight'] = $form['field_presentes']['#weight']+50;
+            $form['field_temadereunion']['#weight'] = $form['field_temadereunion']['#weight']+60;
+            $form['field_firmantes']['#weight'] = $form['field_firmantes']['#weight']+70;
+
+            // Our kickin' mods go here.
+            $form['field_label1'] = array (
+                                            '#type' => 'markup',
+                                            '#value' => ' En la ',
+                                            '#weight' => $form['field_ciudad']['#weight'] - 1,
+                                            );
+            $form['field_label2'] = array (
+                                            '#type' => 'markup',
+                                            '#value' => ' a los días y siendo las ',
+                                            '#weight' => $form['field_fecha']['#weight'] - 1,
+                                            );
+            $form['field_label3'] = array (
+                                            '#type' => 'markup',
+                                            '#value' => ' se reúnen los miembros del Consejeros de Administración de la '. variable_get('site_name', TRUE) .', en el domicilio de la calle ',
+                                            '#weight' => $form['field_domiciliosocial']['#weight'] - 1,
+                                            );
+            $form['field_label4'] = array (
+                                            '#type' => 'markup',
+                                            '#value' => ' quien da comienzo al acto con la presencia de ',
+                                            '#weight' => $form['field_presidereunion']['#weight'] + 1,
+                                            );
+            $form['field_label4'] = array (
+                                            '#type' => 'markup',
+                                            '#value' => 'Abierto el acto el Señor Presidente pone a consideración el acta anterior, la misma es leída y se aprueba por unanimidad, sin observaciones. 
+                                           <br /> A continuación el Sr. Presidente expone que la reunión fue convocada a los efectos de tratar los siguientes temas: ',
+                                            '#weight' => $form['field_presentes']['#weight'] + 1,
+                                            );
+            $form['field_label5'] = array (
+                                            '#type' => 'markup',
+                                            '#value' => 'Siendo las ',
+                                            '#weight' => $form['field_firmantes']['#weight'] + 1,
+                                            );
+            $form['field_label5'] = array (
+                                            '#type' => 'markup',
+                                            '#value' => 'Y al no haber otro asunto que tratar, se levanta la sesión.',
+                                            '#weight' => $form['field_firmantes']['#weight'] - 1,
+                                            );
+            #print "<pre>";
+            #print_r($form);
+            #print "</pre>";
+            #die();
+            break;
+        case 'system_site_information_settings':
+              $form['gcoop_formalter_direccion_setting'] = array(
+                  '#type' => 'textfield',
+                  '#title' => t('domicilio social'),
+                  '#default_value' => variable_get('gcoop_formalter_direccion_setting', TRUE),
+                  '#weight' => '-10',
+                );
+              $form['gcoop_formalter_ciudad_setting'] = array(
+                  '#type' => 'textfield',
+                  '#title' => t('ciudad'),
+                  '#default_value' => variable_get('gcoop_formalter_ciudad_setting', TRUE),
+                  '#weight' => '-11',
+                );
+              break;
+    }
+}
+
+#/**
+# * Implementation of hook_theme().
+# */
+#function gcoop_formalter_theme() {
+#  return array(
+#    'gcoop_formalter_acta' => array(
+#      'arguments' => array(),
+#    ),
+#  );
+#}
+#

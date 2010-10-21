@@ -1,0 +1,12 @@
+; $Id: multiselect.info,v 1.4.2.3 2009/03/29 16:26:17 attheshow Exp $
+name = Multiselect
+description = Defines a CCK multiple selection field widget, to allow easier multi-selection for users.
+dependencies[] = optionwidgets
+package = CCK
+core = 6.x
+; Information added by drupal.org packaging script on 2010-04-22
+version = "6.x-1.7"
+core = "6.x"
+project = "multiselect"
+datestamp = "1271978107"
+
