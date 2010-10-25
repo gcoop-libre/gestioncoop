@@ -2283,31 +2283,32 @@ padding-right:10px;
 
 /**************** Editar Acta ****************************/
 
-body.node-type-acta-consejo #main-content {
+/*body.node-type-acta-consejo #main-content {
 width:563px;
-}
-
-body.node-type-acta-consejo #main-content textarea{
-width:542px;
-}
+}*/
 
 .label1, .label2, .label3, .label4, .label5, .label6, .label7 {
 color:#000;
 background:#f1f1f1;
+width:563px;
 }
 
-body.node-type-acta-consejo #node-form input#edit-field-ciudad-0-value, input#edit-field-domiciliosocial-0-value, input#edit-field-presidereunion-0-uid-uid, textarea{
+input#edit-field-ciudad-0-value, input#edit-field-domiciliosocial-0-value, input#edit-field-presidereunion-0-uid-uid, textarea{
 border:1px solid #E1E1E1;
 margin-left:0px;
 width:563px;
 }
 
-body.node-type-acta-consejo #node-form input#edit-field-fecha-0-value2-datepicker-popup-0, input#edit-field-fecha-0-value-timeEntry-popup-1, input#edit-field-fecha-0-value2-timeEntry-popup-1, input#edit-field-fecha-0-value-datepicker-popup-0{
+input#edit-field-fecha-0-value2-datepicker-popup-0, input#edit-field-fecha-0-value-timeEntry-popup-1, input#edit-field-fecha-0-value2-timeEntry-popup-1, input#edit-field-fecha-0-value-datepicker-popup-0{
 border:1px solid #E1E1E1;
 margin-left:0px;
 }
 
-body.node-type-acta-consejo #node-form #edit-field-ciudad-0-value-wrapper, fieldset, #edit-field-domiciliosocial-0-value-wrapper, #edit-field-presidereunion-0-uid-uid-wrapper, #edit-field-presentes-uid-wrapper, #field-temadereunion-items {
+#field_temadereunion_values textarea{
+width:531px;
+}
+
+#edit-field-ciudad-0-value-wrapper, fieldset, #edit-field-domiciliosocial-0-value-wrapper, #edit-field-presidereunion-0-uid-uid-wrapper, #edit-field-presentes-uid-wrapper, #field-temadereunion-items {
 margin-bottom:33px;
 }
 
@@ -2315,7 +2316,7 @@ body.node-type-acta-consejo #node-form .container-inline-date{
 margin-bottom:13px;
 }
 
-body.node-type-acta-consejo table#field_temadereunion_values {
+table#field_temadereunion_values {
 margin-top:13px;
 }
 
@@ -2333,28 +2334,28 @@ font-size:0.85em;
 font-weight:normal;
 }
 
-body.node-type-acta-consejo #node-form tbody {
+#field_temadereunion_values tbody {
 background:transparent;
 border:none;
 }
 
-body.node-type-acta-consejo #node-form tr {
+#field_temadereunion_values tr {
 background:transparent;
 border:none;
 }
 
-body.node-type-acta-consejo #node-form td {
+#field_temadereunion_values td {
 padding-bottom:13px;
 }
 
-body.node-type-acta-consejo #node-form table#field_temadereunion_values {
+table#field_temadereunion_values {
 margin-bottom:0px;
 }
 
-body.node-type-acta-consejo #node-form #field-temadereunion-items .description, #edit-field-temadereunion-field-temadereunion-add-more {
+#field-temadereunion-items .description, #edit-field-temadereunion-field-temadereunion-add-more {
 margin-left:30px;
 }
-
+	
 body.node-type-acta-consejo #node-form #label_unselected, body.node-type-acta-consejo #node-form #label_selected{
 display:none;
 }
