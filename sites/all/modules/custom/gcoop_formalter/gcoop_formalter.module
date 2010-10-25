@@ -29,6 +29,9 @@ function gcoop_formalter_form_alter(&$form, $form_state, $form_id)
     // one form and it is easy to add a new case for each form.
     switch ($form_id) {
         // This is our form ID.
+        case 'convocatoria_asamblea_node_form':
+          unset($form['field_asamblearef']);
+        break;
         case 'acta_consejo_node_form':
             $form['field_ciudad']['#weight'] = $form['field_ciudad']['#weight']+10;
             $form['field_fecha']['#weight'] = $form['field_fecha']['#weight']+20;
@@ -102,6 +105,46 @@ function gcoop_formalter_form_alter(&$form, $form_state, $form_id)
               break;
     }
 }
+
+/*
+ * hook_presave tipo de nodo convocatoria asamblea. 
+ * creo un nodo asamblea en base a la convocatoria.
+ * Si el nodo asamblea fue creado, seteo el campo
+ * field_asamblearef (del nodo convocatoria) al nodo asamblea.
+*/
+
+function gcoop_formalter_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
+  switch ($op) {
+    case 'presave':
+      if ($node->type == 'convocatoria_asamblea')
+      {
+        auto_nodetitle_set_title($node);
+
+        $node_asamblea->type = "asamblea";
+        $node_asamblea->title = "Asamblea de la {$node->title}";
+        $node_asamblea->form_id = "asamblea_node_form";
+        $node_asamblea->field_fecha = $node->field_fecha;
+        $node_asamblea->field_tipoasamblea = $node->field_tipoasamblea;
+        $node_asamblea->field_domiciliosocial = $node->field_domiciliosocial;
+        $node_asamblea->field_temadereunion = $node->field_temadereunion;
+        $node_asamblea->uid = $node->uid;
+        $node_asamblea->language = $node->language;
+
+        node_save($node_asamblea);
+
+        // verifico que haya creado el nodo. y le hago el refer de la asamblea creada
+        if (!empty($node_asamblea->nid))
+        {
+          $node->field_asamblearef['0']['nid'] = $node_asamblea->nid;
+        }
+      }
+
+      break;
+  }
+}
+
+
+
 
 #/**
 # * Implementation of hook_theme().
