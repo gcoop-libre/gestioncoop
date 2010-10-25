@@ -853,7 +853,7 @@ border-bottom:3px dotted #BEB5AE;
 }
 
 .node .content p a{
-color:#E42236;
+color:red;
 text-decoration:none;
 }
 
@@ -1310,7 +1310,7 @@ color:#1A1A1A;
 
 #forum .info-forum{
 padding-top:10px;
-color:#beb5ae;
+color:red;
 text-transform:uppercase;
 font-size:9px;
 }
@@ -1481,7 +1481,7 @@ border:1px solid #1A1A1A;
 
 #inicio .views-row .views-field-created{
 padding-right:10px;
-color:#beb5ae;
+color:red;
 font-size:9px;
 text-transform:uppercase;
 padding-left:10px;
@@ -1526,7 +1526,7 @@ padding-left:10px;
 #inicio .views-field-type{
 font-size:9px;
 text-transform:uppercase;
-color:#beb5ae;
+color:red;
 padding-top:15px;
 padding-left:10px;
 }
@@ -1563,12 +1563,12 @@ margin-bottom:0px;
 
 ul.pager{
 margin-top:30px;
-color:#beb5ae;
+color:red;
 }
 
 ul.pager li a{
 text-decoration:none;
-color:#beb5ae;
+color:red;
 }
 
 ul.pager li.pager-next a{
@@ -2279,4 +2279,82 @@ text-align:justify;
 .view-balances-memorias .filefield-file {
 padding-left:10px;
 padding-right:10px;
+}
+
+/**************** Editar Acta ****************************/
+
+body.node-type-acta-consejo #main-content {
+width:563px;
+}
+
+body.node-type-acta-consejo #main-content textarea{
+width:542px;
+}
+
+.label1, .label2, .label3, .label4, .label5, .label6, .label7 {
+color:#000;
+background:#f1f1f1;
+}
+
+body.node-type-acta-consejo #node-form input#edit-field-ciudad-0-value, input#edit-field-domiciliosocial-0-value, input#edit-field-presidereunion-0-uid-uid, textarea{
+border:1px solid #E1E1E1;
+margin-left:0px;
+width:563px;
+}
+
+body.node-type-acta-consejo #node-form input#edit-field-fecha-0-value2-datepicker-popup-0, input#edit-field-fecha-0-value-timeEntry-popup-1, input#edit-field-fecha-0-value2-timeEntry-popup-1, input#edit-field-fecha-0-value-datepicker-popup-0{
+border:1px solid #E1E1E1;
+margin-left:0px;
+}
+
+body.node-type-acta-consejo #node-form #edit-field-ciudad-0-value-wrapper, fieldset, #edit-field-domiciliosocial-0-value-wrapper, #edit-field-presidereunion-0-uid-uid-wrapper, #edit-field-presentes-uid-wrapper, #field-temadereunion-items {
+margin-bottom:33px;
+}
+
+body.node-type-acta-consejo #node-form .container-inline-date{
+margin-bottom:13px;
+}
+
+body.node-type-acta-consejo table#field_temadereunion_values {
+margin-top:13px;
+}
+
+body.node-type-acta-consejo #node-form fieldset, input {
+padding:0px;
+margin-left:0px;
+}
+
+body.node-type-acta-consejo #node-form label, thead{
+display:none;
+}
+
+body.node-type-acta-consejo #node-form .description{
+font-size:0.85em;
+font-weight:normal;
+}
+
+body.node-type-acta-consejo #node-form tbody {
+background:transparent;
+border:none;
+}
+
+body.node-type-acta-consejo #node-form tr {
+background:transparent;
+border:none;
+}
+
+body.node-type-acta-consejo #node-form td {
+padding-bottom:13px;
+}
+
+body.node-type-acta-consejo #node-form table#field_temadereunion_values {
+margin-bottom:0px;
+}
+
+body.node-type-acta-consejo #node-form #field-temadereunion-items .description, #edit-field-temadereunion-field-temadereunion-add-more {
+margin-left:30px;
+}
+
+body.node-type-acta-consejo #node-form #label_unselected, body.node-type-acta-consejo #node-form #label_selected{
+display:none;
 }
