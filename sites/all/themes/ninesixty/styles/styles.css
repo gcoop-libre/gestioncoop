@@ -2359,3 +2359,7 @@ margin-left:30px;
 body.node-type-acta-consejo #node-form #label_unselected, body.node-type-acta-consejo #node-form #label_selected{
 display:none;
 }
+
+#edit-field-asamblearef-nid-nid-wrapper {
+  display:none;
+}
