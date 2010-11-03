@@ -30,7 +30,7 @@ function gcoop_formalter_form_alter(&$form, $form_state, $form_id)
     switch ($form_id) {
         // This is our form ID.
         case 'convocatoria_asamblea_node_form':
-          unset($form['field_asamblearef']);
+          //unset($form['field_asamblearef']);
         break;
         case 'acta_consejo_node_form':
             $form['field_ciudad']['#weight'] = $form['field_ciudad']['#weight']+10;
@@ -115,7 +115,7 @@ function gcoop_formalter_form_alter(&$form, $form_state, $form_id)
 
 function gcoop_formalter_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
   switch ($op) {
-    case 'presave':
+    case 'insert':
       if ($node->type == 'convocatoria_asamblea')
       {
         auto_nodetitle_set_title($node);
@@ -136,10 +136,31 @@ function gcoop_formalter_nodeapi(&$node, $op, $a3 = NULL, $a4 = NULL) {
         if (!empty($node_asamblea->nid))
         {
           $node->field_asamblearef['0']['nid'] = $node_asamblea->nid;
+          node_save($node);
         }
       }
 
       break;
+    case 'update':
+      if ($node->type == 'convocatoria_asamblea')
+      {
+        // cargo nodo asamblea ya creado.
+        $node_asamblea = node_load(array('nid' => $node->field_asamblearef['0']['nid']));
+
+        // actualizo los datos de la convocatoria al nodo asamblea
+        $node_asamblea->title = "Asamblea de la {$node->title}";
+        $node_asamblea->field_fecha = $node->field_fecha;
+        $node_asamblea->field_tipoasamblea = $node->field_tipoasamblea;
+        $node_asamblea->field_domiciliosocial = $node->field_domiciliosocial;
+        $node_asamblea->field_temadereunion = $node->field_temadereunion;
+
+        // update nodo asamblea
+        node_save($node_asamblea);
+
+      }
+
+      break;
+
   }
 }
 
