@@ -42,9 +42,30 @@ function gcoop_formalter_form_alter(&$form, $form_state, $form_id)
             $form['field_firmantes']['#weight'] = $form['field_firmantes']['#weight']+70;
 
             // Our kickin' mods go here.
+            $form['field_ciudad'][0]['#title'] = "";
+            $form['field_ciudad'][0]['#description'] = "";
+            $form['field_ciudad']['#weight'] = 0;
+            $form['field_fecha'][0]['#title'] = "";
+            $form['field_fecha'][0]['#description'] = "";
+            $form['field_fecha']['#title'] = "";
+            $form['field_fecha']['#description'] = "";
+            $form['field_fecha']['#weight'] = 1;
+            $form['field_domiciliosocial'][0]['#title'] = "";
+            $form['field_domiciliosocial'][0]['#description'] = "";
+            $form['field_domiciliosocial']['#weight'] = 2;
+            $form['field_presidereunion'][0]['#title'] = "";
+            $form['field_presidereunion'][0]['#description'] = "";
+            $form['field_presidereunion']['#weight'] = 3;
+            $form['field_presentes']['#title'] = "quien da comienzo al acto con la presencia de";
+            $form['field_presentes']['#description'] = "";
+            $form['field_presentes']['#weight'] = 3;
+            $form['field_firmantes']['#title'] = "<span class='label7'>Y al no haber otro asunto que tratar, se levanta la sesión.</span>";
+            $form['field_firmantes']['#description'] = "";
+
+//            $form['field_presentes']['#weight'] = 5;
             $form['field_label1'] = array (
                                             '#type' => 'markup',
-                                            '#value' => '<div class="label1"> En la </div>',
+                                            '#value' => '<div class="label1"> En la Ciudad </div>',
                                             '#weight' => $form['field_ciudad']['#weight'] - 1,
                                             );
             $form['field_label2'] = array (
@@ -54,13 +75,13 @@ function gcoop_formalter_form_alter(&$form, $form_state, $form_id)
                                             );
             $form['field_label3'] = array (
                                             '#type' => 'markup',
-                                            '#value' => '<div class="label3"> se reúnen los miembros del Consejeros de Administración de la '. variable_get('site_name', TRUE) .', en el domicilio de la calle </div>',
+                                            '#value' => '<div class="label3"> se reúnen los miembros del Consejo de Administración de la '. variable_get('site_name', TRUE) .', en el domicilio de la calle </div>',
                                             '#weight' => $form['field_domiciliosocial']['#weight'] - 1,
                                             );
             $form['field_label4'] = array (
                                             '#type' => 'markup',
-                                            '#value' => '<div class="label4"> quien da comienzo al acto con la presencia de </div>',
-                                            '#weight' => $form['field_presidereunion']['#weight'] + 1,
+                                            '#value' => '<div class="label4">preside la reunión</div>',
+                                            '#weight' => $form['field_presidereunion']['#weight'] - 1,
                                             );
             $form['field_label5'] = array (
                                             '#type' => 'markup',
@@ -73,15 +94,6 @@ function gcoop_formalter_form_alter(&$form, $form_state, $form_id)
                                             '#value' => '<div class="label6">Siendo las </div>',
                                             '#weight' => $form['field_firmantes']['#weight'] + 1,
                                             );
-            $form['field_label7'] = array (
-                                            '#type' => 'markup',
-                                            '#value' => '<div class="label7">Y al no haber otro asunto que tratar, se levanta la sesión.</div>',
-                                            '#weight' => $form['field_firmantes']['#weight'] - 1,
-                                            );
-            #print "<pre>";
-            #print_r($form);
-            #print "</pre>";
-            #die();
             break;
         case 'system_site_information_settings':
               $form['gcoop_formalter_direccion_setting'] = array(
