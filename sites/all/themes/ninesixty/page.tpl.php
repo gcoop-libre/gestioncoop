@@ -12,7 +12,7 @@
   <?php print $scripts; ?>
 </head>
 
-<body class="<?php print $body_classes; ?> show-grid">
+<body class="<?php print $body_classes; ?> show-gridno">
 <?php if (!empty($admin)) print $admin; ?> 
 
     <div id="page" class="container-16 clear-block">
