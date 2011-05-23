@@ -1,0 +1,10 @@
+# Archivos a ignorar en cualquier directorio ( el pattern empieza sin barra )
+*~
+*.log
+*.bak
+*.log.lck
+
+sites/default/settings.php
+sites/default/files
+sites/default/tmp
+sites/default/private
