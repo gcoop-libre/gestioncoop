@@ -668,7 +668,7 @@ background:#252525;
 /*height:25px;*/
 padding-top:7px;
 float:left;
-width:638px;
+/*width:638px;*/
 }
 
 ul.main-menu li{
@@ -686,13 +686,11 @@ font-weight:300;
 -moz-border-radius-topright:6px;
 }
 
-ul.main-menu li a:hover{
-background:red;
-color:#252525;
-padding-left:11px;
-padding-right:11px;
-padding-bottom:9px;
-padding-top:4px;
+ul.main-menu li a:hover {
+  background:red;
+  color:#252525;
+  padding-bottom:9px;
+  padding-top:4px;
 }
 
 ul.main-menu li.active a{
