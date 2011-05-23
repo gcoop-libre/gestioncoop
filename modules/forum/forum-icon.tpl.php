@@ -15,10 +15,10 @@
  */
 ?>
 <?php if ($new_posts): ?>
-  <a class="new">
+  <a name="new">
 <?php endif; ?>
 
- <?php print theme('image', "misc/forum-$icon.png") ?>
+<?php print theme('image', "misc/forum-$icon.png") ?>
 
 <?php if ($new_posts): ?>
   </a>

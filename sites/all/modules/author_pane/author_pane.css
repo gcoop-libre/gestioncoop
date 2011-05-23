@@ -1,71 +1,64 @@
-/* $Id: author_pane.css,v 1.1.2.6 2009/03/05 03:27:27 michellec Exp $ */
 
-/* Wrappers */
-.author-pane {
-}
-
-.author-pane-inner {
-}
-
-/* Sections */
+/* POSITIONING **************************************************************/
 .author-pane-section {
   margin-bottom: 10px;
 }
 
-.author-pane-name-status {
-}
-
-.author-pane-stats {
-}
-
-.author-pane-admin {
-}
-
-.author-pane-contact {
-}
-
-/* Lines & icons*/
 .author-pane-line {
   padding-bottom: 5px;
 }
 
-.author-pane-icon {
-  display: inline;
-  padding: 10px 2px 2px 0;
-}
-
-/* Fields */
-.author-pane .author-pane-label {
-}
-
-.author-pane-name-status .picture {
+.author-pane .picture {
   float: none;
   padding-left: 0px;
+  margin-bottom: 10px;
 }
 
-.author-pane-name-status .picture img {
+/* IMAGES ******************************************************************/
+.author-online {
+  background: transparent url(images/user-online.png) no-repeat;
+  padding-left: 20px;
+  height: 20px;
+  width: 200px;
+  display: block;
 }
 
-.author-facebook-status {
+.author-offline {
+  background: transparent url(images/user-offline.png) no-repeat;
+  padding-left: 20px;
+  height: 20px;
+  width: 200px;
+  display: block;
 }
 
-.author-title {
+.author-contact  {
+  background: transparent url(images/contact.png) no-repeat;
+  padding-left: 26px;
+  height: 20px;
+  width: 200px;
+  display: block;
 }
 
-.author-badges {
+.author-privatemsg {
+  background: transparent url(images/private-message.png) no-repeat;
+  padding-left: 26px;
+  height: 20px;
+  width: 200px;
+  display: block;
 }
 
-.author-joined {
+.author-relationship-add-icon {
+  background: transparent url(images/buddy-add.png) no-repeat;
+  padding-left: 26px;
+  height: 20px;
+  width: 200px;
+  display: block;
 }
 
-.author-posts {
-}
-
-.author-points {
-}
-
-.author-ip {
-}
-
-.author-fasttoggle-block {
+.author-relationship-remove-icon {
+  background: transparent url(images/buddy-remove.png) no-repeat;
+  padding-left: 26px;
+  height: 20px;
+  width: 100px;
+  display: block;
 }

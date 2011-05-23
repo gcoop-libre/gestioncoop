@@ -1,8 +1,127 @@
-$Id: CHANGELOG.txt,v 1.1.2.26 2009/05/22 16:17:31 michellec Exp $
 
------------------------- D6 BRANCH ------------------------------------------------------
+------------------------ D6 2.x BRANCH --------------------------------------------------
 
-May 22, 2009
+March 28, 2011
+--------------
+#1085068 by Scyther: Added check if user has admin users to allow them to see contact link even if contact form is disabled.
+NOISSUE by Michelle: Minor template changes to keep in synch with AF changes.
+
+January 12, 2011
+----------------
+NOISSUE by Michelle: Minor template changes to keep in synch with AF changes.
+
+December 20, 2010
+----------------
+#868942 by Michelle: Synch up contact module code to AF's image changes.
+
+December 5, 2010
+----------------
+#941382 by recrit: Fixed broken caching on user points.
+#985742 by carlthuringer, Michelle: Make last access 'Never' when the user has never accessed the site.
+
+October 4, 2010 -- 2.0
+---------------
+#851656 by Michelle, gapple: Added Real Name support to the included content type.
+NOISSUE by Michelle: Coder clean up.
+NOISSUE by Michelle: Documentation tweaks.
+
+September 21, 2010
+------------------
+NOISSUE by Michelle: Made width of items with icons wider so words don't wrap.
+NOISSUE by Michelle: Added label to title and added 'last seen' section.
+
+September 20, 2010
+------------------
+#904928 by mr.j: Fixed broken Troll integration.
+
+September 16, 2010
+------------------
+#880740 by Jay Matwichuk: Fixed caching on User Badges integration.
+
+August 9, 2010 -- RC 1
+-------------
+#819764 by Michelle: Removed User Relationships integration.
+NOISSUE by Michelle: Minor commenting improvements.
+NOISSUE by Michelle: Cleaned up Contact module integration.
+#853538 by Michelle: Link to full sized avatar only when imagecache is used.
+
+July 12, 2010
+-------------
+NOISSUE by Michelle: Changed API function to return a string instead of an array because it makes checking it easier.
+
+July 08, 2010
+-------------
+NOISSUE by Michelle: Fixed notices.
+
+July 04, 2010 -- BETA 1
+-------------
+#824620 by leon85321, larskleiner: Removed typo'd parenthesis.
+NOISSUE by Michelle: Fixed bug in user title caching.
+#525190 by Michelle: Added logic for disabling modules. Still no UI.
+
+June 08, 2010
+-------------
+NOISSUE by Michelle: Updated README.txt.
+#706930 by Michelle: Added caching to integrations handled by AP that have queries.
+
+June 07, 2010
+-------------
+NOISSUE by Michelle: Added more commenting, especially to the template preprocess.
+#747864 by Michelle: Added new 'context' parameter for passing in the node or comment object.
+NOISSUE by Michelle: Removed the hack to make AP 2.x to work with AF 1.x and added an API version function instead.
+NOISSUE by Michelle: Added parameter to disable CSS rather than checking the caller.
+#784846 by locomo: Generate alt text for user picture if imagecache is used.
+#552694 by Michelle: Changed block to specifically avoid /edit rather than all other subpaths of /user /node and /blog.
+#535428 by Michelle: Popup full sized avatar when clicking on thumbnail.
+NOISSUE by Michelle: Added user icon from CTools to content type directory.
+NOISSUE by Michelle: Coder fixes.
+
+March 14, 2010
+--------------
+NOISSUE by Michelle: Added some variable switching that should allow AP 2.x to work with AF 1.x. Untested.
+NOISSUE by Michelle: Added code to template to print the path/name of the current template. 
+#716056 by Michelle: Documented that user titles images are not shown by default.
+
+November 12, 2009
+-----------------
+NOISSUE by Michelle: Removed APK from list of exceptions to CSS loading.
+#525190 by Michelle: Some preliminary work on allowing module integration to be selectively turned off.
+#576750 by alex.k: Relationship link shouldn't be displayed if the relation is not allowed.
+#624648 by dkrueger: Added German translation.
+
+September 19, 2009 -- ALPHA 2
+------------------
+#566750 by abaddonsun, Michelle: Added check for private groups and also added ability to disable the preprocess entirely.
+#525190 by Michelle: Added dummy function to define API for disabling preprocesses.
+NOISSUE by Michelle: Updated README.txt to reflect latest changes.
+
+September 6, 2009
+-----------------
+#542998 by Michelle: More work on processing the user picture image.
+#542998 by Michelle: Changed the included Panels content type to use the new theme function format.
+#542998 by Michelle: Missed changing the default configuration variables in the Panels content type.
+
+August 18, 2009
+--------------
+#548438 by introfini: Added check to see if user can add a given relationship type.
+#537462 by dafeder: Corrected UR variable docs.
+
+July 21, 2009 -- ALPHA 1
+-------------
+#523422 by Michelle: Fixed wrong location variable name.
+#500978 by Michelle: Finished moving images to CSS, including removing image path from config.
+NOISSUE by Michelle: Updated .tpls to reflect changes from AF.
+NOISSUE by Michelle: Removed block template file & setting to simplify UI.
+NOISSUE by Michelle: Updated README.txt to reflect recent changes.
+NOISSUE by Michelle: General clean up and organization.
+
+July 10, 2009
+-------------
+#500978 Some work on moving images to CSS. Incomplete.
+#500982 Initialized some variables to avoid notices.
+#491800 Changed from passing in the template filename to passing in the name of the caller.
+
+May 22, 2009 -- BRANCH TO 2.x
 ------------
 #445192 by Jo Wouters: Turned caching of AP block off completely.
 

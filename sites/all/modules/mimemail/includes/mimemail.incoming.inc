@@ -1,4 +1,4 @@
-<?php /* $Id: mimemail.incoming.inc,v 1.1 2009/02/22 20:55:46 vauxia Exp $ */
+<?php /* $Id$ */
 
 /**
  * @file

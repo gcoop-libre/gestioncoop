@@ -1,5 +1,5 @@
 <?php
-// $Id: ife.settings.inc,v 1.1.2.3 2010/03/02 22:41:24 stijndm Exp $
+// $Id: ife.settings.inc,v 1.1.2.4 2010/03/05 00:25:55 stijndm Exp $
 
 /**
  * @file
@@ -184,5 +184,7 @@ function ife_form_id_delete_form_submit($form, &$form_state) {
   $form_id = $form_state['values']['fid'];
   db_query("DELETE FROM {ife} WHERE form_id = '%s'", $form_id);
   drupal_set_message(t('The form %form_id has been deleted.', array('%form_id' => $form_id)));
+  
+  cache_clear_all('ife_form_ids', 'cache');
   drupal_goto('admin/settings/ife');
 }

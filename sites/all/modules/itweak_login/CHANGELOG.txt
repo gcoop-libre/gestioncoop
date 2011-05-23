@@ -1,7 +1,40 @@
-# $Id: CHANGELOG.txt,v 1.11 2009/08/07 04:30:21 iva2k Exp $
+# $Id: CHANGELOG.txt,v 1.29 2011/02/01 23:53:24 iva2k Exp $
 
 itweak_login 6.x-1.x-dev
 ------------------------
+
+
+itweak_login 6.x-1.14, 2011-02-01
+---------------------------------
+[NOISSUE] Fixed skipped mods to user/register for multi-lingual sites
+[NOISSUE] Fixed skipped mods to user/register for non-clean URLs
+
+
+itweak_login 6.x-1.13, 2010-12-08
+---------------------------------
+[NOISSUE] by iva2k: Optimized performance around i18n_variables, also cleaned up some logic there
+[NOISSUE] by iva2k: i18n updated deserves a release. Performance improvement is noticeable!
+
+
+itweak_login 6.x-1.12, 2010-12-08
+---------------------------------
+[#992236] by iva2k: Login link regression bugfix
+
+
+itweak_login 6.x-1.11, 2010-11-30
+---------------------------------
+[#625162] by iva2k: Fixed form not submitting at /admin/user/user/create
+[#477742] by iva2k: Redone internationalization support to be installed from hook_init()
+[#928316] by iva2k: Fixed missing function _itweak_login_variables() in install
+[#791148] by johnbarclay: Ability to add text before username field in login page
+[#926598] by iva2k: Use theme_button function for register button
+[#866898] by iva2k: Option to use button instead of "request new password" link
+[NOISSUE] by iva2k: Reorder settings fields more logically
+[#799926] by iva2k: README updated
+[#926598] by iva2k: Use theme('button', ...) function for register button
+[#945190] by iva2k: Added setting for register URL
+[#983860] by iva2k: Redesigned Register/Recover buttons so they use standard HTML (no JS).
+
 
 itweak_login 6.x-1.10, 2009-08-06
 ---------------------------------
@@ -18,36 +51,36 @@ itweak_login 6.x-1.9, 2009-07-29
 
 itweak_login 6.x-1.8, 2009-05-30
 --------------------------------
-#477742 by iva2k: Added update_6001() so the Internationalization will register on update.
+[#477742] by iva2k: Added update_6001() so the Internationalization will register on update.
 
 itweak_login 6.x-1.7, 2009-05-30
 --------------------------------
-#477742 by iva2k: Added internationalization support.
+[#477742] by iva2k: Added internationalization support.
 
 itweak_login 6.x-1.6, 2009-05-29
 --------------------------------
-#474158 by asak: Hebrew translation.
-#474158 by iva2k: Updated Russian translation and .pot.
+[#474158] by asak: Hebrew translation.
+[#474158] by iva2k: Updated Russian translation and .pot.
 
 itweak_login 6.x-1.5, 2009-05-28
 --------------------------------
-by iva2k: Translations cleanup.
+[NOISSUE] by iva2k: Translations cleanup.
 
 itweak_login 6.x-1.4, 2009-05-28
 --------------------------------
-by iva2k: Updated Russian translation.
+[NOISSUE] by iva2k: Updated Russian translation.
 
 itweak_login 6.x-1.3, 2009-05-28
 --------------------------------
-#474158 by iva2k: Added translations .pot & Russian translation.
+[#474158] by iva2k: Added translations .pot & Russian translation.
 
 itweak_login 6.x-1.2, 2009-05-28
 --------------------------------
-#475148 by iva2k: Fixed user/register to be passed through check_url(url(...)).
+[#475148] by iva2k: Fixed user/register to be passed through check_url(url(...)).
 
 itweak_login 6.x-1.1, 2009-05-26
 --------------------------------
-Config location fixed.
+[NOISSUE] Config location fixed.
 
 itweak_login 6.x-1.0, 2009-05-26
 --------------------------------

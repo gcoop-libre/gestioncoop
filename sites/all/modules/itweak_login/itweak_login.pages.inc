@@ -1,5 +1,5 @@
 <?php
-// $Id: itweak_login.pages.inc,v 1.5 2009/08/07 04:27:01 iva2k Exp $
+// $Id: itweak_login.pages.inc,v 1.8 2010/10/26 03:44:56 iva2k Exp $
 
 /**
  * @file
@@ -19,6 +19,14 @@ function _itweak_login_admin_settings() {
   $form['#submit'] = array('itweak_login_admin_settings_submit');
   
   $lt_enabled = (module_exists('logintoboggan') && variable_get('logintoboggan_login_with_email', 0));
+
+  $form['itweak_login_username_inpage_prefix'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Prefix for "Username" field on login page'),
+    '#default_value' => variable_get('itweak_login_username_inpage_prefix', ''),
+    '#description' => t('Content to add before the username field such as instructions or account support contact information. Does not appear in logon block.'),
+  );
+
   $form['itweak_login_username_label'] = array(
     '#type' => 'textfield',
     '#title' => t('Label for "Username" field'),
@@ -52,6 +60,13 @@ function _itweak_login_admin_settings() {
 	));
   }
   
+  $form['itweak_login_login_button_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Name for "Log in" button'),
+    '#default_value' => variable_get('itweak_login_login_button_name', ''),
+    '#description' => t('Text to use as "Log in" button label.  Leave empty to use the default.'),
+  );
+
   $form['itweak_login_register_button'] = array(
     '#type' => 'checkbox',
     '#title' => t('Show "Register" button on user login'),
@@ -66,13 +81,6 @@ function _itweak_login_admin_settings() {
     '#description' => t('(Only if "Show button" is enabled) Text to use as "Register" button label.  Leave empty to use the default.'),
   );
 
-  $form['itweak_login_login_button_name'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Name for "Log in" button'),
-    '#default_value' => variable_get('itweak_login_login_button_name', ''),
-    '#description' => t('Text to use as "Log in" button label.  Leave empty to use the default.'),
-  );
-
   $form['itweak_login_register_name'] = array(
     '#type' => 'textfield',
     '#title' => t('Text for "Create new account" link'),
@@ -80,18 +88,39 @@ function _itweak_login_admin_settings() {
     '#description' => t('(Only if "Show button" is disabled) Text to use in the "Create new account" link.  Leave empty to use the default.'),
   );
 
+  $form['itweak_login_register_url'] = array(
+    '#type' => 'textfield',
+    '#title' => t('URL for "Create new account" link or "Register" button'),
+    '#default_value' => variable_get('itweak_login_register_url', ''),
+    '#description' => t('URL to use in the "Create new account" link or "Register" button.  Leave empty to use the default (user/register).'),
+  );
+
+  $form['itweak_login_recover_button'] = array(
+    '#type' => 'checkbox',
+    '#title' => t('Show "Reset Password" button on user login'),
+    '#default_value' => variable_get('itweak_login_recover_button', FALSE),
+    '#description' => t('If checked, use "Reset Password" button instead of the "Request new password" link on Login page.'),
+  );
+
+  $form['itweak_login_recover_button_name'] = array(
+    '#type' => 'textfield',
+    '#title' => t('Name for "Reset Password" button'),
+    '#default_value' => variable_get('itweak_login_recover_button_name', ''),
+    '#description' => t('(Only if "Show button" is enabled) Text to use as "Reset Password" button label.  Leave empty to use the default.'),
+  );
+
   $form['itweak_login_recover_name'] = array(
     '#type' => 'textfield',
     '#title' => t('Text for "Request new password" link'),
     '#default_value' => variable_get('itweak_login_recover_name', ''),
-    '#description' => t('Text to use in the "Request new password" link.  Leave empty to use the default.'),
+    '#description' => t('(Only if "Show button" is disabled) Text to use in the "Request new password" link.  Leave empty to use the default.'),
   );
 
   $form['itweak_login_recover_url'] = array(
     '#type' => 'textfield',
-    '#title' => t('URL for "Request new password" link'),
+    '#title' => t('URL for "Request new password" link or "Reset Password" button'),
     '#default_value' => variable_get('itweak_login_recover_url', ''),
-    '#description' => t('URL to use in the "Request new password" link.  Leave empty to use the default (user/password).'),
+    '#description' => t('URL to use in the "Request new password" link or "Reset Password" button.  Leave empty to use the default (user/password).'),
   );
   
   return $form;

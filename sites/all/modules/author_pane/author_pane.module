@@ -1,9 +1,8 @@
 <?php
-// $Id: author_pane.module,v 1.1.2.16 2009/05/22 16:17:31 michellec Exp $
 
 /**
  * @file
- * Gathers information from user related contrib modules into one template.
+ * Gathers information from user related modules into one template.
  */
 
 // DRUPAL HOOKS **************************************************************/
@@ -13,17 +12,25 @@
  */
 function author_pane_theme() {
   author_pane_include('author-pane.inc');
+
   $items['author_pane'] = array(
       'template' => 'author-pane',
-      'arguments' => array('account' => NULL,
-        'image_path' => NULL,
-        'template_suggestion' => NULL),
-  );
-
-  $items['author_pane_block_user_picture'] = array(
       'arguments' => array(
         'account' => NULL,
-        )
+        'caller' => NULL,
+        'picture_preset' => NULL,
+        'context' => NULL,
+        'disable_css' => NULL,
+      )
+  );
+
+  $items['author_pane_user_picture'] = array(
+      'template' => 'author-pane-user-picture',
+      'arguments' => array(
+        'account' => NULL,
+        'caller' => NULL,
+        'picture_preset' => NULL,
+      )
   );
 
   return $items;
@@ -35,54 +42,39 @@ function author_pane_theme() {
 function author_pane_block($op = 'list', $delta = 0, $edit = array()) {
   switch ($op) {
     case 'list':
-     $blocks[0]['info'] = t('Author Pane');
-     
-     // We don't want the block to cache since what is displayed depends on
-     // both the user viewing and the user being viewed.
-     $blocks[0]['cache'] = BLOCK_NO_CACHE; 
-     
-     return $blocks;
+      $blocks[0]['info'] = t('Author Pane');
 
-    // Block settings
+      // We don't want the block to cache since what is displayed depends on
+      // both the user viewing and the user being viewed.
+      $blocks[0]['cache'] = BLOCK_NO_CACHE;
+
+      return $blocks;
+
     case 'configure':
-      // Template file
-      $form['author_pane_block_template'] = array(
-        '#type' => 'textfield',
-        '#title' => t('Template file'),
-        '#description' => t('Template file to use. Do not include .tpl.php. Default is author-pane-block.'),
-        '#default_value' => variable_get('author_pane_block_template', 'author-pane-block'),
-       );
-       
-      // Image path
-      $form['author_pane_block_image_path'] = array(
-        '#type' => 'textfield',
-        '#title' => t('Image path'),
-        '#description' => t('Path to author pane images.  Leave blank to use default.'),
-        '#default_value' => variable_get('author_pane_block_image_path', ''),
-       );
-
-      // Node types
+      // Get a list of all node types.
       $types = node_get_types();
       $options = array();
       foreach ($types as $type) {
         $options[$type->type] = $type->name;
       }
 
+      // Allow user to choose which node types will display the block.
       $form['author_pane_block_display_types'] = array(
         '#type' => 'checkboxes',
         '#title' => t('Node types to display on'),
         '#options' => $options,
         '#default_value' => variable_get('author_pane_block_display_types', array()),
-       );
+      );
 
-      // Imagecache preset
       if (module_exists('imagecache') && function_exists('imagecache_presets')) {
+        // Get all the imagecache presets on the site.
         $options = array('' => '');
         $presets = imagecache_presets();
         foreach ($presets AS $preset) {
           $options[$preset['presetname']] = $preset['presetname'];
         }
 
+        // Allow the user to choose a preset to use.
         $form['author_pane_block_user_picture_preset'] = array(
           '#type' => 'select',
           '#title' => t('User picture preset'),
@@ -90,13 +82,12 @@ function author_pane_block($op = 'list', $delta = 0, $edit = array()) {
           '#description' => t('Imagecache preset to use for the user picture on this block. Leave blank to not use this feature.'),
           '#default_value' => variable_get('author_pane_block_user_picture_preset', ''),
         );
+
       }
 
       return $form;
 
     case 'save':
-      variable_set('author_pane_block_image_path', $edit['author_pane_block_image_path']);
-      variable_set('author_pane_block_template', $edit['author_pane_block_template']);
       variable_set('author_pane_block_display_types', $edit['author_pane_block_display_types']);
       variable_set('author_pane_block_user_picture_preset', $edit['author_pane_block_user_picture_preset']);
 
@@ -114,7 +105,7 @@ function author_pane_block($op = 'list', $delta = 0, $edit = array()) {
 // TEMPLATE PREPROCESS *******************************************************/
 
 /**
- * Load advanced forum files on behalf of modules.
+ * Load Author Pane files on behalf of modules.
  *
  * This function, taken from the views include system, allows us to include
  * an appropriately named include file bundled with any enabled module.
@@ -127,96 +118,156 @@ function author_pane_include($file) {
 
   foreach (module_list() as $module) {
     $module_path = drupal_get_path('module', $module);
+    
     if (file_exists("$module_path/$module.$file")) {
       $includes[] = "./$module_path/$module.$file";
     }
-    else if (file_exists("$module_path/includes/$module.$file")) {
+    elseif (file_exists("$module_path/includes/$module.$file")) {
       $includes[] = "./$module_path/includes/$module.$file";
     }
-    else if (file_exists("$author_pane_path/$module.$file")) {
+    elseif (file_exists("$author_pane_path/$module.$file")) {
       $includes[] = "./$author_pane_path/$module.$file";
     }
   }
- 
+
   if (!empty($includes)) {
     foreach ($includes as $include) {
-       require_once $include;
+      require_once $include;
     }
   }
 }
 
 /**
  * Preprocesses template variables for the author info template.
+ *
+ * Available variables (All optional except 'account'):
+ * $variables['account']: User account object.
+ * $variables['caller']:  String identifying who called the theme function.
+ *    Usually the name of the module but doesn't have to be.
+ * $variables['picture_preset']: Imagecache preset to use to format the
+ *    user picture.
+ * $variables['context']: Information about where the Author Pane will be
+ *    appearing. For nodes, this will be the node object. For comments,
+ *    the comment object.
+ * $variables['disable_css']: TRUE if the preprocess should skip loading the
+ *    default CSS. This is used by modules such as AF that has its own CSS.
  */
 function template_preprocess_author_pane(&$variables) {
-  if (!empty($variables['template_suggestion'])) {
-    // Allow the calling function to suggest a template file.
-    // This allows AF to set a seperate template from APK.
-    $variables['template_files'][] = $variables['template_suggestion'];
+  // Indicates who called the theme function.
+  $caller = (!empty($variables['caller'])) ? $variables['caller'] : '';
+
+  /* Add CSS */
+  if (empty($variables['disable_css'])) {
+    // Some modules have their own Author Pane CSS. Because Author Pane is
+    // called in a theme function, this CSS would get added after and clobber
+    // the CSS in those modules. So we don't load the CSS in that case.
+    drupal_add_css(drupal_get_path('module', 'author_pane') . '/author_pane.css');
   }
-  
-  // Set the image path
-  if (empty($variables['image_path'])) {
-    // Default images
-    $variables['image_path'] = drupal_get_path('module', 'author_pane') . '/images';
-  }
-  else {
-    $path_to_theme = author_pane_path_to_theme();
-    
-    // Replace [theme_path] token with actual path to theme.
-    $variables['image_path'] = str_replace('[theme_path]', $path_to_theme, $variables['image_path']);
-  }
-  $image_path = $variables['image_path'];
 
-  // Give it some basic formatting.
-  drupal_add_css(drupal_get_path('module', 'author_pane') . '/author_pane.css');
-
-  // Load up all the integration files from other modules.
-  author_pane_include('author-pane.inc');
-
-  // --- Set some basic variables not related to any module. ---
-
-  // This $account refers to the user who's info is in the pane.
+  /* Account ID & Name */
+  // This $account refers to the user whose info is in the pane.
+  $variables['account']->uid = (empty($variables['account']->uid)) ? 0 : $variables['account']->uid;
   $account = $variables['account'];
   $account_id = $account->uid;
 
-  // Username
   $variables['account_name'] =  theme('username', $account);
   $variables['account_id'] = $account_id;
 
-  // Avatar
-  $block_template = variable_get('author_pane_block_template', 'author-pane-block');
-  if ($variables['template_suggestion'] == $block_template) {
-    // Imagecache'd resizing is only available for the block
-    $sized_picture = theme('author_pane_block_user_picture', $variables['account']);
-    if (!empty($sized_picture)) {
-      $variables['picture'] = $sized_picture;
-    }
+  /* Avatar */
+  static $user_pictures;
+  if (!empty($user_pictures[$account_id])) {
+    // This user's picture is cached so pull it from there.
+    $variables['picture'] = $user_pictures[$account_id];
   }
-  if (empty($variables['picture'])) {
-    $variables['picture'] = theme('user_picture', $account);
+  else {
+    $preset = (!empty($variables['picture_preset'])) ? $variables['picture_preset'] : '';
+    $variables['picture'] = theme('author_pane_user_picture', $variables['account'], $caller, $preset);
+    $user_pictures[$account_id] = $variables['picture'];
   }
 
+  /* Join date & online status */
   if ($account_id != 0) {
-    // Join date / since
+    // Join date (uses short date format) / since
     $just_date = str_replace(array('H:i', 'g:ia', ' - '), '', variable_get('date_format_short', 'm/d/Y - H:i'));
     $variables['joined'] = format_date($account->created, 'custom', $just_date);
     $variables['joined_ago'] = format_interval(time() - $account->created);
 
-    // Online status
-    $variables['last_active'] = format_interval(time() - $account->access);
-    if (round((time()-$account->access)/60) < 15) {
-      $variables['online_icon'] = theme('image', "$image_path/user-online.png", t('User is online'), t('User is online'));
+    // Online status - uses the settings for the who's online block.
+    $variables['last_active'] = ($account->access) ? format_interval(time() - $account->access) : t("Never");
+
+    if ((time()-$account->access) < variable_get('user_block_seconds_online', 900)) {
       $variables['online_status'] = t('Online');
+      $variables['online_status_class'] = 'author-online';
     }
     else {
-      $variables['online_icon'] = theme('image', "$image_path/user-offline.png", t('User offline. Last seen @time ago.', array('@time' => $variables['last_active'])), t('User offline. Last seen @time ago.', array('@time' => $variables['last_active'])));
       $variables['online_status'] = t('Offline');
+      $variables['online_status_class'] = 'author-offline';
+    }
+  }
+  else {
+    // Set the variables to empty to avoid notices when the template is displayed.
+    $variables['joined'] = $variables['joined_ago'] = $variables['online_class'] = $variables['online_status'] = '';
+  }
+
+  // This variable is no longer used, but previous integrations are expecting
+  // it. Pass it the path to the images so they don't break.
+  $variables['image_path'] = drupal_get_path('module', 'author_pane') . '/images';
+
+  // Load up all the integration files from other modules.
+  author_pane_include('author-pane.inc');
+}
+
+
+/**
+ * Preprocesses template variables for the author pane picture template.
+ *
+ * Available variables (All optional except 'account'):
+ * $variables['account']: User account object.
+ * $variables['caller']:  String identifying who called the theme function.
+ *    Usually the name of the module but doesn't have to be.
+ * $variables['picture_preset']: Imagecache preset to use to format the
+ *    user picture.
+ */
+function template_preprocess_author_pane_user_picture(&$variables) {
+  $variables['picture'] = '';
+  $account = $variables['account'];
+
+  // Get the imagecache preset, if any.
+  $preset = (!empty($variables['picture_preset'])) ? $variables['picture_preset'] : '';
+
+  // If user pictures are enabled...
+  if (variable_get('user_pictures', 0)) {
+    // Get the user's avatar if they have one or the default picture if exists.
+    if (!empty($account->picture) && file_exists($account->picture)) {
+      // We only want to get the full URL if not using imagecache.
+      $picture = (!empty($preset) && module_exists('imagecache')) ? $account->picture : file_create_url($account->picture);
+    }
+    elseif (variable_get('user_picture_default', '')) {
+      $picture = variable_get('user_picture_default', '');
+    }
+
+    // If we have a picture...
+    if (isset($picture)) {
+      // If there's a preset set and imagecache is enabled...
+      if (!empty($preset) && module_exists('imagecache')) {
+        // Toss the picture over to imagecache for sizing
+        $alt = t("@user's picture", array('@user' => $account->name ? $account->name : variable_get('anonymous', t('Anonymous'))));
+        $variables['picture'] = theme('imagecache', $preset, $picture, $alt, $alt);
+        $variables['imagecache_used'] = TRUE;
+      }
+      else {
+        // Just run the picture through theme_image. Note that we don't link
+        // the picture here since it doesn't make sense for many uses of AP.
+        // If the picture needs to be linked, it can be done in the template.
+        $alt = t("@user's picture", array('@user' => $account->name ? $account->name : variable_get('anonymous', t('Anonymous'))));
+        $variables['picture'] = theme('image', $picture, $alt, $alt, '', FALSE);
+        $variables['imagecache_used'] = FALSE;
+      }
     }
   }
 }
 
-// PANELS ********************************************************************/
+// PANELS / CTOOLS **********************************************************/
 
 /**
  * Implementation of hook_ctools_plugin_directory().
@@ -227,15 +278,26 @@ function author_pane_ctools_plugin_directory($module, $plugin) {
   }
 }
 
-// GENERAL FUNCTIONS *********************************************************/
+// GENERAL FUNCTIONS ********************************************************/
 
+/**
+ * Defines an API version.
+ */
+function author_pane_api() {
+  return "2";
+}
+
+/**
+ * Creates the contents of the block. Called from author_pane_block().
+ */
 function author_pane_get_block() {
-  $image_path = variable_get('author_pane_block_image_path', NULL);
-  $template = variable_get('author_pane_block_template', NULL);
   $area = arg(0);
-  
-  // Check that we're in the right area.
-  if (!($area == 'user' || $area == 'node' || $area == 'blog') || !is_numeric(arg(1)) || arg(2) != '') {
+  $context = NULL;
+
+  // Check that we're in the right area. The block only works on the user pages,
+  // node full view pages, and the blog listing pages. It also does not work on
+  // the "edit" subpath.
+  if (!($area == 'user' || $area == 'node' || $area == 'blog') || !is_numeric(arg(1)) || arg(2) == 'edit') {
     return;
   }
 
@@ -255,69 +317,31 @@ function author_pane_get_block() {
 
     $uid = $node->uid;
 
+    // When we're displaying along with a node, we'll want to send the node
+    // object into the theme function.
+    $context = $node;
   }
-  
+
   // Load up the user object
   $account = user_load($uid);
-  
-  $author_pane = theme('author_pane', $account, $image_path, $template);
-  
+
+  // Build the author pane
+  $author_pane = theme('author_pane', $account, 'author_pane_block', variable_get('author_pane_block_user_picture_preset', ''), $context);
+
   return $author_pane;
 }
 
-// THEME FUNCTIONS ***********************************************************/
-
 /**
- * Theme function to return imagecached version of the user picture.
+ * Determines if a given preprocess should run for a given caller.
  */
-function theme_author_pane_block_user_picture($account) {
-  // Get the imagecache preset to use, if any.
-  $preset = variable_get('author_pane_block_user_picture_preset', '');
-
-  // Only proceed if user pictures are enabled, and there is a preset set, and 
-  // imagecache is enabled. For performace reasons, we return nothing if these
-  // critera aren't met because we only call this function when the non
-  // imagecached version is already created. If you use this function elsewhere
-  // you will need to provide a picture when imagecache is not used.
-  if (variable_get('user_pictures', 0) && !empty($preset) && module_exists('imagecache')) {
-    if ($account->picture && file_exists($account->picture)) {
-      // User has picture, so use that
-      $alt = t("@user's picture", array('@user' => $account->name ? $account->name : 'Visitor'));
-      $picture = theme('imagecache', $preset, $account->picture);   
-    } 
-    else {
-      // User doesn't have a picture so use the default, if any
-      $default_picture = variable_get('user_picture_default', ''); 
-      if ($default_picture) {
-        $picture = theme('imagecache', $preset, $default_picture);
-      }     
-    }
-    
-    if (!empty($picture)) {
-      // If the user has access to view profiles, link the picture
-      if (!empty($account->uid) && user_access('access user profiles')) {
-       $picture = l($picture, "user/$account->uid", array('title' => t('View user profile.'), 'html' => TRUE));
-      }
-    }
-
-    return '<div class="picture">' . $picture . '</div>';
+function author_pane_run_preprocess($module, $caller) {
+  $caller_disabled_list = variable_get("author_pane_disable_for_$caller", NULL);
+  if (!is_null($caller_disabled_list) && isset($caller_disabled_list[$module])) {
+    // If this caller has a list of disabled modules and if this module
+    // is listed, then return the opposite of the value for this caller.
+    // (The variable is TRUE to disable and we want to return TRUE to run it)
+    return !$caller_disabled_list[$module];
   }
-}
 
-/**
- * Returns the path to actual site theme in use because path_to_theme is flaky.
- */
-function author_pane_path_to_theme() {
-  global $theme;
- 
-  if (!empty($theme)) {
-    // Normally, the global theme variable is set, so we use that.
-    return drupal_get_path('theme', $theme);
-  }
-  
-  // If the global $theme variable is not set, pull it from the db
-  $default_theme = variable_get('theme_default', 'garland');
-  return drupal_get_path('theme', $default_theme); 
+  return TRUE;
 }
-
-    

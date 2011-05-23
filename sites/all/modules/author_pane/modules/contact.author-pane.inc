@@ -1,5 +1,4 @@
 <?php
-// $Id: contact.author-pane.inc,v 1.1.2.1 2009/01/05 04:38:06 michellec Exp $
 
 /**
  * @file
@@ -10,16 +9,29 @@
  * Implementation of hook_preprocess_author_pane().
  */
 function contact_preprocess_author_pane(&$variables) {
+  // Check if this preprocess needs to be run given who's calling it.
+  if (!author_pane_run_preprocess('contact', $variables['caller'])) {
+    return;
+  }
+
   global $user;
   $account = $variables['account'];
   $account_id = $account->uid;
-  $image_path = $variables['image_path'];
 
-  if (($account->contact) && ($account_id != $user->uid) && ($user->uid != 0)) {
-    $variables['contact'] =
-      l(theme('image', "$image_path/contact.png", t('Contact user'), t('Contact user'), NULL, TRUE),
-        "user/$account_id/contact", array('html' => TRUE)) ;
-
-    $variables['contact_link'] = l(t('Contact user'), "user/$account_id/contact");
+  // If the viewer isn't anonymous and 
+  // the author isn't anonymous and 
+  // the viewer isn't the author and 
+  // either the author has contact enabled or the viewer has admin users access
+  // then show the link.
+  $variables['contact'] = '';
+  if (($user->uid != 0) && ($account_id != 0) && ($account_id != $user->uid) && (!empty($account->contact) || user_access('administer users'))) {
+    $variables['contact'] = l('<span>' . t('Email') . '</span>', "user/$account_id/contact", array('attributes' => array('class' => 'author-pane-link'), 'html' => TRUE));
   }
+}
+
+/**
+ * Implementation of hook_author_pane_allow_preprocess_disable().
+ */
+function contact_author_pane_allow_preprocess_disable() {
+  return array('contact' => 'Contact');
 }

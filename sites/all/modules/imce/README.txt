@@ -1,4 +1,4 @@
-// $Id: README.txt,v 1.12.2.2 2010/04/10 12:34:51 ufku Exp $
+// $Id: README.txt,v 1.12.2.5 2010/11/08 04:37:36 ufku Exp $
 
 IMCE
 http://drupal.org/project/imce
@@ -33,7 +33,7 @@ INSTALLATION
 2) Enable the module at: /admin/build/modules
 3) Create configuration profiles and assign them to user roles at /admin/settings/imce
 4) Test it at /imce.
-5) See imce-content.tpl.php for some configuration options such as absolute URLs ad inline previewing.
+5) See imce-content.tpl.php for some configuration options such as inline previewing.
 6) See INTEGRATION METHODS to make IMCE collaborate with your application if it's not already integrated.
 Notes:
  - When you configure IMCE for inline image/file insertion into textareas there should appear an IMCE link under each textarea you specified.
@@ -54,7 +54,7 @@ Having nothing to do with IMCE, it appeared many times in issue queues. This is 
 - Upload does not work in Opera
 Jquery form plugin before version 2.09 has problems with Opera 9.2+. Replace Drupal's misc/jquery.form.js with the one at http://jquery.malsup.com/form/#download
 
-- IMCE may have problem working with Google Analytics and Secure pages modules. Just make sure to add imce* path to the exceptions list of these modules.
+- IMCE may have problem working with Google Analytics and Secure pages modules. Just make sure to add *imce* path to the exceptions list of these modules.
 
 
 INTEGRATION METHODS
@@ -68,8 +68,8 @@ Install http://drupal.org/project/imce_wysiwyg bridge module and enable IMCE as 
 BUEditor:
 IMCE is integrated in image and link dialogs.
 
-FCKeditor(without WYSIWYG): 
-Fckeditor profile->File browser settings->IMCE integration
+(F)CKeditor(without WYSIWYG): 
+(F)ckeditor profile->File browser settings->IMCE integration
 
 If your application is not one of the above, please keep reading in order to learn how to integrate IMCE.
 

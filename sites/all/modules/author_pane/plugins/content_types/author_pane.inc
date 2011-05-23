@@ -1,5 +1,4 @@
 <?php
-// $Id: author_pane.inc,v 1.1.2.2 2009/05/11 15:21:59 michellec Exp $
 
 /**
  * @file
@@ -17,7 +16,7 @@ function author_pane_author_pane_ctools_content_types() {
     'description' => t('Author related variables gathered from helper modules.'),
     'required context' => new ctools_context_required(t('User'), 'user'),
     'category' => t('Advanced Profile Kit'),
-    'defaults' => array('image_path' => '', 'template_file' => 'author-pane'),
+    'defaults' => array('caller' => 'advanced_profile', 'picture_preset' => ''),
   );
 }
 
@@ -29,8 +28,16 @@ function author_pane_author_pane_content_type_render($subtype, $conf, $panel_arg
   $block = new stdClass();
 
   if ($account) {
-    $block->title = check_plain($account->name);
-    $block->content = theme('author_pane', $account, $conf['image_path'], $conf['template_file']);
+    // Use the Real Name module if installed. Otherwise just the plain,
+    // unthemed user name for the title since we don't want it linked.
+    if (module_exists('realname')) {
+      $block->title = theme('username', $account, array('plain' => TRUE));
+    }
+    else {
+      $block->title = check_plain($account->name);
+    }
+
+    $block->content = theme('author_pane', $account, $conf['caller'], $conf['picture_preset']);
   }
   else {
     $block->content = "User information not available";
@@ -45,24 +52,28 @@ function author_pane_author_pane_content_type_render($subtype, $conf, $panel_arg
 function author_pane_author_pane_content_type_edit_form(&$form, &$form_state) {
   $conf = $form_state['conf'];
 
-  $form['image_path'] = array(
-    '#type' => 'textfield',
-    '#title' => t('Image directory'),
-    '#size' => 50,
-    '#description' => t('Full path to image directory, not including leading or trailing slashes. Use [theme_path] to substitute the active theme\'s path. If left blank the images in the module directory will be used.'),
-    '#default_value' => $conf['image_path'],
-    '#prefix' => '<div class="clear-block no-float">',
-    '#suffix' => '</div>',
-  );
+  if (module_exists('imagecache')) {
+    $options = array('' => '');
+    $presets = imagecache_presets();
+    foreach ($presets AS $preset) {
+      $options[$preset['presetname']] = $preset['presetname'];
+    }
 
-  $form['template_file'] = array(
+    $form['picture_preset'] = array(
+      '#type' => 'select',
+      '#title' => t('User picture preset'),
+      '#options' => $options,
+      '#description' => t('Imagecache preset to use for user picture. Leave blank to not use this feature.'),
+      '#default_value' => $conf['picture_preset'],
+    );
+  }
+
+  $form['caller'] = array(
     '#type' => 'textfield',
-    '#title' => t('Template file'),
+    '#title' => t('Caller'),
     '#size' => 50,
-    '#description' => t('Template file to use for the author pane.'),
-    '#default_value' => $conf['template_file'],
-    '#prefix' => '<div class="clear-block no-float">',
-    '#suffix' => '</div>',
+    '#description' => t('Name of the calling program. This can be picked up during the preprocessing for specific changes. If using this in Advanced Profile Kit, it should be set to "advanced_profile"'),
+    '#default_value' => $conf['caller'],
   );
 }
 
@@ -74,7 +85,7 @@ function author_pane_author_pane_content_type_edit_form_submit(&$form, &$form_st
 }
 
 function author_pane_author_pane_content_type_admin_title($subtype, $conf, $context) {
-  return t('"@s" author pane', array('@s' => $context->identifier));
+  return t('Author Pane');
 }
 
 

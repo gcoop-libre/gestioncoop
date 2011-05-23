@@ -1,4 +1,7 @@
-// $Id: ckeditor.utils.js,v 1.1.2.11 2010/03/06 11:04:38 mephir Exp $
+/*
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
 Drupal.ckeditor = (typeof(CKEDITOR) != 'undefined');
 
 // this object will store teaser information
@@ -17,6 +20,7 @@ Drupal.ckeditorToggle = function(textarea_id, TextTextarea, TextRTE, xss_check){
     $('#switch_' + textarea_id).text(TextRTE);
   }
   else {
+    $("#" + textarea_id).val(Drupal.ckeditorLinebreakConvert(textarea_id, $("#" + textarea_id).val()));
     Drupal.ckeditorOn(textarea_id);
     $('#switch_' + textarea_id).text(TextTextarea);
   }
@@ -41,7 +45,7 @@ Drupal.ckeditorOn = function(textarea_id) {
   if (teaser = Drupal.ckeditorTeaserInfo(textarea_id)) {
     var ch_checked = teaser.checkbox.attr('checked');
     var tv = teaser.textarea.val();
-    if (tv && tv.length > 0) {
+    if (!teaser.textarea.attr("disabled")) {
       $("#" + textarea_id).val(tv + '\n<!--break-->\n' + $("#" + textarea_id).val());
       teaser.textarea.val('');
     }
@@ -104,6 +108,7 @@ Drupal.ckeditorOn = function(textarea_id) {
     focus : function(ev)
     {
       Drupal.ckeditorInstance = ev.editor;
+      Drupal.ckeditorActiveId = ev.editor.name;
     }
   };
 
@@ -192,7 +197,11 @@ Drupal.ckeditorCompareVersion = function (version){
     if (ckver[x]<version[x]) {
       return false;
     }
+    else if (ckver[x]>version[x]) {
+      return true;
+    }
   }
+
   return true;
 };
 
@@ -220,7 +229,7 @@ Drupal.ckeditorTeaserInfo = function(taid) {
   // find the elements
   if (Drupal.ckeditorTeaser.lookup[taid]) {
     var obj;
-    if (window.opener) {
+    if (window.opener && window.ckeditor_was_opened_in_popup_window) {
       obj = {
         textarea: window.opener.$('#' + Drupal.ckeditorTeaser.lookup[taid]),
         checkbox: window.opener.$('#' + Drupal.settings.teaserCheckbox[Drupal.ckeditorTeaser.lookup[taid]])
@@ -259,6 +268,41 @@ Drupal.ckeditorInsertHtml = function(html) {
     alert(Drupal.t('Content can be only inserted into CKEditor in WYSIWYG mode.'));
     return false;
   }
+};
+
+/**
+ * Converts \n to <br />
+ * It in no way tries to compete with Line break converter filter
+ */
+Drupal.ckeditorEnterModeConvert = function(enterMode){
+  if (enterMode == 1)
+    return {startTag: '<p>', endTag: '</p>'};
+  if (enterMode == 2)
+    return {startTag: '', endTag: '<br/>'};
+  if (enterMode == 3)
+    return {startTag: '<div>', endTag: '</div>'};
+  return {startTag: '', endTag: ''}
+}
+
+Drupal.ckeditorLinebreakConvert = function(textarea_id, text) {
+  var enterMode = Drupal.ckeditorEnterModeConvert(Drupal.settings.ckeditor.settings[textarea_id].enterMode);
+  if (!text.match(/<(div|p|br).*\/?>/i) && text) {
+    text = enterMode.startTag +  text.replace(/\r\n|\n\r/g, '\n').replace(/\n\n/g, enterMode.endTag+enterMode.startTag).replace(/\n/g, '<br />')  + enterMode.endTag;
+  }
+  return text;
+}
+
+/**
+ * Ajax support [#741572]
+ */
+if (typeof(Drupal.Ajax) != 'undefined' && typeof(Drupal.Ajax.plugins) != 'undefined') {
+  Drupal.Ajax.plugins.CKEditor = function(hook, args) {
+    if (hook === 'submit' && typeof(CKEDITOR.instances) != 'undefined') {
+      for (var i in CKEDITOR.instances)
+        CKEDITOR.instances[i].updateElement();
+    }
+    return true;
+  };
 }
 
 /**
@@ -278,11 +322,12 @@ function ckeditor_fileUrl(file, win){
   win.close();
 }
 
+//Support for Panels [#679976]
 Drupal.ckeditorSubmitAjaxForm = function () {
   if (typeof(CKEDITOR.instances) != 'undefined' && typeof(CKEDITOR.instances['edit-body']) != 'undefined') {
     Drupal.ckeditorOff('edit-body');
   }
-}
+};
 
 /**
  * Drupal behaviors
@@ -301,6 +346,7 @@ Drupal.behaviors.ckeditor = function (context) {
     Drupal.behaviors.textarea(context);
   }
 
+  // Support for Panels [#679976]
   if ($(context).attr('id') == 'modal-content') {
     if (CKEDITOR.instances['edit-body'] != 'undefined') {
       Drupal.ckeditorOff('edit-body');
@@ -311,11 +357,11 @@ Drupal.behaviors.ckeditor = function (context) {
       var dialogDefinition = ev.data.definition;
       var _onShow = dialogDefinition.onShow;
       dialogDefinition.onShow = function () {
-      	if ( _onShow ) {
-      	  _onShow.apply( this );
-      	}
-      	$('body').unbind('keypress');
-      }
+        if ( _onShow ) {
+          _onShow.apply( this );
+        }
+        $('body').unbind('keypress');
+      };
     });
   }  
 
@@ -323,6 +369,13 @@ Drupal.behaviors.ckeditor = function (context) {
     var ta_id=$(this).attr("id");
     if ((typeof(Drupal.settings.ckeditor.autostart) != 'undefined') && (typeof(Drupal.settings.ckeditor.autostart[ta_id]) != 'undefined')) {
       Drupal.ckeditorOn(ta_id);
+    }
+    else {
+      $(this).parents('form').bind('submit', function() {
+        $(this).find('textarea').each(function() {
+          $(this).val(Drupal.ckeditorLinebreakConvert(ta_id, $(this).val()));
+        });
+      });
     }
   });
 };

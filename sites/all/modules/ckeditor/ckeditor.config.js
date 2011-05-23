@@ -1,19 +1,7 @@
-
-CKEDITOR.on( 'instanceReady', function( ev )
-{
-// Out self closing tags the HTML4 way, like
-//ev.editor.dataProcessor.writer.selfClosingEnd = '>';
-ev.editor.dataProcessor.writer.setRules( 'p',
-{
-indent : false,
-breakBeforeOpen : true,
-breakAfterOpen : false,
-breakBeforeClose : false,
-breakAfterClose : true
-});
-}); 
-
-// $Id: ckeditor.config.js,v 1.2.2.7 2010/03/11 12:39:54 wwalc Exp $
+/*
+Copyright (c) 2003-2011, CKSource - Frederico Knabben. All rights reserved.
+For licensing, see LICENSE.html or http://ckeditor.com/license
+*/
 
 /*
  WARNING: clear browser's cache after you modify this file.
@@ -61,7 +49,7 @@ CKEDITOR.editorConfig = function(config) {
     ['Format'],
     ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
     ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
-    ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+    ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiRtl','BidiLtr'],
     ['Link','Unlink','Anchor','LinkToNode', 'LinkToMenu'],
     ['DrupalBreak', 'DrupalPageBreak']
    ];
@@ -86,7 +74,7 @@ CKEDITOR.editorConfig = function(config) {
       '/',
       ['Bold','Italic','Underline','Strike','-','Subscript','Superscript'],
       ['NumberedList','BulletedList','-','Outdent','Indent','Blockquote'],
-      ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock'],
+      ['JustifyLeft','JustifyCenter','JustifyRight','JustifyBlock','-','BidiRtl','BidiLtr'],
       ['Link','Unlink','Anchor','LinkToNode', 'LinkToMenu'],
       '/',
       ['Format','Font','FontSize'],
@@ -138,7 +126,14 @@ CKEDITOR.editorConfig = function(config) {
     CKEDITOR.plugins.addExternal('linktonode', Drupal.settings.ckeditor.module_path + '/plugins/linktonode/');
     Drupal.settings.ckeditor.linktonode_basepath = Drupal.settings.basePath;
   }
-
+  if (Drupal.settings.ckeditor_swf) {
+    config.extraPlugins += (config.extraPlugins) ? ',swf' : 'swf';
+    CKEDITOR.plugins.addExternal('swf', Drupal.settings.ckeditor_swf.module_path + '/plugins/swf/');
+  }
+  if (Drupal.settings.ckeditor_link) {
+    config.extraPlugins += (config.extraPlugins) ? ',drupal_path' : 'drupal_path';
+    CKEDITOR.plugins.addExternal('drupal_path', Drupal.settings.ckeditor_link.module_path + '/plugins/link/');
+  }
   // 'MediaEmbed' plugin. To enable it, uncomment lines below and add 'MediaEmbed' button to selected toolbars.
   //config.extraPlugins += (config.extraPlugins ? ',mediaembed' : 'mediaembed' );
   //CKEDITOR.plugins.addExternal('mediaembed', Drupal.settings.ckeditor.module_path + '/plugins/mediaembed/');

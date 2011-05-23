@@ -1,5 +1,5 @@
 <?php
-// $Id: ife-form-element.tpl.php,v 1.1.2.1 2010/03/02 21:32:35 stijndm Exp $
+// $Id: ife-form-element.tpl.php,v 1.1.2.2 2010/04/20 18:29:23 stijndm Exp $
 
 /**
  * @file
@@ -19,5 +19,5 @@
 <?php print $field; ?>
 
 <?php if ($error_message): ?>
-  <div class="messages error inline"><?php print $error_message; ?></div>
+  <div class="messages error messages-inline"><?php print $error_message; ?></div>
 <?php endif;

@@ -1,11 +1,16 @@
 <?php
-// $Id: calendar_tooltips.module,v 1.1.2.2 2010/08/27 16:29:58 rjb Exp $
-
 /*
-   Calendar tooltips module for Drupal 6.x.
+   Calendar tooltips module for Drupal.
    Ronald Baljeu (rjb@xs4all.nl)
    http://linuxpc.info/
 */
+
+/* Implementation of hook_init(), in our case used to load the CSS file.
+*/
+function calendar_tooltips_init() {
+  drupal_add_css(drupal_get_path('module', 'calendar_tooltips') .
+    '/calendar_tooltips.css');
+}
 
 /* Override the theme function template_preprocess_calendar_datebox() in
    modules/calendar/theme/theme.inc.
@@ -45,47 +50,61 @@ function calendar_tooltips_preprocess_calendar_datebox(&$vars) {
   $vars['granularity'] = $view->date_info->granularity;
   $vars['mini'] = $view->date_info->mini;
 
+  /* The following code has been added. It aggregates event data
+     of that day and puts it in an HTML unordered list,
+     which is parented in a div element, which, on its turn,
+     is placed next to the hyperlink. The div element with the event
+     data is hidden by using a "display:none" style.
+     The code for telling Beautytips that this is the place to look for
+     event data, is in the function
+     calendar_tooltips_initialize_beautytips().
+  */
+  if (!empty($vars['selected'])) {
+    $bt_text = "<ul>";
+    foreach ($vars['items'][$date] as $time => $results_at_that_time) {
+      foreach ($results_at_that_time as $num => $result) {
+        $result = (array)$result;
+        $bt_text .= "<li>";
+        /* The event data shown in the tooltip can be specified in
+           the display settings of your calendar view.
+           Choose the "Block view" display, and check out
+           the "Fields" section.
+        */
+        foreach ($view->field as $name => $field) {
+          if (!$field->options['exclude']) {
+            if ($field->options['label'] != "")
+              $bt_text .= "<div class=\"calendar_tooltips-" . $name .
+                "-label\">" . $field->options['label'] . "</div>";
+            // Some fields have no alias.
+            $field_alias = $field->field_alias != 'unknown' ?
+              $field->field_alias : $name;
+            if ($result[$field_alias] != "")
+              $bt_text .= "<div class=\"calendar_tooltips-" . $name .
+                "-value\">" . $result[$field_alias] . "</div>";
+          }
+        }
+        $bt_text .= "</li>";
+      }
+    }
+    $bt_text .= "</ul>";
+    $bt_text = "<div class=\"calendar_tooltips\" style=\"display:none\">" .
+      $bt_text . "</div>";
+    $vars['link'] = l($vars['day'], $vars['url']) . $bt_text;
+    /*
+       The balloon text is appended to the link variable,
+       like this: "<a href=...>31</a> <div>balloon text</div>" (see above).
+       which makes it difficult for the user to alter the link without
+       losing the balloon text. That's why we provide an extra variable with
+       the balloon text only. The user may use this to append to
+       the new link when overriding calendar-datebox.tpl.php.
+    */
+    $vars['calendar_tooltips_text'] = $bt_text;
+  }
+  /* End of additional code. */
+
   if ($view->date_info->mini) {
     if (!empty($vars['selected'])) {
       $vars['class'] = 'mini-day-on';
-      /* The following code has been added. It aggregates event data
-         of that day and puts it in an HTML unordered list,
-         which is parented in a div element, which, on its turn,
-         is placed next to the hyperlink. The div element with the event
-         data is hidden by using a "display:none" style.
-         The code for telling Beautytips that this is the place to look for
-         event data, is in the function
-         calendar_tooltips_initialize_beautytips().
-      */
-      $bt_text = "<ul>";
-      foreach ($vars['items'][$date] as $time => $results_at_that_time) {
-        foreach ($results_at_that_time as $num => $result) {
-          $result = (array)$result;
-          $bt_text .= "<li>";
-          /* The event data shown in the tooltip can be specified in
-             the display settings of your calendar view.
-             Choose the "Block view" display, and check out
-             the "Fields" section.
-          */
-          foreach ($view->field as $name => $field) {
-            if (!$field->options['exclude']) {
-              $bt_text .= "<div class=\"calendar_tooltips-" . $name .
-                "-label\">" . $field->options['label'] . "</div>";
-              // Some fields have no alias.
-              $field_alias = $field->field_alias != 'unknown' ?
-                $field->field_alias : $name;
-              $bt_text .= "<div class=\"calendar_tooltips-" . $name .
-                "-value\">" . $result[$field_alias] . "</div>";
-            }
-          }
-          $bt_text .= "</li>";
-        }
-      }
-      $bt_text .= "</ul>";
-      $bt_text = "<div class=\"calendar_tooltips\" style=\"display:none\">" .
-        $bt_text . "</div>";
-      $vars['link'] = l($vars['day'], $vars['url']) . $bt_text;
-      /* End of additional code. */
     }
     else {
       $vars['class'] = 'mini-day-off';
@@ -98,7 +117,7 @@ function calendar_tooltips_preprocess_calendar_datebox(&$vars) {
 
 /* This function will be called at the beginning of each page request.
    It is used to setup Beautytips. The "cssSelect" below is a CSS
-   selector that selects every date containing events on the mini calendar.
+   selector that selects every date containing events on the calendar.
    The "contentSelector" is jQuery code which specifies the HTML code
    of the hyperlink's first sibling (in our case the div element)
    as the tooltip's content.
@@ -106,7 +125,8 @@ function calendar_tooltips_preprocess_calendar_datebox(&$vars) {
 */
 function calendar_tooltips_initialize_beautytips() {
   $bt_options['calendar-tooltips'] = array(
-    "cssSelect" => ".mini-day-on a",
+    "cssSelect" =>
+      ".calendar-calendar .mini-day-on a, .calendar-calendar .day a",
     "contentSelector" => '$(this).next().html()'
   );
   switch (variable_get("calendar_tooltips_whentoclose", "mouseout")) {

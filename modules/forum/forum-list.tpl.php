@@ -31,44 +31,7 @@
  * @see theme_forum_list()
  */
 ?>
-
-<table id="forum" >
-  <tbody>
-  <?php foreach ($forums as $child_id => $forum): ?>
-    <tr id="forum-list-<?php print $child_id; ?>" class="<?php print $forum->zebra; ?>">
-      <td <?php print $forum->is_container ? 'class="container"' : 'class="forum"'; ?>>
-        <?php /* Enclose the contents of this cell with X divs, where X is the
-               * depth this forum resides at. This will allow us to use CSS
-               * left-margin for indenting.
-               */ ?>
-        <?php print str_repeat('<div class="indent">', $forum->depth); ?>
-          <div class="name"><a href="<?php print $forum->link; ?>"><?php print $forum->name; ?></a></div>
-          <?php if ($forum->description): ?>
-            <div class="description"><?php print $forum->description; ?></div>
-          <?php endif; ?>
-        <?php print str_repeat('</div>', $forum->depth); ?>
-      
-      <?php if (!$forum->is_container): ?>
-        <div class="info-forum">
-            <div class="topics">
-          <span class="num-topics"><?php print $forum->num_topics ?> Tema/s </span>
-          <?php if ($forum->new_topics): ?>
-          <span class="new-topic"> - <a href="<?php print $forum->new_url; ?>"><?php print $forum->new_text; ?></a></span>
-          <?php endif; ?>
-          <span> | </span></div>
-        
-        <div class="posts"><?php print $forum->num_posts ?> Publicación/es | </div>
-        <div class="last-reply"> Última respuesta publicada<?php print $forum->last_reply ?></div>
-      <?php endif; ?>
-      </div>
-      </td>
-    </tr>
-  <?php endforeach; ?>
-  </tbody>
-</table>
-
-
-<!--  <table id="forum-<?php print $forum_id; ?>">
+<table id="forum-<?php print $forum_id; ?>">
   <thead>
     <tr>
       <th><?php print t('Forum'); ?></th>
@@ -106,4 +69,4 @@
     </tr>
   <?php endforeach; ?>
   </tbody>
-</table> -->
+</table>

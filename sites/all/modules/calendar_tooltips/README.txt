@@ -1,9 +1,7 @@
-/* $Id: README.txt,v 1.1 2010/06/06 22:07:46 rjb Exp $ */
-
 SUMMARY
 
-The purpose of the Calendar Tooltips module is simplifying the process of
-displaying a tooltip / popup / balloon when you hover over a day on
+The purpose of the Calendar Tooltips module is displaying
+a tooltip / popup / balloon when you hover over a day on
 a calendar block. This tooltip would contain a list of events occurring
 on that day.
 
@@ -51,6 +49,8 @@ If you have any questions or remarks, or if you would like to report a bug,
 please visit our project page at
 
    http://drupal.org/project/calendar_tooltips
+
+There you will also find a list of known issues and workarounds.
 
 I hope this module is useful for you.
 

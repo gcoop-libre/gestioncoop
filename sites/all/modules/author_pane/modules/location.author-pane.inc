@@ -1,5 +1,4 @@
 <?php
-// $Id: location.author-pane.inc,v 1.1.2.3 2009/03/04 23:09:56 michellec Exp $
 
 /**
  * @file
@@ -10,6 +9,11 @@
  * Implementation of hook_preprocess_author_pane().
  */
 function location_preprocess_author_pane(&$variables) {
+  // Check if this preprocess needs to be run given who's calling it.
+  if (!author_pane_run_preprocess('location', $variables['caller'])) {
+    return;
+  }
+
   $account_id = $variables['account']->uid;
   if ($account_id != 0) {
     $account = $variables['account'];
@@ -19,4 +23,11 @@ function location_preprocess_author_pane(&$variables) {
       $variables['location_user_location'] = $location['#value'];
     }
   }
+}
+
+/**
+ * Implementation of hook_author_pane_allow_preprocess_disable().
+ */
+function location_author_pane_allow_preprocess_disable() {
+  return array('location' => 'Location');
 }

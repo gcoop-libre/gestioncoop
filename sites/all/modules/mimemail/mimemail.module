@@ -1,4 +1,4 @@
-<?php /* $Id: mimemail.module,v 1.54 2010/09/12 16:11:58 sgabe Exp $ */
+<?php /* $Id$ */
 
 /**
  * @file
@@ -45,7 +45,7 @@ function mimemail_user($op, &$edit, &$account, $category = '') {
     $form['mimemail']['mimemail_textonly'] = array(
       '#type'           => 'checkbox',
       '#title'           => t('Plaintext email only'),
-      '#default_value'   => $account->mimemail_textonly,
+      '#default_value'   => isset($account->mimemail_textonly) ? $account->mimemail_textonly : 0,
       '#description'     => t('Check this option if you do not wish to receive email messages with graphics and styles'),
     );
     return $form;
@@ -84,34 +84,55 @@ function mimemail_theme() {
  * @param $text
  *   Optional plaintext portion of a multipart e-mail.
  * @param $attachments
- *   An array of arrays which describe one or more attachments. The internal
- *   array consists of two parts: the file's path and the file's MIME type.
+ *   An array of arrays which describe one or more attachments.
+ *   Existing files can be added by path, dinamically-generated files
+ *   can be added by content. The internal array consists of the following parts:
+ *   - 'filepath':
+ *      Relative Drupal path to an existing file (filecontent is NULL).
+ *   - 'filecontent':
+ *      The actual content of the file (filepath is NULL).
+ *   - 'filename':
+ *      The filename of the file.
+ *   - 'filemime':
+ *      The MIME type of the file.
  *   The array of arrays looks something like this:
  *   Array
  *   (
  *     [0] => Array
  *       (
- *         [filepath] => '/path/to/file.name'
- *         [filemime] => 'mime/type'
+ *         [filepath] => '/sites/default/files/attachment.txt'
+ *         [filecontent] => 'My attachment.'
+ *         [filename] => 'attachment.txt'
+ *         [filemime] => 'text/plain'
  *       )
  *   )
  * @param $mailkey
  *   An identifier for the message.
+ *
  * @return
  *   An array containing the MIME encoded message, including headers and body.
  */
 function mimemail_prepare_message($sender, $recipient, $subject, $body, $plaintext = NULL, $headers = array(), $text = NULL, $attachments = array(), $mailkey = '') {
   module_load_include('inc', 'mimemail');
 
-  if (is_null($sender)) {        // use site default for sender
+  $site_name = variable_get('site_name', 'Drupal');
+  $site_mail = variable_get('site_mail', ini_get('sendmail_from'));
+
+  // Override site mails default sender when using default engine.
+  if ((empty($sender) || $sender == $site_mail)
+      && variable_get('mimemail_engine', 'mimemail') == 'mimemail') {
     $sender = array(
-        'name' => variable_get('site_name', 'Drupal'),
-        'mail' => variable_get('site_mail', ini_get('sendmail_from')),
+      'name' => variable_get('mimemail_name', $site_name),
+      'mail' => variable_get('mimemail_mail', $site_mail),
     );
   }
 
-  // try to determine recpient's text mail preference
-  if (is_null($plaintext)) {
+  // Body is empty, this is a plaintext message.
+ if (empty($body)) {
+   $plaintext = 1;
+  }
+ // Try to determine recpient's text mail preference.
+  elseif (is_null($plaintext)) {
     if (is_object($recipient)) {
       if (isset($recipient->mimemail_textonly)) {
         $plaintext = $recipient->mimemail_textonly;
@@ -124,7 +145,7 @@ function mimemail_prepare_message($sender, $recipient, $subject, $body, $plainte
       }
     }
   }
-  $subject = trim(drupal_html_to_text($subject));
+  $subject = str_replace("\n", '', trim(drupal_html_to_text($subject)));
   $body = theme(array('mimemail_message__'. $mailkey, 'mimemail_message'), $subject, $body, $mailkey);
   foreach (module_implements('mail_post_process') as $module) {
     $function = $module .'_mail_post_process';
@@ -194,6 +215,8 @@ function mimemail_get_engines() {
  *   Returns TRUE if the operation was successful or FALSE if it was not.
  */
 function mimemail_mailengine($op, $message = array()) {
+  module_load_include('inc', 'mimemail');
+
   //default values
   $message = array_merge( array(
       'address' => '',

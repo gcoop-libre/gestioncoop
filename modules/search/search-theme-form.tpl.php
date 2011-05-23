@@ -33,7 +33,6 @@
  * @see template_preprocess_search_theme_form()
  */
 ?>
-
 <div id="search" class="container-inline">
   <?php print $search_form; ?>
 </div>

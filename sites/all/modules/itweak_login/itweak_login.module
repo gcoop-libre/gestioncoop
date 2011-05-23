@@ -1,5 +1,5 @@
 <?php
-// $Id: itweak_login.module,v 1.11 2009/08/07 04:27:01 iva2k Exp $
+// $Id: itweak_login.module,v 1.24 2011/01/13 05:22:23 iva2k Exp $
 
 /**
  * @file
@@ -11,6 +11,13 @@
  */
 function itweak_login_init() {
   drupal_add_css(drupal_get_path('module', 'itweak_login') . '/itweak_login.css');
+
+  // http://drupal.org/node/313272#comment-2786004
+  // This is a performance hit. We need it here because $conf in settings.php 
+  // overrides database variable value in variable_init().
+  // Faster performance will be achieved if the variables in 
+  // _terms_of_use_i18n() are added to $conf in settings.php.
+  _itweak_login_i18n();
 }
 
 /**
@@ -50,26 +57,30 @@ function itweak_login_form_alter(&$form, $form_state, $form_id) {
       );
       $form['login'] += $myform;
       $form['login']['#weight'] = $form['registration']['#weight'] + 0.001;
-	  foreach ($myform['#submit'] as $func) {
-	    $form['#submit'][] = $func;
-	  }
+      foreach ($myform['#submit'] as $func) {
+        $form['#submit'][] = $func;
+      }
       break;
-      
+
     case 'user_login':
-	  $inpage = TRUE;
-	  // No break here!
-	  
+      $inpage = TRUE;
+      // No break here!
+  
     case 'user_login_block':
 
       // Avoid conflict with LoginToboggan if it is installed and enables email login.
       $lt_enabled = (module_exists('logintoboggan') && variable_get('logintoboggan_login_with_email', 0));
 
       // Configurable variables
+      $username_inpage_prefix = $lt_enabled ? '' : variable_get('itweak_login_username_inpage_prefix', '');
       $username_label = $lt_enabled ? '' : variable_get('itweak_login_username_label', '');
       $password_label = $lt_enabled ? '' : variable_get('itweak_login_password_label', '');
       $register_button = variable_get('itweak_login_register_button', FALSE);
       $register_button_name = variable_get('itweak_login_register_button_name', '');
       $register_name = variable_get('itweak_login_register_name', '');
+      $register_url = variable_get('itweak_login_register_url', '');
+      $recover_button = variable_get('itweak_login_recover_button', FALSE);
+      $recover_button_name = variable_get('itweak_login_recover_button_name', '');
       $passwd_recover_name = variable_get('itweak_login_recover_name', '');
       $passwd_recover_url = variable_get('itweak_login_recover_url', '');
       $login_button_name = variable_get('itweak_login_login_button_name', '');
@@ -81,45 +92,59 @@ function itweak_login_form_alter(&$form, $form_state, $form_id) {
       if ($register_name == '') {
         $register_name = t('Create new account');
       }
+      if ($register_url == '') {
+        $register_url = 'user/register'; 
+      }
+      if ($recover_button_name == '') {
+        $recover_button_name = t('Reset Password');
+      }
       if ($passwd_recover_name == '') {
         $passwd_recover_name = t('Request new password');
       }
       if ($passwd_recover_url == '') {
         $passwd_recover_url = 'user/password'; 
       }
-	  
+  
       if (!$inpage) {
-        // Button wrap with <a> makes the button functional without javascript
-        $buttonwrap = 1;
-
         $items = array();
         if (variable_get('user_register', 1)) {
           if ($register_button) {
-            $url = check_url(url('user/register'));
             // Add a new register button ...
+            $form['#validate'][] = '_itweak_login_custom_buttons';
             $form['register'] = array(
+              '#type' => 'submit',
               // Place at the same weight as "Login" button for now
               '#weight' => $form['submit']['#weight'], 
-              '#value' => 
-                ($buttonwrap ? '<a class="itweak_buttonwrap" href="' . $url . '">' . "\n" : '') .
-                '<input type="button" name="register" value="' . $register_button_name . '"'
-                  . ' onclick = "location.href = ' . "'" . $url . "'" . ';"'
-                  . ' class = "form-submit"'
-                   . ' />' . "\n"
-                . ($buttonwrap ? '</a>' . "\n" : '')
+              '#value' => $register_button_name,
             );
           }
           else {
             // ... instead of a regular link
-            $items[] = l($register_name, 'user/register', array('attributes' => array('title' => t('Create a new user account.'))));
+            $items[] = l($register_name, $register_url, array('attributes' => array('title' => t('Create a new user account.'))));
           }
         }
-        $items[] = l($passwd_recover_name, $passwd_recover_url, array('attributes' => array('title' => t('Request new password via e-mail.'))));
+        if ($recover_button) {
+          // Add a new register button ...
+          $form['#validate'][] = '_itweak_login_custom_buttons';
+          $form['recover'] = array(
+            '#type' => 'submit',
+            // Place at the same weight as "Login" button for now
+            '#weight' => $form['submit']['#weight'], 
+            '#value' => $recover_button_name,
+          );
+        }
+        else {
+          // ... instead of a regular link
+          $items[] = l($passwd_recover_name, $passwd_recover_url, array('attributes' => array('title' => t('Request new password via e-mail.'))));
+        }
         $form['links']['#value'] = theme('item_list', $items);
         // Fix unassigned weight (it breaks order of controls later on)
         $form['links']['#weight'] = $form['submit']['#weight'] + 1;
       }
 
+      if ($inpage && $username_inpage_prefix != '') {
+        $form['name']['#prefix'] = $username_inpage_prefix;
+      }
       if ($username_label != '') {
         $form['name']['#title'] = $username_label;
       }
@@ -140,14 +165,44 @@ function itweak_login_form_alter(&$form, $form_state, $form_id) {
       break;
 
     case 'user_register':
-      $register_button_name = variable_get('itweak_login_register_button_name', '');
-      if ($register_button_name == '') {
-        $register_button_name = t('Create new account');
-      }
-      if ($register_button_name != '') {
-       $form['submit']['#value'] = $register_button_name;
+      if (FALSE !== strpos($form['#action'], 'user/register')) {
+      // Only change the registration form. There is also form at /admin/user/user/create path, but we leave it alone.
+        $register_button_name = variable_get('itweak_login_register_button_name', '');
+        if ($register_button_name == '') {
+          $register_button_name = t('Create new account');
+        }
+        if ($register_button_name != '') {
+         $form['submit']['#value'] = $register_button_name;
+        }
       }
       break;
+  }
+}
+
+/**
+ * This function redirects to registration or password recover page if user 
+ * clicked "Register" or "Recover" button
+ */
+function _itweak_login_custom_buttons($form, &$form_state) {
+  $url = FALSE;
+  if ($form_state['values']['op'] == $form_state['values']['register']) {
+    $register_url = variable_get('itweak_login_register_url', '');
+    if ($register_url == '') {
+      $register_url = 'user/register'; 
+    }
+    $url = $register_url;
+  }
+  else if ($form_state['values']['op'] == $form_state['values']['recover']) {
+    $passwd_recover_url = variable_get('itweak_login_recover_url', '');
+    if ($passwd_recover_url == '') {
+      $passwd_recover_url = 'user/password'; 
+    }
+    $url = $passwd_recover_url;
+  }
+  if ($url) {
+    // This line is required to redirect properly and remove any warning messages from other #validate functions:
+    unset($_REQUEST['destination'], $_REQUEST['edit']['destination'], $_SESSION['messages']);
+    drupal_goto($url);
   }
 }
 
@@ -190,3 +245,52 @@ function itweak_login_menu_alter(&$items) {
     $items['user/password']['title'] = $passwd_recover_name;
   }
 }
+
+function _itweak_login_variables($i18n = FALSE) {
+  $ret = array(
+    'itweak_login_register_button_name',
+    'itweak_login_register_name',
+    'itweak_login_recover_button_name',
+    'itweak_login_recover_name',
+    'itweak_login_login_button_name',
+    'itweak_login_username_label',
+    'itweak_login_password_label',
+  );
+  if (!$i18n) {
+    $ret += array (
+      'itweak_login_register_button',
+      'itweak_login_register_url',
+      'itweak_login_recover_url',
+      'itweak_login_recover_button',
+    );
+  }
+  return $ret;
+}
+
+function _itweak_login_i18n($force = FALSE) {
+  if (!module_exists('i18n')) return;	// No Internationalization module
+  global $conf;
+  $variables = _itweak_login_variables(TRUE);
+  $i18n_variables = variable_get('i18n_variables', array());
+  if (!$force && is_array($i18n_variables) && in_array($variables[0], $i18n_variables)) return;
+  if (!is_array($i18n_variables)) $i18n_variables = array();
+  $i18n_variables = array_merge($i18n_variables, $variables);
+  if ($force) foreach ($i18n_variables as $key => $name) {
+    // Remove variables that should not be internationalized
+    if (0 === strpos($name, 'itweak_login_') && !in_array($name, $variables)) {
+	  unset($i18n_variables[$key]);
+      db_query("DELETE FROM {i18n_variable} WHERE name='%s'", $name);
+	  // Good from user experience perspective, but not nice from implementation 
+	  // perspective (we probably should not mess with other module's data, but there
+	  // is no hook to call to keep it clean).
+	  // Alternative would be to ask user to click 'Clean up variables' on i18n admin page, which is troublesome.
+	}
+  }
+  // If settings.php defines $conf['i18n_variables'], it will override anything we set to the DB with variable_set().
+  // Also, variable_set() is clearing variables cache every time it is called, which is a big and useless performance hit. 
+  // So we do not set it unless it is forced.
+  if ($force) variable_set('i18n_variables', $i18n_variables);
+  // Instead we add directly to working copy. This avoids cache rebuild.
+  $conf['i18n_variables'] = $i18n_variables;
+}
+

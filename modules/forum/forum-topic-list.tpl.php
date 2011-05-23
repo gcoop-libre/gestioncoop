@@ -33,42 +33,7 @@
  * @see theme_forum_topic_list()
  */
 ?>
-
 <table id="forum-topic-<?php print $topic_id; ?>">
-    <tbody>
-    <?php foreach ($topics as $topic): ?>
-        <tr class="<?php print $topic->zebra; ?>">
-            <td class="topic-list">
-                        <div id="icon"><?php print $topic->icon; ?></div>
-            <div id="title"><?php print $topic->title; ?></div>
-            <?php $teaser=node_load($topic->nid); ?>
-            <div id="teaser"><?php print $teaser->teaser; ?></div>
-            <?php if ($topic->moved): ?>
-            <div class="mesagges"><?php print $topic->message; ?></div>
-            <?php else: ?>
-            <div class="info-topic">
-            <div class="replies">
-            <span><?php print $topic->num_comments; ?> Respuestas</span>
-            <span> - <?php if ($topic->new_replies): ?> 
-            <a href="<?php print $topic->new_url; ?>"><?php print $topic->new_text; ?></a>
-            <?php endif; ?></span>
-                </div><!--Cierra Replies -->
-            <div id="created"> | Publicado hace <?php print $topic->created; ?> | </div>                   
-            <div id="last-reply">Última respuesta publicada hace <?php print $topic->last_reply; ?></div>
-            <?php endif; ?>
-            </div>
-     
-
-            </td>                
-        </tr>
-    <?php endforeach; ?>
-    </tbody>
-</table><!-- Cierra Forum-Topic -->
-
-
-
-
-<!-- <table id="forum-topic-<?php print $topic_id; ?>" class="grid-12">
   <thead>
     <tr><?php print $header; ?></tr>
   </thead>
@@ -94,4 +59,4 @@
   <?php endforeach; ?>
   </tbody>
 </table>
-<?php print $pager; ?> -->
+<?php print $pager; ?>

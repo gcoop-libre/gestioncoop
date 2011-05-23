@@ -1,5 +1,5 @@
 <?php
-// $Id: imce.page.inc,v 1.1.2.3 2010/05/29 08:27:24 ufku Exp $
+// $Id: imce.page.inc,v 1.1.2.9 2010/12/27 20:08:33 ufku Exp $
 
 /**
  * @file
@@ -395,6 +395,17 @@ function imce_process_files($filenames, &$imce, $function, $args = array()) {
  */
 function imce_delete_file($filename, &$imce) {
   $filepath = file_directory_path() . ($imce['dir'] == '.' ? '' : '/'. $imce['dir']) .'/'. $filename;
+  if (!imce_delete_filepath($filepath)) {
+    return FALSE;
+  }
+  imce_remove_file($filename, $imce);
+  return TRUE;
+}
+
+/**
+ * Delete a file by path.
+ */
+function imce_delete_filepath($filepath) {
   $file = db_fetch_object(db_query("SELECT * FROM {files} WHERE filepath = '%s'", $filepath));
 
   //file exists in database
@@ -420,7 +431,6 @@ function imce_delete_file($filename, &$imce) {
     return FALSE;
   }
 
-  imce_remove_file($filename, $imce);
   return TRUE;
 }
 
@@ -608,7 +618,7 @@ function imce_validate_all(&$file, $imce) {
   //and scaling it may exploit system memory.
   $errors = imce_validate_filesize($file, $imce['filesize']);
   //image resolution validation
-  if (empty($errors)) {
+  if (empty($errors) && preg_match('/\.(png|gif|jpe?g)$/i', $file->filename)) {
     $errors = array_merge($errors, file_validate_image_resolution($file, $imce['dimensions']));
   }
   //directory quota validation
@@ -704,10 +714,12 @@ function imce_initiate_profile($user) {
   if ($imce = imce_user_profile($user)) {
     imce_process_directories($imce, $user);
     if (!empty($imce['directories'])) {
-      $imce['uid'] = (int)$user->uid;
+      $imce['uid'] = (int) $user->uid;
       $imce['url'] = url($_GET['q']);
       $imce['clean'] = variable_get('clean_url', 0) == 1;
-      $imce['furl'] = file_create_url('');
+      $imce['absurls'] = variable_get('imce_settings_absurls', 0) == 1;
+      $private = variable_get('file_downloads', '') == FILE_DOWNLOADS_PRIVATE;
+      $imce['furl'] = $private ? url('system/files') : base_path() . file_directory_path();
       $imce['filesize'] *= 1048576;//convert from Mb to byte
       $imce['quota'] *= 1048576;
       $imce['tuquota'] *= 1048576;
@@ -1074,7 +1086,14 @@ function theme_imce_root_text($imce_ref) {
  * Returns the html for user's file browser tab.
  */
 function theme_imce_user_page($account) {
-  return '<iframe src="' . url('imce') . '" frameborder="0" style="border: 1px solid #eee; width: 99%; height: 520px" class="imce-frame"></iframe>';
+  global $user;
+  $options = array();
+  //switch to account's active folder
+  if ($user->uid == 1 && $account->uid != 1) {
+    $imce = imce_initiate_profile($account);
+    $options['query'] = array('dir' => $imce['dir']);
+  }
+  return '<iframe src="' . url('imce', $options) . '" frameborder="0" style="border: 1px solid #eee; width: 99%; height: 520px" class="imce-frame"></iframe>';
 }
 
 /**

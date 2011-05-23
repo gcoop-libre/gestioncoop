@@ -1,5 +1,5 @@
 <?php
-// $Id: panels_tabs.module,v 1.1.2.13.2.7 2010/06/02 18:59:05 dereine Exp $
+// $Id: panels_tabs.module,v 1.1.2.13.2.13 2010/09/10 12:25:34 smoothify Exp $
 
 /**
  * @file
@@ -11,13 +11,80 @@
 // Panels hooks.
 
 /**
-* Implements hook_ctools_plugin_directory().
-*/
+ * Implements hook_ctools_plugin_directory().
+ */
 function panels_tabs_ctools_plugin_directory($module, $plugin) {
   if ($module == 'page_manager' || $module == 'panels') {
     return 'plugins/' . $plugin;
   }
 }
+
+/**
+ * Implements hook_ctools_plugin_api().
+ */
+function panels_tabs_ctools_plugin_api($module, $api) {
+  if ($module == 'panels' && $api == 'styles') {
+    // Check and return correct style version
+    return array('version' => panels_tabs_style_version());
+  }
+}
+
+/**
+ * Implements hook_panels_pre_render().
+ */
+function panels_tabs_panels_pre_render($display, $renderer = NULL) {
+  // Don't run if we are using an old version of panels or legacy mode
+  if (empty($renderer)) {
+    return;
+  }
+  elseif (panels_tabs_style_version() == 2) {
+
+    $tabs_regions = array();
+    
+    // Check if the tabs style has been applied to entire panel
+    $global_style = $renderer->display->panel_settings['style'] == 'tabs';
+
+    // Get the list of regions for the panel
+    $regions = panels_get_regions($renderer->plugins['layout'], $renderer->display);
+
+    // Find out which regions are using the tabs style and add to an array
+    foreach ($regions as $region_id => $title) {
+
+      $settings = $renderer->display->panel_settings[$region_id];
+      if ($global_style && (empty($settings['style']) || $settings['style'] == -1)) {
+        $tabs_regions[] = $region_id;
+      }
+      elseif ($settings['style'] == 'tabs') {
+        $tabs_regions[] = $region_id;
+      }
+    }
+    
+    // Go through all the panes and mark those that are in a tab region.
+    foreach ($renderer->display->content as $pane_id => $pane) {
+      if (in_array($pane->panel, $tabs_regions)) {
+        $renderer->display->content[$pane_id]->region_style = 'tabs';
+      }
+    }
+  }
+}
+
+/**
+ * Implements hook_panels_pane_content_alter().
+ */
+function panels_tabs_panels_pane_content_alter($content, $pane, $args, $context) {
+  // Don't run if we are using legacy mode
+  if (panels_tabs_style_version() == 2) {
+    if ($pane->region_style == 'tabs') {
+      $pane->tab_title = $content->title;
+      // Set the original title in case it is required to provide the panel title
+      if (!empty($content->title) && $content->title != '<none>') {
+        $content->original_title = $content->title;
+      }
+      unset($content->title);
+    }
+  }
+}
+
 
 /**
  * Implementation of hook_theme()
@@ -28,6 +95,15 @@ function panels_tabs_theme() {
       'arguments' => array('title' => NULL),
     ),
   );
+}
+
+/**
+ * Determine which style version we shoud declare.
+ */
+function panels_tabs_style_version() {
+  // If ctools api version is greater than 1.7 then we should return version 2
+  $new = version_compare(PANELS_REQUIRED_CTOOLS_API, 1.7, '>=');
+  return $new ? 2 : 1;
 }
 
 /**
