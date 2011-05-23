@@ -58,11 +58,11 @@ function gcoop_formalter_form_alter(&$form, $form_state, $form_id)
             $form['field_presidereunion']['#weight'] = 3;
             $form['field_presentes']['#title'] = "quien da comienzo al acto con la presencia de";
             $form['field_presentes']['#description'] = "";
-            $form['field_presentes']['#weight'] = 3;
+            $form['field_presentes']['#weight'] = 4;
             $form['field_firmantes']['#title'] = "<span class='label7'>Y al no haber otro asunto que tratar, se levanta la sesión.</span>";
             $form['field_firmantes']['#description'] = "";
 
-//            $form['field_presentes']['#weight'] = 5;
+            //$form['field_presentes']['#weight'] = 5;
             $form['field_label1'] = array (
                                             '#type' => 'markup',
                                             '#value' => '<div class="label1"> En la Ciudad </div>',
@@ -89,11 +89,11 @@ function gcoop_formalter_form_alter(&$form, $form_state, $form_id)
                                            <br /> A continuación el Sr. Presidente expone que la reunión fue convocada a los efectos de tratar los siguientes temas: </div>',
                                             '#weight' => $form['field_presentes']['#weight'] + 1,
                                             );
-            $form['field_label6'] = array (
-                                            '#type' => 'markup',
-                                            '#value' => '<div class="label6">Siendo las </div>',
-                                            '#weight' => $form['field_firmantes']['#weight'] + 1,
-                                            );
+              //$form['field_label6'] = array (
+              //                              '#type' => 'markup',
+              //                              '#value' => '<div class="label6">Siendo las </div>',
+              //                              '#weight' => $form['field_firmantes']['#weight'] + 1,
+              //                              );
             break;
         case 'system_site_information_settings':
               $form['gcoop_formalter_direccion_setting'] = array(
