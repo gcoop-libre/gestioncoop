@@ -1,0 +1,8 @@
+core = "6.x"
+description = "gestioncoop_presets"
+features[imagecache][] = "original_perfil"
+features[imagecache][] = "thumbnail_perfil"
+name = "gestioncoop_presets"
+package = "Features"
+project = "gestioncoop_presets"
+version = "6.x-1.0-gcoop"

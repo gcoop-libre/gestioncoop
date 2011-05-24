@@ -1,0 +1,3 @@
+<?php
+
+include_once('gestioncoop_balance_memoria.features.inc');

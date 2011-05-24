@@ -1,0 +1,3 @@
+<?php
+
+include_once('gestioncoop_profiles.features.inc');
