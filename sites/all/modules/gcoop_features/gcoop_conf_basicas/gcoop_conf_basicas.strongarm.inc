@@ -680,6 +680,15 @@ function gcoop_conf_basicas_strongarm() {
     14 => 'sites/all/modules/contrib/features/features.js',
     15 => 'misc/jquery.form.js',
     16 => 'misc/ahah.js',
+    17 => 'sites/all/modules/contrib/ctools/js/ajax-responder.js',
+    18 => 'sites/all/modules/contrib/ctools/page_manager/js/page-list.js',
+    19 => 'sites/all/modules/contrib/ctools/js/modal.js',
+    20 => 'sites/all/modules/contrib/ctools/js/dependent.js',
+    21 => 'sites/all/modules/contrib/ctools/js/dropdown.js',
+    22 => 'sites/all/modules/contrib/panels/js/panels-base.js',
+    23 => 'sites/all/modules/contrib/panels/js/display_editor.js',
+    24 => 'sites/all/modules/contrib/panels/plugins/layouts/flexible/flexible-admin.js',
+    25 => 'sites/all/modules/contrib/ckeditor/includes/ckeditor.utils.js',
   );
 
   $export['javascript_parsed'] = $strongarm;
@@ -833,7 +842,7 @@ function gcoop_conf_basicas_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_frontpage';
-  $strongarm->value = 'front_page';
+  $strongarm->value = 'inicio';
 
   $export['site_frontpage'] = $strongarm;
   $strongarm = new stdClass;
