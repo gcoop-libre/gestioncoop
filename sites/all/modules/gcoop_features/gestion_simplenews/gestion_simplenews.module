@@ -1,0 +1,3 @@
+<?php
+
+include_once('gestion_simplenews.features.inc');
