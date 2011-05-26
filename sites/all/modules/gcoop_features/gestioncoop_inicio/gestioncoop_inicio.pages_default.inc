@@ -152,7 +152,7 @@ function gestioncoop_inicio_default_page_manager_pages() {
       ),
       'logic' => 'and',
     ),
-    'path' => '/user/login',
+    'path' => 'user/login',
     'query' => '',
     'fragment' => '',
   );
