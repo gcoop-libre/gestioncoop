@@ -1,0 +1,13 @@
+gcoop_conf_basicas
+gestioncoop_acta_consejo
+gestioncoop_actividad
+gestioncoop_asamblea
+gestioncoop_balance_memoria
+gestioncoop_beautytips
+gestioncoop_captcha
+gestioncoop_convocatoria_asamblea
+gestioncoop_inicio
+gestioncoop_noticia
+gestioncoop_presets
+gestioncoop_profiles
+gestioncoop_rules
