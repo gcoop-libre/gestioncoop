@@ -12,7 +12,22 @@ function gestioncoop_inicio_default_page_manager_pages() {
   $page->admin_title = 'Inicio';
   $page->admin_description = 'Panel para la vista de Inicio';
   $page->path = 'inicio';
-  $page->access = array();
+  $page->access = array(
+    'plugins' => array(
+      0 => array(
+        'name' => 'role',
+        'settings' => array(
+          'rids' => array(
+            0 => 1,
+            1 => 2,
+          ),
+        ),
+        'context' => 'logged-in-user',
+        'not' => FALSE,
+      ),
+    ),
+    'logic' => 'and',
+  );
   $page->menu = array();
   $page->arguments = array();
   $page->conf = array();
