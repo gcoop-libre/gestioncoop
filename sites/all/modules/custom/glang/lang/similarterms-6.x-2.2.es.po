@@ -1,0 +1,20 @@
+# Spanish translation of Similar By Terms (6.x-2.2)
+# Copyright (c) 2010 by the Spanish translation team
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Similar By Terms (6.x-2.2)\n"
+"POT-Creation-Date: 2010-12-18 23:20+0000\n"
+"PO-Revision-Date: 2009-10-12 14:21+0000\n"
+"Language-Team: Spanish\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+msgid "Views"
+msgstr "Vistas"
+msgid "Nid"
+msgstr "Nid"
+msgid "Display type"
+msgstr "Tipo de presentación"

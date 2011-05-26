@@ -1,0 +1,60 @@
+<?php
+// $Id: glang.install,v 1.85.2.33 2009/07/14 22:17:05 yched Exp $
+
+/**
+ * Implementation of hook_install().
+ */
+function glang_install() 
+{
+  include_once './includes/locale.inc';
+
+  $langcode = 'es';
+  //Creamos el idioma 'es' como predeterminado y desactivamos el ingles
+  locale_add_language($langcode, NULL, NULL, LANGUAGE_LTR, '', '', TRUE, TRUE);
+  db_query("UPDATE {languages} SET enabled = %d, weight = %d WHERE language = '%s'", 0, 1, 'en');
+  $files = scandir(dirname(__FILE__) . '/lang/');
+
+  foreach ($files as $filename)
+  {
+    if (isfile($filename))
+    {
+      $file = _create_file($filename);
+      $mode = '1';
+      $group = 'default';
+       _locale_import_po($file, $langcode, $mode, $group);
+    }
+  }
+}
+
+function isfile($file){
+      return preg_match('/^[^.^:^?^\-][^:^?]*\.(?i)' . getexts() . '$/',$file);
+}
+
+function getexts(){
+      return '(po)';
+} 
+
+function _create_file($filename)
+{
+  $dest = dirname(__FILE__) . '/lang/';
+  $file = new stdClass();
+  $file->filename = $filename;
+  $file->filepath = $dest.$file->filename;
+  $file->filemime = file_get_mimetype($file->filename);
+  $file->source = 'file';
+  $file->destination = $dest.$file->filename;
+  $file->filesize = '1000000';
+  $file->uid = '1';
+  $file->status = 0;
+  $file->timestamp = time();
+ 
+  return $file;
+}
+
+/**
+ * Implementation of hook_uninstall().
+ */
+function glang_uninstall() 
+{
+  
+}

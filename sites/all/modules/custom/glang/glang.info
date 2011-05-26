@@ -1,0 +1,5 @@
+core = "6.x"
+dependencies[] = "locale"
+description = "Importador de idioma"
+name = "glang"
+package = "gcoop"
