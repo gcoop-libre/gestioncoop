@@ -1,0 +1,23 @@
+<?php
+// $Id: page_manager_redirect.module,v 1.3.2.2 2011/01/10 15:16:30 jameswilliams Exp $
+
+/**
+ * @file Expose ourselves to Page manager, in a good way.
+ */
+
+/**
+ * Implementation of hook_ctools_plugin_directory() to let the system know
+ * we implement page manager task handlers.
+ */
+function page_manager_redirect_ctools_plugin_directory($module, $plugin) {
+  if ($module == 'page_manager') {
+    return 'plugins/' . $plugin;
+  }
+}
+/**
+ * page manager redirect path helper function.
+ */
+function page_manager_redirect_get_path($file, $base_path = FALSE, $module = 'page_manager_redirect') {
+  $output = $base_path ? base_path() : '';
+  return $output . drupal_get_path('module', $module) . '/' . $file;
+}

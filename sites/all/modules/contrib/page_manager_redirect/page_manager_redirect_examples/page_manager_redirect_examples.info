@@ -1,0 +1,13 @@
+; $Id: page_manager_redirect_examples.info,v 1.1 2010/10/21 14:15:43 jameswilliams Exp $
+name = Page manager redirect examples
+description = Provides example redirects for Page manager redirect
+core = 6.x
+dependencies[] = page_manager_redirect
+package = Chaos tool suite
+
+; Information added by drupal.org packaging script on 2011-01-10
+version = "6.x-1.3"
+core = "6.x"
+project = "page_manager_redirect"
+datestamp = "1294674694"
+

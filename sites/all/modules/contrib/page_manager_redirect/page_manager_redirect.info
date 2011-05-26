@@ -1,0 +1,13 @@
+; $Id: page_manager_redirect.info,v 1.1 2010/07/01 19:07:51 darthsteven Exp $
+name = Page manager redirect
+description = Adds a new variant type to page manager, to redirect to a specified URL
+core = 6.x
+dependencies[] = page_manager
+package = Chaos tool suite
+
+; Information added by drupal.org packaging script on 2011-01-10
+version = "6.x-1.3"
+core = "6.x"
+project = "page_manager_redirect"
+datestamp = "1294674694"
+
