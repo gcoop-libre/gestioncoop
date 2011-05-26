@@ -32,6 +32,21 @@ function gestioncoop_inicio_default_page_manager_pages() {
     'css' => '',
     'contexts' => array(),
     'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 1,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => TRUE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
   );
   $display = new panels_display;
   $display->layout = 'flexible';
@@ -109,6 +124,38 @@ function gestioncoop_inicio_default_page_manager_pages() {
   $display->hide_title = PANELS_TITLE_FIXED;
   $display->title_pane = '0';
   $handler->conf['display'] = $display;
+  $page->default_handlers[$handler->name] = $handler;
+  $handler = new stdClass;
+  $handler->disabled = FALSE; /* Edit this to true to make a default handler disabled initially */
+  $handler->api_version = 1;
+  $handler->name = 'page_front_redirect_context';
+  $handler->task = 'page';
+  $handler->subtask = 'front';
+  $handler->handler = 'redirect_context';
+  $handler->weight = 1;
+  $handler->conf = array(
+    'title' => 'Inicio Anonimo',
+    'contexts' => array(),
+    'relationships' => array(),
+    'access' => array(
+      'plugins' => array(
+        0 => array(
+          'name' => 'role',
+          'settings' => array(
+            'rids' => array(
+              0 => 1,
+            ),
+          ),
+          'context' => 'logged-in-user',
+          'not' => FALSE,
+        ),
+      ),
+      'logic' => 'and',
+    ),
+    'path' => '/user/login',
+    'query' => '',
+    'fragment' => '',
+  );
   $page->default_handlers[$handler->name] = $handler;
   $pages['front'] = $page;
 
