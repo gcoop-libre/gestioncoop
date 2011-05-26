@@ -8,6 +8,27 @@ function gestioncoop_acta_consejo_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ant_acta_consejo';
+  $strongarm->value = '1';
+
+  $export['ant_acta_consejo'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_pattern_acta_consejo';
+  $strongarm->value = 'Acta de Consejo [field_fecha-dd]-[field_fecha-mm]-[field_fecha-yyyy]';
+
+  $export['ant_pattern_acta_consejo'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_php_acta_consejo';
+  $strongarm->value = 0;
+
+  $export['ant_php_acta_consejo'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_acta_consejo';
   $strongarm->value = '0';
 

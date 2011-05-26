@@ -8,6 +8,27 @@ function gestioncoop_convocatoria_asamblea_strongarm() {
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
+  $strongarm->name = 'ant_convocatoria_asamblea';
+  $strongarm->value = '1';
+
+  $export['ant_convocatoria_asamblea'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_pattern_convocatoria_asamblea';
+  $strongarm->value = 'Convocatoria Asamblea [field_fecha-dd]-[field_fecha-mm]-[field_fecha-yyyy]';
+
+  $export['ant_pattern_convocatoria_asamblea'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'ant_php_convocatoria_asamblea';
+  $strongarm->value = 0;
+
+  $export['ant_php_convocatoria_asamblea'] = $strongarm;
+  $strongarm = new stdClass;
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
   $strongarm->name = 'comment_anonymous_convocatoria_asamblea';
   $strongarm->value = 0;
 
