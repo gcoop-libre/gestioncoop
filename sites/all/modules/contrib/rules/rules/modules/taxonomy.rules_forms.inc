@@ -1,5 +1,4 @@
 <?php
-// $Id: taxonomy.rules_forms.inc,v 1.1.2.10 2009/09/10 10:57:54 fago Exp $
 
 
 /**
