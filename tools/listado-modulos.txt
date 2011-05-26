@@ -1,6 +1,6 @@
 adminrole
 admin_menu
-front_page
+page_manager_redirect
 content
 content_copy
 content_permissions
@@ -91,3 +91,4 @@ fivestar
 votingapi
 webform
 ninesixty
+features_extra
