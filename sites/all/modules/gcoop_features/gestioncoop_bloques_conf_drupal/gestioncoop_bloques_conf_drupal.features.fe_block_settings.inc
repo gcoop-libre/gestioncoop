@@ -44,7 +44,7 @@ function gestioncoop_bloques_conf_drupal_default_fe_block_settings() {
     'delta' => '1',
     'theme' => 'ninesixty',
     'status' => '1',
-    'weight' => '-13',
+    'weight' => '-12',
     'region' => 'right',
     'custom' => '0',
     'throttle' => '0',
@@ -149,12 +149,13 @@ function gestioncoop_bloques_conf_drupal_default_fe_block_settings() {
     'delta' => 'calendario_actividades-block_1',
     'theme' => 'ninesixty',
     'status' => '1',
-    'weight' => '-25',
+    'weight' => '-13',
     'region' => 'right',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '0',
     'pages' => 'crear_acta',
+    'title' => '',
     'cache' => '-1',
   );
 
@@ -175,7 +176,177 @@ function gestioncoop_bloques_conf_drupal_default_fe_block_settings() {
 
   $export['ninesixty'] = $theme;
 
-  $theme_default = variable_get('theme_default', 'ninesixty');
+  // garland
+  $theme = array();
+
+  $theme['calendar-0'] = array(
+    'module' => 'calendar',
+    'delta' => '0',
+    'theme' => 'garland',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['forum-0'] = array(
+    'module' => 'forum',
+    'delta' => '0',
+    'theme' => 'garland',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['forum-1'] = array(
+    'module' => 'forum',
+    'delta' => '1',
+    'theme' => 'garland',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['menu-primary-links'] = array(
+    'module' => 'menu',
+    'delta' => 'primary-links',
+    'theme' => 'garland',
+    'status' => 0,
+    'weight' => '-2',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  );
+
+  $theme['menu-secondary-links'] = array(
+    'module' => 'menu',
+    'delta' => 'secondary-links',
+    'theme' => 'garland',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  );
+
+  $theme['poll-0'] = array(
+    'module' => 'poll',
+    'delta' => '0',
+    'theme' => 'garland',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '1',
+  );
+
+  $theme['search-0'] = array(
+    'module' => 'search',
+    'delta' => '0',
+    'theme' => 'garland',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  );
+
+  $theme['user-0'] = array(
+    'module' => 'user',
+    'delta' => '0',
+    'theme' => 'garland',
+    'status' => 0,
+    'weight' => '-5',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  );
+
+  $theme['views-Inicio-block_1'] = array(
+    'module' => 'views',
+    'delta' => 'Inicio-block_1',
+    'theme' => 'garland',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  );
+
+  $theme['views-calendario_actividades-block_1'] = array(
+    'module' => 'views',
+    'delta' => 'calendario_actividades-block_1',
+    'theme' => 'garland',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  );
+
+  $theme['views-nuevos_socios-block_1'] = array(
+    'module' => 'views',
+    'delta' => 'nuevos_socios-block_1',
+    'theme' => 'garland',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  );
+
+  $export['garland'] = $theme;
+
+  $theme_default = variable_get('theme_default', 'garland');
   $themes = list_themes();
   foreach ($export as $theme_key => $settings) {
     if ($theme_key != $theme_default && empty($themes[$theme_key]->status)) {
