@@ -9,21 +9,6 @@ function gestioncoop_bloques_conf_drupal_default_fe_block_settings() {
   // ninesixty
   $theme = array();
 
-  $theme['calendar-0'] = array(
-    'module' => 'calendar',
-    'delta' => '0',
-    'theme' => 'ninesixty',
-    'status' => 0,
-    'weight' => '-12',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => 'Calendario',
-    'cache' => '1',
-  );
-
   $theme['forum-0'] = array(
     'module' => 'forum',
     'delta' => '0',
@@ -129,13 +114,13 @@ function gestioncoop_bloques_conf_drupal_default_fe_block_settings() {
     'cache' => '-1',
   );
 
-  $theme['views-Inicio-block_1'] = array(
+  $theme['views-002bb8861a4c677218715ccd4389f381'] = array(
     'module' => 'views',
-    'delta' => 'Inicio-block_1',
+    'delta' => '002bb8861a4c677218715ccd4389f381',
     'theme' => 'ninesixty',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
+    'status' => 1,
+    'weight' => '-10',
+    'region' => 'right',
     'custom' => '0',
     'throttle' => '0',
     'visibility' => '0',
@@ -144,24 +129,9 @@ function gestioncoop_bloques_conf_drupal_default_fe_block_settings() {
     'cache' => '-1',
   );
 
-  $theme['views-calendario_actividades-block_1'] = array(
+  $theme['views-Inicio-block_1'] = array(
     'module' => 'views',
-    'delta' => 'calendario_actividades-block_1',
-    'theme' => 'ninesixty',
-    'status' => '1',
-    'weight' => '-13',
-    'region' => 'right',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => 'crear_acta',
-    'title' => '',
-    'cache' => '-1',
-  );
-
-  $theme['views-nuevos_socios-block_1'] = array(
-    'module' => 'views',
-    'delta' => 'nuevos_socios-block_1',
+    'delta' => 'Inicio-block_1',
     'theme' => 'ninesixty',
     'status' => 0,
     'weight' => '0',
@@ -178,21 +148,6 @@ function gestioncoop_bloques_conf_drupal_default_fe_block_settings() {
 
   // garland
   $theme = array();
-
-  $theme['calendar-0'] = array(
-    'module' => 'calendar',
-    'delta' => '0',
-    'theme' => 'garland',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '1',
-  );
 
   $theme['forum-0'] = array(
     'module' => 'forum',
@@ -299,39 +254,24 @@ function gestioncoop_bloques_conf_drupal_default_fe_block_settings() {
     'cache' => '-1',
   );
 
+  $theme['views-002bb8861a4c677218715ccd4389f381'] = array(
+    'module' => 'views',
+    'delta' => '002bb8861a4c677218715ccd4389f381',
+    'theme' => 'garland',
+    'status' => 0,
+    'weight' => '0',
+    'region' => '',
+    'custom' => '0',
+    'throttle' => '0',
+    'visibility' => '0',
+    'pages' => '',
+    'title' => '',
+    'cache' => '-1',
+  );
+
   $theme['views-Inicio-block_1'] = array(
     'module' => 'views',
     'delta' => 'Inicio-block_1',
-    'theme' => 'garland',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '-1',
-  );
-
-  $theme['views-calendario_actividades-block_1'] = array(
-    'module' => 'views',
-    'delta' => 'calendario_actividades-block_1',
-    'theme' => 'garland',
-    'status' => 0,
-    'weight' => '0',
-    'region' => '',
-    'custom' => '0',
-    'throttle' => '0',
-    'visibility' => '0',
-    'pages' => '',
-    'title' => '',
-    'cache' => '-1',
-  );
-
-  $theme['views-nuevos_socios-block_1'] = array(
-    'module' => 'views',
-    'delta' => 'nuevos_socios-block_1',
     'theme' => 'garland',
     'status' => 0,
     'weight' => '0',
