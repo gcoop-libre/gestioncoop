@@ -671,24 +671,12 @@ function gcoop_conf_basicas_strongarm() {
     5 => 'misc/tableheader.js',
     6 => 'sites/all/modules/contrib/beautytips/js/jquery.bt.min.js',
     7 => 'sites/all/modules/contrib/beautytips/js/beautytips.js',
-    8 => 'sites/all/modules/contrib/calendar/jcalendar/jcalendar.js',
-    9 => 'sites/all/themes/tao/js/tao.js',
-    10 => 'sites/all/themes/rubik/js/rubik.js',
-    11 => 'sites/all/modules/contrib/token/jquery.treeTable.js',
-    12 => 'sites/all/modules/contrib/token/token.js',
-    13 => 'misc/textarea.js',
-    14 => 'sites/all/modules/contrib/features/features.js',
-    15 => 'misc/jquery.form.js',
-    16 => 'misc/ahah.js',
-    17 => 'sites/all/modules/contrib/ctools/js/ajax-responder.js',
-    18 => 'sites/all/modules/contrib/ctools/page_manager/js/page-list.js',
-    19 => 'sites/all/modules/contrib/ctools/js/modal.js',
-    20 => 'sites/all/modules/contrib/ctools/js/dependent.js',
-    21 => 'sites/all/modules/contrib/ctools/js/dropdown.js',
-    22 => 'sites/all/modules/contrib/panels/js/panels-base.js',
-    23 => 'sites/all/modules/contrib/panels/js/display_editor.js',
-    24 => 'sites/all/modules/contrib/panels/plugins/layouts/flexible/flexible-admin.js',
-    25 => 'sites/all/modules/contrib/ckeditor/includes/ckeditor.utils.js',
+    8 => 'sites/all/themes/tao/js/tao.js',
+    9 => 'sites/all/themes/rubik/js/rubik.js',
+    10 => 'sites/all/modules/contrib/calendar/jcalendar/jcalendar.js',
+    11 => 'sites/all/modules/contrib/features/features.js',
+    12 => 'misc/jquery.form.js',
+    13 => 'misc/ahah.js',
   );
 
   $export['javascript_parsed'] = $strongarm;
@@ -829,7 +817,7 @@ function gcoop_conf_basicas_strongarm() {
   $strongarm->name = 'preprocess_js';
   $strongarm->value = '0';
 
-  $export['site_footer'] = $strongarm;
+  $export['preprocess_js'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
@@ -904,8 +892,8 @@ function gcoop_conf_basicas_strongarm() {
     'toggle_favicon' => 1,
     'toggle_primary_links' => 1,
     'toggle_secondary_links' => 1,
-    'default_logo' => 0,
-    'logo_path' => 'sites/default/files/ninesixty_logo.png',
+    'default_logo' => 1,
+    'logo_path' => 'sites/all/themes/ninesixty/logo.png',
     'logo_upload' => '',
     'default_favicon' => 0,
     'favicon_path' => 'sites/default/files/ninesixty_favicon.png',
