@@ -22,7 +22,7 @@ function gestioncoop_menus_menu_default_menu_links() {
     'external' => '1',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '0',
+    'weight' => '-50',
   );
   // Exported menu link: primary-links:actividades
   $menu_links['primary-links:actividades'] = array(
@@ -36,7 +36,7 @@ function gestioncoop_menus_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '1',
+    'weight' => '-49',
   );
   // Exported menu link: primary-links:balances-memorias
   $menu_links['primary-links:balances-memorias'] = array(
@@ -50,7 +50,7 @@ function gestioncoop_menus_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '4',
+    'weight' => '-47',
   );
   // Exported menu link: primary-links:forum
   $menu_links['primary-links:forum'] = array(
@@ -68,7 +68,7 @@ function gestioncoop_menus_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '5',
+    'weight' => '-46',
   );
   // Exported menu link: primary-links:node/24
   $menu_links['primary-links:node/24'] = array(
@@ -100,7 +100,7 @@ function gestioncoop_menus_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '2',
+    'weight' => '-48',
   );
   // Exported menu link: secondary-links:logout
   $menu_links['secondary-links:logout'] = array(
