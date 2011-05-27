@@ -829,14 +829,6 @@ function gcoop_conf_basicas_strongarm() {
   $strongarm->name = 'preprocess_js';
   $strongarm->value = '0';
 
-  $export['preprocess_js'] = $strongarm;
-  $strongarm = new stdClass;
-  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
-  $strongarm->api_version = 1;
-  $strongarm->name = 'site_footer';
-  $strongarm->value = '<p><img alt="" src="http://localhost/gestioncooperativa/trunk/sites/default/files/ninesixty_favicon.png" style="width: 15px; height: 14px;" /> Demo Sistema de Gesti&oacute;n Cooperativa | Cooperativa de Trabajo gcoop Ltda. |&nbsp; Luis M. Drago 364 3 B - Ciudad Aut&oacute;noma de Buenos Aires, Argentina |&nbsp; (0054 11) 4856-7925</p>
-';
-
   $export['site_footer'] = $strongarm;
   $strongarm = new stdClass;
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
@@ -849,7 +841,7 @@ function gcoop_conf_basicas_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_mail';
-  $strongarm->value = 'soledadtordini@gcoop.coop';
+  $strongarm->value = 'info@gcoop.coop';
 
   $export['site_mail'] = $strongarm;
   $strongarm = new stdClass;
@@ -864,7 +856,7 @@ function gcoop_conf_basicas_strongarm() {
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
   $strongarm->api_version = 1;
   $strongarm->name = 'site_name';
-  $strongarm->value = 'Cooperativa de Trabajo GCOOP Ltda.';
+  $strongarm->value = 'Cooperativa de Trabajo XXXXX Ltda.';
 
   $export['site_name'] = $strongarm;
   $strongarm = new stdClass;
@@ -879,7 +871,7 @@ function gcoop_conf_basicas_strongarm() {
   $strongarm->api_version = 1;
   $strongarm->name = 'site_offline_message';
   $strongarm->value = '<p>
-	Gesti&oacute;n Cooperativa is currently under maintenance. We should be back shortly. Thank you for your patience.</p>
+	Gesti&oacute;n Cooperativa se encuentra en mantenimiento. Volveremos en un rato, por favor tenga paciencia.</p>
 ';
 
   $export['site_offline_message'] = $strongarm;
