@@ -11,7 +11,8 @@ function glang_install()
   $langcode = 'es';
   //Creamos el idioma 'es' como predeterminado y desactivamos el ingles
   locale_add_language($langcode, NULL, NULL, LANGUAGE_LTR, '', '', TRUE, TRUE);
-  db_query("UPDATE {languages} SET enabled = %d, weight = %d WHERE language = '%s'", 0, 1, 'en');
+  db_query("DELETE FROM {languages} WHERE language = 'en'");
+//  db_query("UPDATE {languages} SET enabled = %d, weight = %d WHERE language = '%s'", 0, 1, 'en');
   $files = scandir(dirname(__FILE__) . '/lang/');
 
   foreach ($files as $filename)
