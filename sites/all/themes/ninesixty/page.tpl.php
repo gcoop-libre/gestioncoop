@@ -12,7 +12,7 @@
   <?php print $scripts; ?>
 </head>
 
-<body class="<?php print $body_classes; ?> show-gridno">
+<body class="<?php print $body_classes; ?> show-nogrid">
 <?php if (!empty($admin)) print $admin; ?> 
 
     <div id="page" class="container-16 clear-block">
@@ -84,13 +84,13 @@
     </div>
 
   <?php if ($left): ?>
-    <div id="sidebar-left" class="column sidebar region grid-4 <?php print ns('pull-12', $right, 3); ?>">
+    <div id="sidebar-left" class="column sidebar region grid-4 <?php print ns('pull-12', $left, 12); ?>">
       <?php print $left; ?>
     </div>
   <?php endif; ?>
 
   <?php if ($right): ?>
-    <div id="sidebar-right" class="column sidebar region grid-4 omega">
+    <div id="sidebar-right" class="column sidebar region grid-4 omega <?php print ns('pull-12', $right, 12); ?>">
       <div id="sidebar-right-container">
       <?php print $right; ?>
      
