@@ -181,10 +181,13 @@ ini_set('url_rewriter.tags',        '');
  *
  * Remove the leading hash signs to enable.
  */
-# $conf = array(
-#   'site_name' => 'My Drupal site',
-#   'theme_default' => 'minnelli',
-#   'anonymous' => 'Visitor',
+ $conf = array(
+//   'site_name' => '',
+   'theme_default' => 'ninesixty',
+   'admin_theme' => 'rubik',
+   'anonymous' => 'Anonimo',
+   'site_frontpage' => 'inicio',
+   );
 /**
  * A custom theme can be set for the off-line page. This applies when the site
  * is explicitly set to off-line mode through the administration page or when
