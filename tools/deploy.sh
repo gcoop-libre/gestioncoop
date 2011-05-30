@@ -24,8 +24,8 @@ if [ -d $site ]; then
 fi
 
 #clonar el repositorio
-echo "Clonando $site"
-git clone ssh://$user@git.gcoop.com.ar/var/git/$site.git
+echo "Clonando $site read-only"
+git clone git://github.com/gcooplibre/gestioncoop.git
 
 #copiar default.settings.php a settings.php editando la conexion a la db 
 conexion_db="\$db_url = 'mysql:\/\/$DB_USER:$DB_PASS@$DB_HOST\/$DB_NAME';"
