@@ -36,7 +36,7 @@ function gestioncoop_menus_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-49',
+    'weight' => '1',
   );
   // Exported menu link: primary-links:balances-memorias
   $menu_links['primary-links:balances-memorias'] = array(
@@ -50,7 +50,7 @@ function gestioncoop_menus_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-47',
+    'weight' => '4',
   );
   // Exported menu link: primary-links:forum
   $menu_links['primary-links:forum'] = array(
@@ -70,24 +70,6 @@ function gestioncoop_menus_menu_default_menu_links() {
     'expanded' => '0',
     'weight' => '-46',
   );
-  // Exported menu link: primary-links:node/24
-  $menu_links['primary-links:node/24'] = array(
-    'menu_name' => 'primary-links',
-    'link_path' => 'node/24',
-    'router_path' => 'node/%',
-    'link_title' => 'Sala de Chat',
-    'options' => array(
-      'attributes' => array(
-        'title' => 'Sala de Chat',
-      ),
-    ),
-    'module' => 'menu',
-    'hidden' => '0',
-    'external' => '0',
-    'has_children' => '0',
-    'expanded' => '0',
-    'weight' => '7',
-  );
   // Exported menu link: primary-links:noticias
   $menu_links['primary-links:noticias'] = array(
     'menu_name' => 'primary-links',
@@ -100,7 +82,7 @@ function gestioncoop_menus_menu_default_menu_links() {
     'external' => '0',
     'has_children' => '0',
     'expanded' => '0',
-    'weight' => '-48',
+    'weight' => '2',
   );
   // Exported menu link: secondary-links:logout
   $menu_links['secondary-links:logout'] = array(
@@ -119,6 +101,24 @@ function gestioncoop_menus_menu_default_menu_links() {
     'has_children' => '0',
     'expanded' => '0',
     'weight' => '-48',
+  );
+  // Exported menu link: secondary-links:node/add
+  $menu_links['secondary-links:node/add'] = array(
+    'menu_name' => 'secondary-links',
+    'link_path' => 'node/add',
+    'router_path' => 'node/add',
+    'link_title' => 'Agregar Contenido',
+    'options' => array(
+      'attributes' => array(
+        'title' => '',
+      ),
+    ),
+    'module' => 'menu',
+    'hidden' => '0',
+    'external' => '0',
+    'has_children' => '0',
+    'expanded' => '0',
+    'weight' => '-49',
   );
   // Exported menu link: secondary-links:user
   $menu_links['secondary-links:user'] = array(
@@ -141,13 +141,13 @@ function gestioncoop_menus_menu_default_menu_links() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Actividades');
+  t('Agregar Contenido');
   t('Balances y Memorias');
   t('Cerrar Sesión');
   t('Foro');
   t('Inicio');
   t('Mi perfil');
   t('Noticias');
-  t('Sala de Chat');
 
 
   return $menu_links;
