@@ -738,7 +738,7 @@ text-decoration:underline;
 /* User Login */
 
 .page-user #main-content{
-background:red;
+background:#45494B;
 color:#fff;
 
 }
@@ -2361,3 +2361,10 @@ display:none;
 #edit-field-asamblearef-nid-nid-wrapper {
   display:none;
 }
+
+/*node add*/
+
+dl.node-type-list dt {background:url("../images/content.png") no-repeat scroll;height:25px;padding: 5px 0px 0px 40px;}
+dl.node-type-list dt a {font-size:16px;color:#1a1a1a;text-decoration:none;}
+dl.node-type-list dt a:hover {text-decoration:underline;}
+dl.node-type-list dd {padding: 0px 0px 10px 40px; margin-bottom:10px; border-bottom: 1px solid #ccc; color:#a2a2a2; }
