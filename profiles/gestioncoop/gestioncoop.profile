@@ -7,7 +7,7 @@
 function gestioncoop_profile_details() {
   return array(
     'name' => 'Gestion Cooperativa',
-    'description' => 'Gestion Cooperativa.',
+    'description' => 'Elija este perfil para instalar Gestión Cooperativa.',
     'old_short_name' => 'gestioncoop_installer',
   );
 }
@@ -262,13 +262,6 @@ function _gestioncoop_intranet_configure() {
 //    db_query("DELETE FROM {languages} WHERE language = 'en'");
 //  }
 
-  // Remove default input filter formats
-  $result = db_query("SELECT * FROM {filter_formats} WHERE name IN ('%s', '%s')", 'Filtered HTML', 'Full HTML');
-  while ($row = db_fetch_object($result)) {
-    db_query("DELETE FROM {filter_formats} WHERE format = %d", $row->format);
-    db_query("DELETE FROM {filters} WHERE format = %d", $row->format);
-  }
-
   // Eliminate the access content perm from anonymous users.
   db_query("UPDATE {permission} set perm = '' WHERE rid = 1");
 
@@ -283,7 +276,7 @@ function _gestioncoop_intranet_configure() {
   variable_set('date_default_timezone', $tz_offset);
 
   // Set a default footer message.
-  variable_set('site_footer', 'Sistema de Gestión Cooperativa | Cooperativa de Trabajo Ltda.copy | Desarrollado por '. l('gcoop - Cooperativa de Software Libre', 'http://www.gcoop.coop', array('absolute' => TRUE)));
+  variable_set('site_footer', 'Sistema de Gestión Cooperativa | ' . variable_get('site_name', '') . ' | Desarrollado por '. l('gcoop - Cooperativa de Software Libre', 'http://www.gcoop.coop', array('absolute' => TRUE)));
 }
 
 /**
